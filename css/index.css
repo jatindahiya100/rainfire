@@ -114,9 +114,11 @@ html,body{
     display: inline-table;
 }
 .wrapper .category-wise .product-holder{
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, 230px);
     grid-gap: 16px;
+    justify-content: center;
 }
 .wrapper .category-wise .product-holder .item{
     margin: 16px;
