@@ -6,12 +6,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Name</title>
+
+    <link rel="stylesheet" href="css/productDetails.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header></header>
+    <div class="product-page-holder">
 
+        <div class="product-image-section">
+            <div class="product-image-parts fade">
+                <img src="images/electronic-gadgets.jpg">
+            </div>
+            <div class="product-image-parts fade">
+                <img src="images/travel-epidemic.jpg">
+            </div>
+            <div class="product-image-parts fade">
+                <img src="images/wearable-technology.jpg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="product-page-details">
+            <div class="product-title-holder">
+                <h2>Rainfire Premium Edition Wireless Over Ear Gaming Headphones with Detachable Mic for PC, Mobile,
+                    Laptop, PS4, Xbox, Nintendo Switch, VR(Black)
+                </h2>
+            </div>
+            <div class="product-price">
+                <h1>₹ 4400</h1>&nbsp&nbsp<h3><s>₹5500</s></h3>&nbsp&nbsp<h3 style="color: green">20% OFF</h3>
+            </div>
+            <hr>
+            <div class="product-available-status">
+                <h3 style="color: green;">In Stock</h3>
+            </div>
+            <ul>
+                <li>40mm dynamic drivers delivering Rainfire QuantunSound Signature, our signature audio designed to
+                    experience the tiniest footsteps to loudest explosions</li>
+                <li>Detachable Voice focus Directional Boom mic with mute features for crystal clear communications</li>
+                <li>Lightweight and durable headband with memory foam cushioning</li>
+                <li>Compatible with all gaming platforms including PC gaming, Xbox, Playstation, Nintendo, Switch,
+                    Mobile, Mac and VR</li>
+                <li>Compatible with Windows Sonic Spatial Sound built into Windows 10 PC and Xbox One consoles</li>
+                <li>What's in the box : Rainfire Quantum 100 headset, Removable Mic, Windshield foam for microphone, QSG /
+                    Warranty card / Safety sheet</li>
+                <li>1 year manufacturer’s warranty</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>Color</td>
+                    <td>Black</td>
+                </tr>
+                <tr>
+                    <td>Connectivity</td>
+                    <td>Wireless(bluetooth) and wired both</td>
+                </tr>
+                <tr>
+                    <td>Microphone</td>
+                    <td>Integrated Mic</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>150g</td>
+                </tr>
+                <tr>
+                    <td>Noise</td>
+                    <td>Sound Isolation</td>
+                </tr>
+                <tr>
+                    <td>Waterproof</td>
+                    <td>IPv6 qualified</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("product-image-parts");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
