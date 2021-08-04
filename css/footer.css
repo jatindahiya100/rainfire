@@ -40,7 +40,20 @@ footer .social-handles img{
 
 /* If the browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
+    footer .footer-content{
+        width: 98%;
+        margin-left: 1%;
+        justify-content:start;
+        flex-wrap: wrap;
+    }
     footer .footer-content .sections{
-       margin-top: 4%;
+        width: 48%;
+        margin-top: 4%;
+        margin-bottom: 1%;
+        color: white;
+    }
+    footer .sections ul li{
+        padding: 4px;
+        line-height: 19px;
     }
   }
