@@ -20,6 +20,30 @@
   object-fit: cover;
 }
 
+/* Next and previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .slide-product-name {
   position: absolute;
   top: 15%;
@@ -48,19 +72,19 @@
 .slide-product-name button:hover {
   background-color: rgb(236, 230, 230);
 }
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
-  from {transform: scale(1.1)} 
-  to {transform: scale(1)}
+  from {opacity: 0.8;} 
+  to {opacity: 1}
 }
 
 @keyframes fade {
-  from {transform: scale(1.1)} 
-  to {transform: scale(1)}
+  from {opacity: 0.8;} 
+  to {opacity: 1}
 }
