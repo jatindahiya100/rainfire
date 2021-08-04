@@ -46,15 +46,21 @@ html,body{
     font-weight: 700;
 }
 .wrapper .new-arrivals{
-    margin-top: 5%;
+    margin-top: 1%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.new-arrivals .new-arrivals-holder{
+    margin-top: 1%;
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    overflow-y: scroll;
 }
-.wrapper .new-arrivals .item{
+.wrapper .new-arrivals .new-arrivals-holder .item{
     margin: 16px;
     width: 200px;
     color: rgb(0, 0, 0);
@@ -63,12 +69,12 @@ html,body{
     justify-content: center;
     flex-direction: column;
 }
-.wrapper .new-arrivals .item img{
+.wrapper .new-arrivals .new-arrivals-holder .item img{
     width: 200px;
     height: 200px;
    object-fit: cover;
 }
-.wrapper .new-arrivals .item label[for=pName]{
+.wrapper .new-arrivals .new-arrivals-holder .item label[for=pName]{
     margin: 16px;
     font-size: 12px;
     font-weight: 600;
@@ -78,7 +84,7 @@ html,body{
    -webkit-line-clamp: 1; /* number of lines to show */
    -webkit-box-orient: vertical;
 }
-.wrapper .new-arrivals .item label[for=pPrice]{
+.wrapper .new-arrivals .new-arrivals-holder .item label[for=pPrice]{
     text-align: center;
     width: 100px;
     background: #000;
@@ -96,10 +102,10 @@ html,body{
     .wrapper .featured .featured-text button {
         width: 100px;
     }
-    .wrapper .new-arrivals .item{
+    .wrapper .new-arrivals .new-arrivals-holder .item{
         width: 150px;
     }
-    .wrapper .new-arrivals .item img{
+    .wrapper .new-arrivals .new-arrivals-holder .item img{
         width: 150px;
         height: 150px;
        object-fit: cover;
