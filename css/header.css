@@ -13,8 +13,12 @@ header .logo img{
     pointer-events: none;
 }
 header .quick-links ul li{
-    padding-right: 10px;
     display: inline-block;
     list-style-type: none;
     font-family: 'Karla', sans-serif;
+    background: #000;
+    padding: 4px 16px;
+    border-radius: 12px;
+    color: white;
+    border:1px solid black
 }
