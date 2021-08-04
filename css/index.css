@@ -176,4 +176,16 @@ body {
     font-size: 14px;
     padding: 2px;
   }
+  .wrapper .category-wise .product-holder {
+  grid-template-columns: repeat(auto-fit, 142px);
+  grid-gap: 16px;
+}
+  .wrapper .category-wise .product-holder .item {
+    margin: 8px;
+    width: 140px;
+  }
+  .wrapper .category-wise .product-holder .item img {
+    width: 130px;
+    height: 130px;
+  }
 }
