@@ -25,11 +25,13 @@
             <div class="slide-product-name">Rainfire HyperX Cloud </div><button>Purchase</button>
         </div>
         <div class="slide-parts">
-            <img src="https://cdn.shopify.com/s/files/1/0314/2193/t/7/assets/personal_audio_collection_banner.jpg?v=16427186628660576205">
+            <img
+                src="https://cdn.shopify.com/s/files/1/0314/2193/t/7/assets/personal_audio_collection_banner.jpg?v=16427186628660576205">
             <div class="slide-product-name">Travel Accessories </div><button>Know More</button>
         </div>
         <div class="slide-parts">
-            <img src="https://www.pantrade.com.sg/image/pantrade/image/data/brand-page-sennheiser-20190614-featurebanner-small.jpg">
+            <img
+                src="https://www.pantrade.com.sg/image/pantrade/image/data/brand-page-sennheiser-20190614-featurebanner-small.jpg">
             <div class="slide-product-name">Rainfire wearable technology </div><button>Know More</button>
         </div>
 
@@ -59,6 +61,22 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "block";
+        }
+
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide-parts");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
         }
     </script>
 
