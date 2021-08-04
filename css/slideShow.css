@@ -51,11 +51,11 @@
   width: 30%;
   height: 100%;
   font-size: 36px;
-    line-height: 46px;
-    color: white;
-  display:table-caption;
-   font-weight: 700;
-   text-transform: capitalize;
+  line-height: 46px;
+  color: white;
+  font-weight: 700;
+  text-transform: capitalize;
+  word-spacing: 100vw;
 }
 .slide-parts button {
   position: absolute;
