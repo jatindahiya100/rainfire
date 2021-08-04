@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .slideshow-container {
@@ -30,6 +30,7 @@
   padding: 16px;
   margin-top: -22px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-size: 18px;
   border-radius: 0 3px 3px 0;
@@ -80,11 +81,19 @@
   animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-  from {opacity: 0.8;} 
-  to {opacity: 1}
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: 0.8;} 
-  to {opacity: 1}
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
