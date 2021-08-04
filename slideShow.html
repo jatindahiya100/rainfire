@@ -20,23 +20,20 @@
 
     <div class="slideshow-container">
 
-        <div class="slide-parts">
+        <div class="slide-parts fade">
             <img src="https://shopsellers.in/wp-content/uploads/2020/10/wireless-banner.jpg">
             <div class="slide-product-name">Rainfire HyperX Cloud </div><button>Purchase</button>
         </div>
-        <div class="slide-parts">
+        <div class="slide-parts fade">
             <img
                 src="https://cdn.shopify.com/s/files/1/0314/2193/t/7/assets/personal_audio_collection_banner.jpg?v=16427186628660576205">
             <div class="slide-product-name">Travel Accessories </div><button>Know More</button>
         </div>
-        <div class="slide-parts">
+        <div class="slide-parts fade">
             <img
                 src="https://www.pantrade.com.sg/image/pantrade/image/data/brand-page-sennheiser-20190614-featurebanner-small.jpg">
             <div class="slide-product-name">Rainfire wearable technology </div><button>Know More</button>
         </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
 
@@ -44,26 +41,7 @@
         var slideIndex = 1;
         showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("slide-parts");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-
-        function showSlides(n) {
+        function showSlides() {
             var i;
             var slides = document.getElementsByClassName("slide-parts");
             for (i = 0; i < slides.length; i++) {
