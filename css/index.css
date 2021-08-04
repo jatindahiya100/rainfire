@@ -111,11 +111,14 @@ body {
   font-weight: 700;
 }
 .wrapper .category-wise {
-  margin-top: 4%;
+  margin: 4% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.wrapper .category-wise ul{
+  margin: 45px auto 25px auto;
 }
 .wrapper .category-wise ul li {
   font-size: 18px;
@@ -147,7 +150,6 @@ body {
   border-bottom: 2px solid black;
 }
 
-
 @media only screen and (max-width: 600px) {
   .wrapper .featured .featured-text h2 {
     font-size: 26px;
@@ -167,25 +169,32 @@ body {
 }
 @media (max-width: 492px) {
   .wrapper .category-wise ul li {
-    font-size: 16px;
-    padding: 4px;
-  }
-}
-@media (max-width: 492px) {
-  .wrapper .category-wise ul li {
     font-size: 14px;
     padding: 2px;
   }
+  .wrapper .category-wise ul{
+    margin: 40px auto 20px auto;
+  }
   .wrapper .category-wise .product-holder {
-  grid-template-columns: repeat(auto-fit, 142px);
-  grid-gap: 16px;
-}
+    grid-template-columns: repeat(auto-fit, 142px);
+    grid-gap: 16px;
+  }
   .wrapper .category-wise .product-holder .item {
-    margin: 8px;
+    margin: 0;
     width: 140px;
   }
   .wrapper .category-wise .product-holder .item img {
     width: 130px;
     height: 130px;
+  }
+  .wrapper .category-wise .product-holder .item label[for="pName"] {
+    margin: 16px;
+    font-size: 12px;
+  }
+  .wrapper .category-wise .product-holder .item label[for="pPrice"] {
+    width: 80px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 14px;
   }
 }
