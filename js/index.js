@@ -8,5 +8,8 @@ $(document).ready(function(){
 
     // Loading header
     $('#header').load("header.html");
+
+    // Loading Footer
+    $('#footer').load("footer.html");
     
 });

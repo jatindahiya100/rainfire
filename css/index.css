@@ -83,7 +83,7 @@ html,body{
     height: 200px;
    object-fit: cover;
 }
-.wrapper .new-arrivals .new-arrivals-holder .item label[for=pName]{
+.wrapper .new-arrivals .new-arrivals-holder .item label[for=pName],.wrapper .category-wise .product-holder .item label[for=pName]{
     margin: 16px;
     font-size: 12px;
     font-weight: 600;
@@ -93,7 +93,7 @@ html,body{
    -webkit-line-clamp: 1; /* number of lines to show */
    -webkit-box-orient: vertical;
 }
-.wrapper .new-arrivals .new-arrivals-holder .item label[for=pPrice]{
+.wrapper .new-arrivals .new-arrivals-holder .item label[for=pPrice],.wrapper .category-wise .product-holder .item label[for=pPrice]{
     text-align: center;
     width: 100px;
     background: #000;
@@ -103,7 +103,7 @@ html,body{
     font-weight: 700;
 }
 .wrapper .category-wise{
-    margin-top: 2%;
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +114,23 @@ html,body{
     display: inline-table;
 }
 .wrapper .category-wise .product-holder{
-    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+.wrapper .category-wise .product-holder .item{
+    margin: 16px;
+    width: 200px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper .category-wise .product-holder .item img {
+    width: 200px;
+    height: 200px;
+   object-fit: cover;
 }
 .active{
     border-bottom: 2px solid black;
