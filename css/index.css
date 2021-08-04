@@ -128,8 +128,9 @@ body {
 .wrapper .category-wise .product-holder {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, 230px);
+  grid-gap: 16px;
+  justify-content: center;
 }
 .wrapper .category-wise .product-holder .item {
   margin: 16px;
