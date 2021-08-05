@@ -192,6 +192,7 @@ html,body{
   line-height: 26px;
   color: rgb(43, 43, 43);
   margin-top: 20px;
+  word-break: break-all;
 }
 
 @media only screen and (max-width: 1000px) {
