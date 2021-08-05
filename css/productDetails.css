@@ -1,26 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-.product-page-holder {
+html,body{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.pd-page-holder {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
 }
 
-.product-image-div {
+.pd-image-div {
   width: 45%;
 }
-.product-image-section {
+.pd-image-section {
   position: relative;
   margin: auto;
 }
-.product-image-parts {
+.pd-image-parts {
   display: none;
 }
-.product-image-section .product-image-parts img {
+.pd-image-section .pd-image-parts img {
   width: 100%;
   height: auto;
   object-fit: cover;

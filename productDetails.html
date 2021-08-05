@@ -20,20 +20,21 @@
 
 <body>
 
-    <!-- .product-page-holder divided into flex (.product-image-div and .product-page-details). .product-image-div contains image slideshow(.product-image-section) -->
+    <!-- .pd-page-holder divided into flex (.pd-image-div and .product-page-details). .pd-image-div contains image slideshow(.pd-image-section) -->
     <div class="pd-holder">
         <div id="header"></div>
-        
-        <div class="product-page-holder">
-            <div class="product-image-div">
-                <div class="product-image-section">
-                    <div class="product-image-parts fade">
+
+        <div class="pd-page-holder">
+            
+            <div class="pd-image-div">
+                <div class="pd-image-section">
+                    <div class="pd-image-parts fade">
                         <img src="images/electronic-gadgets.jpg">
                     </div>
-                    <div class="product-image-parts fade">
+                    <div class="pd-image-parts fade">
                         <img src="images/travel-epidemic.jpg">
                     </div>
-                    <div class="product-image-parts fade">
+                    <div class="pd-image-parts fade">
                         <img src="images/wearable-technology.jpg">
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -123,7 +124,7 @@
 
         function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("product-image-parts");
+            var slides = document.getElementsByClassName("pd-image-parts");
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {

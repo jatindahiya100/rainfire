@@ -135,10 +135,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-$(document).on("click", ".prev" ,function () {
+$('.prev').on("click", function () {
     plusSlides(-1);
 });
-$(document).on("click", ".next" ,function () {
+$('.next').on("click", function () {
     plusSlides(1);
 });
 
