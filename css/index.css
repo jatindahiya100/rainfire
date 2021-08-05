@@ -188,13 +188,5 @@ a{
     width: 140px;
     height: 140px;
   }
-  .wrapper .category-wise .product-holder .item label[for="pName"] {
-    font-size: 12px;
-  }
-  .wrapper .category-wise .product-holder .item label[for="pPrice"] {
-    width: 80px;
-    padding: 4px 8px;
-    border-radius: 16px;
-    font-size: 14px;
-  }
+ 
 }
