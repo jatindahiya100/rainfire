@@ -102,6 +102,7 @@ html,body{
 
 .section02 {
   width: 50%;
+ 
 }
 .section02 h2 {
   font-size: 26px;
@@ -153,18 +154,12 @@ html,body{
   font-weight: 600;
   font-size: 14px;
 }
-.section02 .specifications{
-  margin-top: 30px;
+.section2 .specifications{
   width: 100%;
 }
 .section02 .specifications table{
-  border-collapse: collapse;
+  
   width: 60%;
-}
-.section02 .specifications table th{
-  background-color: black;
-  color: white;
-  border: black 1px solid;
 }
 .section02 .specifications table tr{
   height: 40px;
@@ -173,12 +168,4 @@ html,body{
   color: rgb(53, 53, 53);
   font-weight: 500;
   font-size: 14px;
-}
-.section02 .specifications table tr td {
-  border: rgb(99, 99, 99) 1px solid;
-  padding: 2px;
-}
-
-#description {
-  margin-top: 20px;
 }

@@ -6,10 +6,10 @@
 }
 
 h1 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
-.cart-holder{
+.cart-holder {
   width: 100%;
 }
 .cart-flex {
@@ -33,15 +33,23 @@ h1 {
   height: calc(100% - 20px);
   width: auto;
 }
-.item-card .item-title h2{
+.item-card .item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.item-card .item-title h2 {
   font-weight: 400;
   font-size: 18px;
 }
-.item-card .item-title h3{
+.item-card .item-title h3 {
   font-weight: 500;
   font-size: 16px;
 }
-.change-quantity{
+.change-quantity {
   display: inline;
 }
 
@@ -96,8 +104,8 @@ input#number {
   height: 40px;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
