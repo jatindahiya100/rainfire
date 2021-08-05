@@ -5,10 +5,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
-  font-family: "Karla", sans-serif;
-}
-
 .cart-holder {
   width: 100%;
 }
@@ -21,6 +17,10 @@ h1 {
 .item-holder {
   width: 48%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.item-holder h1 {
+  margin: 10px 30px;
+  font-family: "Karla", sans-serif;
 }
 .item-card {
   height: 150px;
@@ -40,6 +40,7 @@ h1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  padding: 10px 0;
 }
 .item-card .item-title h2 {
   font-weight: 400;
@@ -48,6 +49,7 @@ h1 {
 .item-card .item-title h3 {
   font-weight: 500;
   font-size: 16px;
+  margin-top: 5px;
 }
 .change-quantity {
   display: inline;
@@ -56,6 +58,7 @@ h1 {
 /* quantity change buttons */
 form {
   width: 300px;
+  margin-top: 10px;
 }
 .value-button {
   display: inline-block;
