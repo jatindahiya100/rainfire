@@ -27,7 +27,7 @@ function fetchNewArrival() {
                         "<div class='item'>" +
                         "<img src=" + value.thumbnail + "alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" +"₹ "+ value.p_Price + "</label>" +
+                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
                         "</div>" +
                         "</a>";
 
@@ -69,8 +69,8 @@ function GetDataByCategory(category) {
                         "<div class='item'>" +
                         "<img src=" + value.thumbnail + "alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "₹ "+ value.p_Price + "</label>" +
-                        "</div>"+
+                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
+                        "</div>" +
                         "</a>";
 
                 });
@@ -83,10 +83,38 @@ function GetDataByCategory(category) {
     });
 }
 
+// hero Image
+function heroimage() {
+    var category = "heroimage";
+    $.ajax({
+        url: 'api/fetchdata-api.php?get=' + category,
+        type: "GET",
+        beforeSend: function () {
+
+        },
+        success: function (data) {
+            if (data.status != "false") {
+                var banner = "";
+                $.each(data, function (key, value) {
+                    banner += "<div class='slide-parts fade'>" +
+                        "<img src=" + value.banner_url +">" +
+                        "<div class='slide-product-name'>" + value.heading + "</div><button>Purchase</button>" +
+                        "</div>";
+                });
+
+                banner += "<a class='prev' onclick="+ plusSlides(-1) + ">&#10094;</a>" +
+                    "<a class='next' onclick="+ plusSlides(1)+ ">&#10095;</a>";
+                $('.slideshow-container').html(banner);
+                showSlides(slideIndex);
+            }
+        }
+    });
+}
+heroimage();
 
 // Slideshow Function
 var slideIndex = 1;
-showSlides(slideIndex);
+
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -98,7 +126,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("slide-parts");
+    var slides = $(".slide-parts");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
@@ -107,10 +135,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-$('.prev').on("click",function(){
+$(document).on("click", ".prev" ,function () {
     plusSlides(-1);
 });
-$('.next').on("click",function(){
+$(document).on("click", ".next" ,function () {
     plusSlides(1);
 });
 
