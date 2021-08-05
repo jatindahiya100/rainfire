@@ -102,8 +102,8 @@ function heroimage() {
                         "</div>";
                 });
 
-                banner += "<a class='prev' onclick="+ plusSlides(-1) + ">&#10094;</a>" +
-                    "<a class='next' onclick="+ plusSlides(1)+ ">&#10095;</a>";
+                banner += "<a class='prev'>&#10094;</a>" +
+                    "<a class='next'>&#10095;</a>";
                 $('.slideshow-container').html(banner);
                 showSlides(slideIndex);
             }
@@ -135,10 +135,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-$('.prev').on("click", function () {
+$(document).on("click", ".prev" ,function () {
     plusSlides(-1);
 });
-$('.next').on("click", function () {
+$(document).on("click", ".next" ,function () {
     plusSlides(1);
 });
 
