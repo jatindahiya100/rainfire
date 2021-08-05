@@ -9,7 +9,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
 }
-a{
+a {
   text-decoration: none;
 }
 .wrapper {
@@ -121,7 +121,7 @@ a{
   align-items: center;
   justify-content: center;
 }
-.wrapper .category-wise ul{
+.wrapper .category-wise ul {
   margin: 45px auto 25px auto;
 }
 .wrapper .category-wise ul li {
@@ -175,7 +175,7 @@ a{
     font-size: 14px;
     padding: 2px;
   }
-  .wrapper .category-wise ul{
+  .wrapper .category-wise ul {
     margin: 40px auto 20px auto;
   }
   .wrapper .category-wise .product-holder {
@@ -187,14 +187,5 @@ a{
   .wrapper .category-wise .product-holder .item img {
     width: 140px;
     height: 140px;
-  }
-  .wrapper .category-wise .product-holder .item label[for="pName"] {
-    font-size: 12px;
-  }
-  .wrapper .category-wise .product-holder .item label[for="pPrice"] {
-    width: 80px;
-    padding: 4px 8px;
-    border-radius: 16px;
-    font-size: 14px;
   }
 }
