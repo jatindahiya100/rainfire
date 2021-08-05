@@ -95,7 +95,7 @@ a{
 }
 .wrapper .new-arrivals .new-arrivals-holder .item label[for="pName"],
 .wrapper .category-wise .product-holder .item label[for="pName"] {
-  margin: 16px auto;
+  margin: 16px;
   font-size: 12px;
   font-weight: 600;
   overflow: hidden;
