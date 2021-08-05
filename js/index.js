@@ -84,7 +84,7 @@ function GetDataByCategory(category) {
 }
 
 // hero Image
-function heroimage(slideIndex) {
+function heroimage() {
     var category = "heroimage";
     $.ajax({
         url: 'api/fetchdata-api.php?get=' + category,
@@ -110,7 +110,7 @@ function heroimage(slideIndex) {
         }
     });
 }
-heroimage(slideIndex);
+heroimage();
 
 // Slideshow Function
 var slideIndex = 1;
