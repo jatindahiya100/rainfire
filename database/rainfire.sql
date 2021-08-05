@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 05, 2021 at 11:59 AM
+-- Generation Time: Aug 05, 2021 at 07:48 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -54,21 +54,27 @@ CREATE TABLE `products` (
   `p_ID` varchar(255) NOT NULL,
   `p_Name` varchar(255) NOT NULL,
   `p_Price` int(11) NOT NULL,
-  `thumbnail` varchar(255) NOT NULL,
+  `original_price` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
+  `money_saved` int(11) NOT NULL,
+  `thumbnail` varchar(500) NOT NULL,
   `added_on` date NOT NULL DEFAULT current_timestamp(),
-  `category` varchar(50) NOT NULL
+  `category` varchar(50) NOT NULL,
+  `rating` decimal(1,1) DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`S_No`, `p_ID`, `p_Name`, `p_Price`, `thumbnail`, `added_on`, `category`) VALUES
-(2, 'SU101', 'Rainfire HyperX Cloud', 2200, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Headphones'),
-(3, 'SU103', 'Rainfire smart watch', 2200, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Headphones'),
-(4, 'SU104', 'Rainfire smart watch', 2200, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Headphones'),
-(5, 'SU105', 'Rainfire smart watch', 2200, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Headphones'),
-(6, 'SU106', 'Rainfire smart watch', 2200, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Batteries');
+INSERT INTO `products` (`S_No`, `p_ID`, `p_Name`, `p_Price`, `original_price`, `discount`, `money_saved`, `thumbnail`, `added_on`, `category`, `rating`, `stock`) VALUES
+(2, 'SU101', 'Rainfire HyperX Cloud', 2200, 0, 0, 0, 'https://p.globalsources.com/IMAGES/PDT/BIG/801/B1185071801.jpg', '2021-08-04', 'Headphones', '0.0', 0),
+(3, 'SU103', 'Rainfire smart watch', 2200, 0, 0, 0, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', '2021-08-04', 'Headphones', '0.0', 0),
+(4, 'SU104', 'Rainfire smart watch', 2200, 0, 0, 0, 'https://images.unsplash.com/photo-1599669454699-248893623440?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRwaG9uZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80', '2021-08-04', 'Headphones', '0.0', 0),
+(5, 'SU105', 'Rainfire smart watch', 2200, 0, 0, 0, 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f01d1e9-48f4-4e55-886d-0b255b9bbf24.png?v=1625046257', '2021-08-04', 'Headphones', '0.0', 0),
+(6, 'SU106', 'Rainfire smart watch', 2200, 0, 0, 0, 'https://images.immediate.co.uk/production/volatile/sites/4/2020/09/Apple-AirPods-Pro-best-wireless-earbuds-712ddc5.jpg?quality=90&resize=400,357', '2021-08-04', 'Batteries', '0.0', 0),
+(7, 'SU0010', 'iphone Data Cable', 2200, 2500, 20, 300, 'https://images.unsplash.com/photo-1599669454699-248893623440?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRwaG9uZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80', '2021-08-05', 'Data Cables', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -100,7 +106,7 @@ ALTER TABLE `heroimage`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `S_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `S_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
