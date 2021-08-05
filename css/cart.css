@@ -48,9 +48,8 @@ h1 {
 /* quantity change buttons */
 form {
   width: 300px;
-  margin: 0 auto;
-  text-align: center;
 }
+
 .value-button {
   display: inline-block;
   border: 1px solid #ddd;
@@ -67,21 +66,26 @@ form {
   -ms-user-select: none;
   user-select: none;
 }
+
 .value-button:hover {
   cursor: pointer;
 }
+
 form #decrease {
   margin-right: -4px;
   border-radius: 8px 0 0 8px;
 }
+
 form #increase {
   margin-left: -4px;
   border-radius: 0 8px 8px 0;
 }
+
 form #input-wrap {
   margin: 0px;
   padding: 0px;
 }
+
 input#number {
   text-align: center;
   border: none;
@@ -91,6 +95,7 @@ input#number {
   width: 40px;
   height: 40px;
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
