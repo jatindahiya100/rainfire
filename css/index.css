@@ -136,7 +136,6 @@ a{
   justify-content: space-evenly;
 }
 .wrapper .category-wise .product-holder .item {
-  margin: 16px;
   width: 200px;
   color: rgb(0, 0, 0);
   display: flex;
@@ -189,7 +188,6 @@ a{
     height: 140px;
   }
   .wrapper .category-wise .product-holder .item label[for="pName"] {
-    margin: 16px;
     font-size: 12px;
   }
   .wrapper .category-wise .product-holder .item label[for="pPrice"] {
