@@ -13,6 +13,7 @@ body {
   width: 100%;
 }
 .wrapper .featured {
+  margin-bottom: -10px;
   width: 100%;
   position: relative;
 }
