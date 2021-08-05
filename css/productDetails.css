@@ -154,3 +154,18 @@ html,body{
   font-weight: 600;
   font-size: 14px;
 }
+.section2 .specifications{
+  width: 100%;
+}
+.section02 .specifications table{
+  
+  width: 60%;
+}
+.section02 .specifications table tr{
+  height: 40px;
+}
+.section02 .specifications table tr td:first-child{
+  color: rgb(53, 53, 53);
+  font-weight: 500;
+  font-size: 14px;
+}
