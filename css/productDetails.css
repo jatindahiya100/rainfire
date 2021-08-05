@@ -54,6 +54,22 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+.add-cart-product-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.add-cart-product-page button {
+  width: 48%;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  color: white;
+  background-image: linear-gradient(to right bottom, #000000, #181818, #282828, #3a3a3a, #4c4c4c);
+  border-radius: 5px;
+}
+
 @-webkit-keyframes fade {
   from {
     opacity: 0.8;
@@ -82,8 +98,8 @@
   display: none;
 }
 .product-page-details {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .product-page-details h2 {
   font-family: "Georama", sans-serif;
@@ -120,7 +136,7 @@
   width: 97%;
   padding: 5px;
   border-collapse: collapse;
-  border: 1px solid #38678f;
+  border: 1px solid #949494;
   background: white;
   margin-top: 30px;
 }
@@ -135,11 +151,11 @@
 }
 .product-page-details table tr th {
   padding: 10px;
-  background: steelblue;
+  background-image: linear-gradient(to right bottom, #000000, #181818, #282828, #3a3a3a, #4c4c4c);
   font-weight: lighter;
   text-shadow: 0 1px 0 #38678f;
   color: white;
-  border: 1px solid #38678f;
+  border: 1px solid #949494;
   text-align: start;
 }
 .product-page-details table tr td {
