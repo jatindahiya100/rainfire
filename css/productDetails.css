@@ -186,8 +186,17 @@ html,body{
   color: rgb(43, 43, 43);
   margin-top: 20px;
 }
-@media only screen and (max-width: 800px) {
- 
+
+@media only screen and (max-width: 1000px) {
+  .section02 .specifications table{
+    width: 80%;
+  }
+  .section01 {
+    width: 50%;
+  }
+  .product-gallery {
+    width: 95%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .wrapper {
@@ -202,8 +211,35 @@ html,body{
   }
   .section02{
     width: 100%;
+    padding: 5px;
   }
   .product-photos {
     height: 400; 
+  }
+  .section02 .specifications table{
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .checkout {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .checkout button {
+    width: 50%;
+    height: 50px;
+    /* outline: none;
+    border: 2px solid black;
+    background: #000;
+    color: white;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    padding: 4px 8px; */
+    border-radius: 0;
+  }
+  p{
+    margin-bottom: 60px;
   }
 }
