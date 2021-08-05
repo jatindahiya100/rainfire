@@ -161,11 +161,49 @@ html,body{
   
   width: 60%;
 }
+.section02 .specifications table th{
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  /* border: black 1px solid; */
+}
 .section02 .specifications table tr{
   height: 40px;
 }
 .section02 .specifications table tr td:first-child{
-  color: rgb(53, 53, 53);
-  font-weight: 500;
+  color: rgb(22, 22, 22);
+  font-weight: 700;
   font-size: 14px;
+  text-align: start;
+}
+.section02 .specifications table tr td {
+  padding: 2px;
+}
+
+#description {
+  font-size: 14px;
+  line-height: 26px;
+  color: rgb(43, 43, 43);
+  margin-top: 20px;
+}
+@media only screen and (max-width: 800px) {
+ 
+}
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column; 
+  }
+  .section01 {
+    width: 100%;
+  }
+  .product-gallery{
+    margin-top: 0;
+    width: 100%;
+  }
+  .section02{
+    width: 100%;
+  }
+  .product-photos {
+    height: 400; 
+  }
 }
