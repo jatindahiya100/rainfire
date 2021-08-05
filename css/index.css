@@ -80,7 +80,7 @@ a{
   display: none;
 }
 .wrapper .new-arrivals .new-arrivals-holder .item {
-  margin: 16px;
+  margin: 16px auto;
   width: 200px;
   color: rgb(0, 0, 0);
   display: flex;
@@ -132,9 +132,8 @@ a{
 .wrapper .category-wise .product-holder {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 230px);
-  grid-gap: 16px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: space-evenly;
 }
 .wrapper .category-wise .product-holder .item {
   margin: 16px;
@@ -180,16 +179,14 @@ a{
     margin: 40px auto 20px auto;
   }
   .wrapper .category-wise .product-holder {
-    grid-template-columns: repeat(auto-fit, 142px);
-    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, 140px);
   }
   .wrapper .category-wise .product-holder .item {
-    margin: 0;
     width: 140px;
   }
   .wrapper .category-wise .product-holder .item img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
   }
   .wrapper .category-wise .product-holder .item label[for="pName"] {
     margin: 16px;
