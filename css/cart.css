@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+}
+
+.cart-holder{
+  width: 100%;
+}
+.cart-flex {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.item-holder {
+  width: 48%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.item-card {
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.item-card img {
+  height: calc(100% - 20px);
+  width: auto;
+}
+.item-card .item-title h2{
+  font-weight: 400;
+  font-size: 18px;
+}
+.item-card .item-title h3{
+  font-weight: 500;
+  font-size: 16px;
+}
+.change-quantity{
+  display: inline;
+}
+
+/* quantity change buttons */
+form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
