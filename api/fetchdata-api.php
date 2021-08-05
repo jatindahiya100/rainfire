@@ -80,6 +80,13 @@ function findby($url_value)
             mysqli_close($link);
             break;
 
+        case 'heroimage':
+            $sql = "SELECT * FROM heroimage";
+            getDataFromServer($link, $sql);
+            // Close Connection to database
+            mysqli_close($link);
+            break;
+
         default:
 
             break;
