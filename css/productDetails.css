@@ -102,6 +102,13 @@ html,body{
 
 .section02 {
   width: 50%;
+  height: 79vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.section02::-webkit-scrollbar {
+  display: none;
 }
 .section02 h2 {
   font-size: 26px;
@@ -212,6 +219,7 @@ html,body{
   .section02{
     width: 100%;
     padding: 16px;
+    height: fit-content;
   }
   .product-photos {
     height: 400; 
