@@ -16,11 +16,11 @@ h1 {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  justify-content: space-evenly;
 }
 
 .item-holder {
-  width: 48%;
-  margin-left: 1%;
+  width: 49%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .item-holder .top-buttons {
@@ -30,7 +30,7 @@ h1 {
   justify-content: space-between;
   margin-top: 10px;
 }
-.item-holder .top-buttons h1 {
+.item-holder .top-buttons h1{
   margin: 10px 30px;
   font-family: "Karla", sans-serif;
   font-size: 20px;
@@ -121,4 +121,15 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.checkout-holder {
+  width: 49%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1%;
+}
+.form-head h1 {
+  margin-top: 10px;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
 }
