@@ -23,9 +23,21 @@ h1 {
   margin-left: 1%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.item-holder h1 {
+.item-holder .top-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.item-holder .top-buttons h1 {
   margin: 10px 30px;
   font-family: "Karla", sans-serif;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5px;
 }
 
 .item-card {
