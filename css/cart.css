@@ -21,7 +21,8 @@ h1 {
 
 .item-holder {
   width: 49%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: fit-content;
+  box-shadow: rgba(85, 62, 62, 0.2) 0px 2px 8px 0px;
 }
 .item-holder .top-buttons {
   width: 100%;
@@ -123,7 +124,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.checkout-holder {
+.checkout-info {
   width: 49%;
   padding: 1%;
 }
@@ -132,7 +133,6 @@ input[type=number]::-webkit-outer-spin-button {
   font-family: "Karla", sans-serif;
   font-size: 25px;
 }
-
 .form-info {
   width: 100%;
   font-size: 18px;
@@ -145,7 +145,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 49%;
   padding: 10px 15px;
   float: left;
-  margin-top: 10px;
+  margin-top: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .form-info .form50:nth-child(even) {
@@ -161,7 +161,48 @@ input[type=number]::-webkit-outer-spin-button {
 .form-info .form100 {
   width: 98%;
   padding: 10px 15px;
-  margin-top: 10px;
+  margin-top: 6px;
   float: left;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 30px;
+}
+
+.checkout-sum {
+  width: 100%;
+  font-size: 18px;
+}
+.sum-head h1 {
+  margin-top: 10px;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+}
+.price-table{
+  margin-top: 10px;
+  width: 100%;
+}
+.price-table table{
+  border-collapse: collapse;
+  width: 60%;
+}
+.price-table table th{
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  /* border: black 1px solid; */
+}
+.price-table table tr{
+  height: 40px;
+}
+.price-table table tr:last-child {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.price-table table tr td:first-child{
+  color: rgb(22, 22, 22);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: start;
+}
+.price-table table tr td {
+  padding: 2px;
 }
