@@ -5,12 +5,17 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#header {
+  width: 100%;
+}
+
 h1 {
   font-family: 'Karla', sans-serif;
 }
 
 .cart-holder{
   width: 100%;
+  
 }
 .cart-flex {
   display: flex;
@@ -129,7 +134,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 1%;
 }
 .form-head h1 {
-  margin-top: 10px;
+  margin-top: 15px;
   font-family: "Karla", sans-serif;
   font-size: 25px;
 }
@@ -159,7 +164,7 @@ input[type=number]::-webkit-outer-spin-button {
   outline: none;
 }
 .form-info .form100 {
-  width: 98%;
+  width: 99%;
   padding: 10px 15px;
   margin-top: 6px;
   float: left;
@@ -182,21 +187,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .price-table table{
   border-collapse: collapse;
-  width: 60%;
-}
-.price-table table th{
-  background-color: black;
-  color: white;
-  border-radius: 8px;
-  /* border: black 1px solid; */
+  width: 98%;
 }
 .price-table table tr{
   height: 40px;
 }
-.price-table table tr:last-child {
+.price-table table tr td:last-child{
+  text-align: end;
+  width: fit-content;
+}
+/* .price-table table tr:last-child td:last-child{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-}
+} */
 .price-table table tr td:first-child{
   color: rgb(22, 22, 22);
   font-weight: 600;
@@ -205,4 +208,66 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .price-table table tr td {
   padding: 2px;
+}
+
+.payment-method {
+  width: 100%;
+  font-size: 18px;
+}
+.payment-method .method-head h1 {
+  margin: 20px auto 15px auto;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+}
+.select-method {
+  width: 99%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+}
+.select-method h1{
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.order-btn button{
+  width: 99%;
+  height: 50px;
+  margin-top: 15px;
+  font-family: "Karla", sans-serif;
+  font-size: 26px;
+  background-color: black;
+  color: white;
+  padding: auto;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+@media (max-width: 930px) {
+  .cart-flex {
+    flex-direction: column;
+  }
+  .item-holder {
+    width: 98%;
+    margin-left: 1%;
+  }
+  .checkout-info {
+    width: 98%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 550px) {
+  .order-btn button{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    border-radius: 0;
+    border: none;
+  }
+  .payment-method {
+    margin-bottom: 60px;
+  }
 }
