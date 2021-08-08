@@ -53,18 +53,18 @@
             </div>
 
             <div class="section02">
-                <h2 id="product-name">boAt Rockerz 450 Bluetooth Headset (Luscious Black, On the Ear)</h2>
+                <h2 id="product-name"></h2>
 
                 <div class="basic-info">
-                    <label for="ratings">Rating 4.5</label>
-                    <label for="stock">In Stock</label>
+                    <label for="ratings"></label>
+                    <label for="stock"></label>
                 </div>
 
                 <div class="price-info">
-                    <label for="dprice">₹ <strong>5000</strong></label>
-                    <label for="discount">74% Off</label>
-                    <label for="deleted-price"><del>₹ 12000</del></label>
-                    <label for="usaved">Money Saved ₹ <strong>2000</strong></label>
+                    <label for="dprice"></label>
+                    <label for="discount"></label>
+                    <label for="deleted-price"></label>
+                    <label for="usaved"></label>
                 </div>
 
                 <div class="specifications">
@@ -127,31 +127,7 @@
 
     <!-- Importing jquery for AJAX -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        // Loading header
-        $('#header').load("header.html");
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("product-photos");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
+    <script src="js/itemDetails.js"></script>
 </body>
 
 </html>
