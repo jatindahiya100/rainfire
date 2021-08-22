@@ -30,7 +30,7 @@ function findby($url_value)
     require 'config.php';
     switch ($url_value) {
         case 'New Arrivals':
-            $sql = "SELECT * FROM products ORDER BY S_No DESC LIMIT 5";
+            $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 5";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
