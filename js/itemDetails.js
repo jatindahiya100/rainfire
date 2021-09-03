@@ -80,6 +80,7 @@ function product_basic_Info() {
         },
         success: function (data) {
             if (data[0].status != 'false') {
+                $('title').html(data[0].p_Name);
                 $('#product-name').html(data[0].p_Name);
                 $('label[for=ratings]').html(data[0].rating);
                 $('label[for=stock]').html(data[0].stock);
