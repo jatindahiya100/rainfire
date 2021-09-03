@@ -1,28 +1,28 @@
- // Loading header
- $('#header').load("header.html");
- var slideIndex = 1;
- showSlides(slideIndex);
+// Loading header
+$('#header').load("header.html");
+var slideIndex = 1;
+showSlides(slideIndex);
 
- function plusSlides(n) {
-     showSlides(slideIndex += n);
- }
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
- function currentSlide(n) {
-     showSlides(slideIndex = n);
- }
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
- function showSlides(n) {
-     var i;
-     var slides = document.getElementsByClassName("product-photos");
-     if (n > slides.length) { slideIndex = 1 }
-     if (n < 1) { slideIndex = slides.length }
-     for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";
-     }
-     slides[slideIndex - 1].style.display = "block";
- }
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("product-photos");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
 
- function productDetails() {
+function product_basic_Info() {
     //  Get Value from Url
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -35,29 +35,46 @@
 
         },
         success: function (data) {
-            if (data.status != 'false') {
-
-               
-                $.each(data, function (key, value) {
-                    $('#product-name').html(value.p_Name);
-                    $('label[for=ratings]').html(value.rating);
-                    $('label[for=stock]').html(value.stock);
-                    $('label[for=dprice]').html("₹ "+value.p_Price);
-                    $('label[for=discount]').html(value.discount+"% Off");
-                    $('label[for=deleted-price]').html("<del> ₹ "+value.original_price+"</del>");
-                    $('label[for=usaved]').html("Money Saved ₹" + "<strong>"+value.money_saved+"</strong>");
-                });
-                
-
-            } else {
-                $('.product-holder').html("");
+            if (data[0].status != 'false') {
+                $('#product-name').html(data[0].p_Name);
+                $('label[for=ratings]').html(data[0].rating);
+                $('label[for=stock]').html(data[0].stock);
+                $('label[for=dprice]').html("₹ " + data[0].p_Price);
+                $('label[for=discount]').html(data[0].discount + "% Off");
+                $('label[for=deleted-price]').html("<del> ₹ " + data[0].original_price + "</del>");
+                $('label[for=usaved]').html("Money Saved ₹" + "<strong>" + data[0].money_saved + "</strong>");
+                $('#description').append(data[0].description);
+                $('.basic_info').show();
             }
         }
     });
- }
- productDetails();
+}
+product_basic_Info();
 
- function productSpecs() {
-     
- }
- productSpecs()
+function productSpecs() {
+    //  Get Value from Url
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const p_ID = urlParams.get('ProductID');
+    var findby = "specs"
+    $.ajax({
+        url: 'api/index.php?p_id=' + p_ID + '&&findby=' + findby,
+        type: "GET",
+        beforeSend: function () {
+
+        },
+        success: function (data) {
+            if (data[0].status != 'false') {
+                var specs = "<tr><th colspan='2'>Specifications</th></tr>"
+                $.each(data, function (key, value) {
+                    specs += "<tr>" +
+                        "<td>"+ value.p_Spec +"</td>" +
+                        "<td>"+ value.spec_Value +"</td>" +
+                        "</tr>"
+                });
+                $('table').html(specs);
+            }
+        }
+    });
+}
+productSpecs()
