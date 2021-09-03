@@ -25,7 +25,7 @@ function fetchNewArrival() {
                 $.each(data, function (key, value) {
                     arrivals += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
-                        "<img src=" + value.thumbnail + "alt=''>" +
+                        "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
                         "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
                         "</div>" +
@@ -67,7 +67,7 @@ function GetDataByCategory(category) {
                 $.each(data, function (key, value) {
                     products += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
-                        "<img src=" + value.thumbnail + "alt=''>" +
+                        "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
                         "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
                         "</div>" +

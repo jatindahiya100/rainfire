@@ -42,6 +42,13 @@ function findby($p_ID,$findby)
             // Close Connection to database
             mysqli_close($link);
             break;
+
+            case 'product_images':
+                $sql = "SELECT * FROM p_images WHERE p_ID = '{$p_ID}'";
+                getDataFromServer($link, $sql);
+                // Close Connection to database
+                mysqli_close($link);
+                break;
     }
 }
 // Check if search value is set in url
@@ -55,4 +62,3 @@ if (!empty($_GET['p_id']) && !empty($_GET['findby'])) {
     // If search value is not set in url
     echo json_encode(array('message' => 'Bad Request', 'status' => 'false'));
 }
-?>

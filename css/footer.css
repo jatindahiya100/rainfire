@@ -1,6 +1,6 @@
 footer{
+    padding: 16px;
     width: 100%;
-    min-height: 300px;
     background: #000000;
     display: flex;
     justify-content: center;
@@ -12,11 +12,10 @@ footer .footer-content{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 footer .footer-content .sections{
-    width: 200px;
     color: white;
+    text-align: center;
 }
 footer .footer-content .sections label{
     font-weight: 600;
@@ -41,23 +40,10 @@ footer .social-handles img{
 /* If the browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
     footer .footer-content{
-        width: 98%;
-        margin-left: 1%;
-        justify-content:start;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
     }
     footer .footer-content .sections{
-        width: 48%;
-        height: 130px;
-        margin-top: 4%;
-        margin-bottom: 1%;
-        color: white;
-    }
-    footer .sections ul li{
-        padding: 4px;
-        line-height: 19px;
-    }
-    footer .footer-content .sections:nth-child(3) {
-        height: fit-content;
+        text-align: center;
     }
   }

@@ -68,10 +68,11 @@ a {
 .new-arrivals .new-arrivals-holder {
   margin-top: 1%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 16px;
+  justify-content: center;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -134,7 +135,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
   grid-gap: 16px;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .wrapper .category-wise .product-holder .item {
   width: 200px;
