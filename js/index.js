@@ -23,7 +23,7 @@ function fetchNewArrival() {
 
                 var arrivals = "";
                 $.each(data, function (key, value) {
-                    arrivals += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
+                    arrivals += "<a href=Details.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
@@ -65,7 +65,7 @@ function GetDataByCategory(category) {
 
                 var products = "";
                 $.each(data, function (key, value) {
-                    products += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
+                    products += "<a href=Details.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +

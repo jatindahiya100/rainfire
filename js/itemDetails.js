@@ -9,7 +9,7 @@ function products_Images() {
     const p_ID = urlParams.get('ProductID');
     var findby = "product_images"
     $.ajax({
-        url: 'api/index.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
@@ -73,7 +73,7 @@ function product_basic_Info() {
     const p_ID = urlParams.get('ProductID');
     var findby = "Case1"
     $.ajax({
-        url: 'api/index.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
@@ -103,7 +103,7 @@ function productSpecs() {
     const p_ID = urlParams.get('ProductID');
     var findby = "specs"
     $.ajax({
-        url: 'api/index.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
