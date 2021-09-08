@@ -47,6 +47,7 @@ body {
 }
 .flex-box #left-flex .item-details .item-info label[for="item-name"] {
   font-size: 14px;
+  word-break: break-all;
 }
 .flex-box #left-flex .item-details .item-info label[for="item-price"] {
   width: max-content;
