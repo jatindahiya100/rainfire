@@ -21,26 +21,18 @@ $(document).on("click", '.quantity', function () {
 
 
 function show_Cart_Items() {
-    var items_array = JSON.parse(localStorage.getItem('cart_items'));
-    var items = '';
-
-    items_array.forEach(Display_All_items_from_WebStorage);
-    $('#left-flex').html(items);
-
-    function Display_All_items_from_WebStorage(item,index) {
-        items += "<div class='item-details'>" +
-            "<img src='"+ items_array[index]['productImage'] +"' alt=''>" +
-            " <div class='item-info'>" +
-            "<label for='item-name'>"+items_array[index]['productName']+"</label>" +
-            "<label for='item-price'>"+ items_array[index]['productPrice'] +"</label>" +
-            "<label for='item-quantity'>" +
-            "<div class='quantity' id='minus'>-</div>" +
-            "<input class='current_qt' type='text' id='qt' value='1'>" +
-            "<div class='quantity' id='plus'>+</div>" +
-            "</label>" +
-            "</div>" +
-            "</div>"
-
-    }
+    
+        $.ajax({
+            url: 'api/get-cart-items.php',
+            type: 'GET',
+            // dataType: "JSON",
+            data: {
+                itemID: localStorage.getItem('cart_items')
+            },
+            success: function (data) {
+               $('#left-flex').html(data);
+            }
+        });
+    
 }
 show_Cart_Items();

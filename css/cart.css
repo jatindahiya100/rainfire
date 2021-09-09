@@ -33,21 +33,40 @@ body {
   margin: 16px;
   padding: 8px;
 }
+.flex-box #left-flex .item-details .item-image{
+  width: 30%;
+}
 .flex-box #left-flex .item-details img {
-  width: 100px;
+  width: 100%;
   height: 100px;
   object-fit: contain;
 }
 .flex-box #left-flex .item-details .item-info {
+  width: 70%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 .flex-box #left-flex .item-details .item-info label {
   margin-bottom: 10px;
 }
 .flex-box #left-flex .item-details .item-info label[for="item-name"] {
-  font-size: 14px;
+  font-size: 16px;
   word-break: break-all;
+}
+.flex-box #left-flex .item-details .item-info label[for="description"] {
+  width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+
+  word-break: break-word;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 16px; /* fallback */
+   max-height: 48px; /* fallback */
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }
 .flex-box #left-flex .item-details .item-info label[for="item-price"] {
   width: max-content;
@@ -187,6 +206,17 @@ body {
   .flex-box .checkout button{
     position: fixed;
     bottom: 0;
+    width: 100%;
+  }
+  .flex-box #left-flex .item-details {
+   
+    flex-direction: column;
+    
+  }
+  .flex-box #left-flex .item-details .item-image{
+    width: 100%;
+  }
+  .flex-box #left-flex .item-details .item-info {
     width: 100%;
   }
 }

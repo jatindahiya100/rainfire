@@ -138,13 +138,7 @@ $(document).on("click", "#buy", function () {
     if (cart_items.includes(p_ID)) {
         alert("Already in cart");
     } else {
-        cart_items.push({
-            'productId': p_ID,
-            'productImage': $('.product-photos img').attr('src'),
-            'productName': $('#product-name').html(),
-            'productPrice': $('label[for=dprice]').html()
-
-        });
+        cart_items.push(p_ID);
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
         alert("Product Added To Cart");
     }
