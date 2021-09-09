@@ -19,15 +19,15 @@ function axd($link, $sql)
             echo "
                 <div class='item-details'> 
                     <div class='item-image'>
-                    <a href='Details.html?ProductID={$output['p_ID']}'>
-                        <img src='{$output['thumbnail']}' alt=''>
-                    </a>
+                       
+                            <img src='{$output['thumbnail']}' alt=''>
+                        
                     </div>
                     <div class='item-info'> 
-                    <a href='Details.html?ProductID={$output['p_ID']}'>
-                        <label for='item-name'>{$output['p_Name']}</label> 
-                        <label for='description'>{$output['description']}</label>
-                    </a>
+                       
+                            <label for='item-name'>{$output['p_Name']}</label> 
+                            <label for='description'>{$output['description']}</label>
+                      
                         <label for='item-price'>Rs. {$output['p_Price']} </label> 
                         <label for='item-quantity'> 
                             <div class='quantity' id='minus'>-</div> 

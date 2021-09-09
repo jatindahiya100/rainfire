@@ -1,6 +1,16 @@
 // Loading header
 $('#header').load("header.html");
 
+// Check If cart is empty
+var check = localStorage.getItem('cart_items');
+if(check != null){
+  var x = document.getElementsByClassName("flex-box");
+  x[0].style.display = "flex";
+} else {
+    var x = document.getElementsByClassName("empty-cart");
+    x[0].style.display = "flex";
+}
+
 $(document).on("click", '.quantity', function () {
     var $clicked_id = $(this).attr("id");
     if ($clicked_id == "plus") {
@@ -16,7 +26,6 @@ $(document).on("click", '.quantity', function () {
             $qty.val(currentVal - 1);
         }
     }
-
 });
 
 
