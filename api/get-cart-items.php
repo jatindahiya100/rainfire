@@ -16,21 +16,26 @@ function axd($link, $sql)
 
             $output = mysqli_fetch_assoc($result);
 
-            echo "<div class='item-details'> 
-            <div class='item-image'>
-                <img src='{$output['thumbnail']}' alt=''> 
-            </div>
-             <div class='item-info'> 
-            <label for='item-name'>{$output['p_Name']}</label> 
-            <label for='description'>{$output['description']}</label>
-            <label for='item-price'>Rs. {$output['p_Price']} </label> 
-            <label for='item-quantity'> 
-            <div class='quantity' id='minus'>-</div> 
-            <input class='current_qt' type='text' id='qt' value='1'> 
-            <div class='quantity' id='plus'>+</div> 
-            </label> 
-            </div> 
-            </div>";
+            echo "
+                <div class='item-details'> 
+                    <div class='item-image'>
+                    <a href='Details.html?ProductID={$output['p_ID']}'>
+                        <img src='{$output['thumbnail']}' alt=''>
+                    </a>
+                    </div>
+                    <div class='item-info'> 
+                    <a href='Details.html?ProductID={$output['p_ID']}'>
+                        <label for='item-name'>{$output['p_Name']}</label> 
+                        <label for='description'>{$output['description']}</label>
+                    </a>
+                        <label for='item-price'>Rs. {$output['p_Price']} </label> 
+                        <label for='item-quantity'> 
+                            <div class='quantity' id='minus'>-</div> 
+                            <input class='current_qt' type='text' id='qt' value='1'> 
+                            <div class='quantity' id='plus'>+</div> 
+                        </label> 
+                    </div> 
+                </div>";
         } else {
             echo "No Products Found";
         }
@@ -42,6 +47,8 @@ function axd($link, $sql)
 
 foreach ($id as $value) {
     # code...
-    $sql = "SELECT p_Name,thumbnail,p_Price,description FROM products WHERE p_ID = '{$value}'";
+    $sql = "SELECT p_ID,p_Name,thumbnail,p_Price,description FROM products WHERE p_ID = '{$value}'";
     axd($link, $sql);
 }
+
+mysqli_close($link);
