@@ -11,16 +11,16 @@ if(check != null){
     x[0].style.display = "flex";
 }
 
-$(document).on("click", '.quantity', function () {
+$(document).on("click", '.edit-qt', function () {
     var $clicked_id = $(this).attr("id");
     if ($clicked_id == "plus") {
-        var $qty = $(this).closest('label').find('.current_qt');
+        var $qty = $(this).closest('.product-quantity').find('.quantity_value');
         var currentVal = parseInt($qty.val());
         if (!isNaN(currentVal)) {
             $qty.val(currentVal + 1);
         }
     } else if ($clicked_id == "minus") {
-        var $qty = $(this).closest('label').find('.current_qt');
+        var $qty = $(this).closest('.product-quantity').find('.quantity_value');
         var currentVal = parseInt($qty.val());
         if (!isNaN(currentVal) && currentVal > 1) {
             $qty.val(currentVal - 1);

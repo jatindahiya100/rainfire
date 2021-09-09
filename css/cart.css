@@ -48,15 +48,15 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-.flex-box #left-flex .item-details .item-info label {
+.flex-box #left-flex .item-details .item-info .prod_descp label{
   margin-bottom: 10px;
 }
-.flex-box #left-flex .item-details .item-info label[for="item-name"] {
+.flex-box #left-flex .item-details .item-info .prod_descp label[for="item-name"] {
   font-size: 16px;
   word-break: break-all;
   color: black;
 }
-.flex-box #left-flex .item-details .item-info label[for="description"] {
+.flex-box #left-flex .item-details .item-info .prod_descp label[for="description"] {
   width: 100%;
   font-size: 12px;
   line-height: 14px;
@@ -70,40 +70,54 @@ body {
    -webkit-line-clamp: 3; /* number of lines to show */
    -webkit-box-orient: vertical;
 }
-.flex-box #left-flex .item-details .item-info label[for="item-price"] {
-  width: max-content;
-  color: black;
-  background: rgba(0, 0, 0, 0.123);
-  line-height: 26px;
-  padding-left: 6px;
-  padding-right: 6px;
+.flex-box #left-flex .item-details .item-info .prod_price {
+  font-family: 'Karla',sans-serif;
+  font-size: 14;
   font-weight: 600;
-  border-radius: 6px;
-  font-size: 14px;
+  background: rgba(0, 0, 0, 0.055);
+  line-height: 24px;
+  width: max-content;
+  padding: 0 8px 0 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
-.flex-box #left-flex .item-details .item-info label[for="item-quantity"] {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  /* width: min-content; */
-}
-.flex-box #left-flex .item-details .item-info label[for="item-quantity"] #minus,
-#plus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(0, 0, 0);
-  color: white;
-  font-weight: 900;
+.flex-box #left-flex .item-details .item-info .prod_price input{
+  display: none;
+ }
+
+ .flex-box #left-flex .item-details .item-info .product-quantity{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .flex-box #left-flex .item-details .item-info .product-quantity button{
+   outline: none;
+   border: none;
+   width: 30px;
+   height: 30px;
+   font-weight: 800;
+   background: #000;
+   color: white;
+   font-size: 20px;
+ }
+ .flex-box #left-flex .item-details .item-info .product-quantity  input {
   width: 30px;
   height: 30px;
-}
-.flex-box #left-flex .item-details .item-info label[for="item-quantity"] input {
-  width: 40px;
   outline: none;
-  border: none;
-  text-align: center;
-}
+   border: none;
+   text-align: center;
+ }
+ .flex-box #left-flex .item-details .item-info .product-quantity .remove{
+   background: rgb(192, 12, 12);
+   color: white;
+   font-weight: 600;
+   font-family: 'Karla',sans-serif;
+   line-height: 26px;
+   padding: 0 6px 0 6px;
+   border-radius: 6px;
+ }
 
 /* CSS for right section */
 .flex-box #right-flex h3 {
