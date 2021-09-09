@@ -5,7 +5,7 @@ require 'config.php';
 
 $id = json_decode($_GET['itemID']);
 
-function axd($link, $sql)
+function fetch($link, $sql)
 {
 
     if (mysqli_query($link, $sql)) {
@@ -57,7 +57,7 @@ function axd($link, $sql)
 foreach ($id as $value) {
     # code...
     $sql = "SELECT p_ID,p_Name,thumbnail,p_Price,description FROM products WHERE p_ID = '{$value}'";
-    axd($link, $sql);
+    fetch($link, $sql);
 }
 
 mysqli_close($link);

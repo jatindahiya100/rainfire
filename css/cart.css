@@ -72,7 +72,7 @@ body {
 }
 .flex-box #left-flex .item-details .item-info .prod_price {
   font-family: 'Karla',sans-serif;
-  font-size: 14;
+  font-size: 14px;
   font-weight: 600;
   background: rgba(0, 0, 0, 0.055);
   line-height: 24px;

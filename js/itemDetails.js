@@ -137,9 +137,11 @@ $(document).on("click", "#buy", function () {
     }
     if (cart_items.includes(p_ID)) {
         alert("Already in cart");
+        window.location.href = 'Cart.html';
     } else {
         cart_items.push(p_ID);
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
         alert("Product Added To Cart");
+        window.location.href = 'Cart.html';
     }
 });
