@@ -117,7 +117,7 @@ function heroimage() {
                 $.each(data, function (key, value) {
                     banner += "<div class='slide-parts fade'>" +
                         "<img src='" + value.banner_url + "' alt=''>" +
-                        "<div class='slide-product-name'>" + value.heading + "</div><button>Purchase</button>" +
+                        "<div class='slide-product-name'>" + value.heading + "</div>" +
                         "</div>";
                 });
 

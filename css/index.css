@@ -73,7 +73,6 @@ a {
   width: 120px;
   color: rgb(0, 84, 211);
   border-radius: 26px;
-
   line-height: 36px;
   margin: 16px 0 16px 0;
   font-weight: 600;
@@ -121,14 +120,16 @@ a {
   -webkit-box-orient: vertical;
 }
 .wrapper .category-wise .product-holder .item label[for="pPrice"] {
+  line-height: 36px;
+  width: 120px;
+  border-radius: 26px;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 14px;
+  margin-bottom: 16px;
   text-align: center;
-  width: 100px;
-  background: rgb(22, 22, 22);
-  color: rgb(255, 255, 255);
-  line-height: 30px;
-  border-radius: 2px;
   font-weight: 600;
-  font-family: "karla", sans-serif;
+  /* font-family: "karla", sans-serif; */
 }
 .wrapper .category-wise {
   margin: 6% auto;
