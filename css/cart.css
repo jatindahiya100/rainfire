@@ -241,6 +241,9 @@ body {
   .flex-box .flex {
     flex: 100%;
   }
+  .flex-box .checkout img {
+    margin-bottom: 50px;
+  }
   .flex-box .checkout button{
     position: fixed;
     bottom: 0;

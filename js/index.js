@@ -27,7 +27,7 @@ function fetchNewArrival() {
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
+                        "<label for='pPrice'>" + "Rs. " + value.p_Price + "</label>" +
                         "</div>" +
                         "</a>";
 
@@ -69,7 +69,7 @@ function GetDataByCategory(category) {
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
+                        "<label for='pPrice'>" + "Rs. " + value.p_Price + "</label>" +
                         "</div>" +
                         "</a>";
 
@@ -97,7 +97,7 @@ function heroimage() {
                 var banner = "";
                 $.each(data, function (key, value) {
                     banner += "<div class='slide-parts fade'>" +
-                        "<img src=" + value.banner_url +">" +
+                        "<img src='" + value.banner_url + "' alt=''>" +
                         "<div class='slide-product-name'>" + value.heading + "</div><button>Purchase</button>" +
                         "</div>";
                 });

@@ -50,9 +50,6 @@ a {
   line-height: 20px;
   font-weight: 700;
 }
-.wrapper .featured .featured-text button:hover {
-  background-color: rgb(209, 209, 209);
-}
 .wrapper .new-arrivals {
   width: 100%;
   margin-top: 1%;
@@ -61,9 +58,16 @@ a {
   align-items: center;
 }
 .wrapper .new-arrivals h2 {
-  font-size: 18px;
-  line-height: 46px;
-  color: rgb(0, 0, 0);
+  font-family: 'karla',sans-serif;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  width: 96%;
+  background: #000;
+  display: block;
+  color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 .new-arrivals .new-arrivals-holder {
   display: flex;
@@ -80,8 +84,8 @@ a {
   flex-direction: column;
 }
 .wrapper .new-arrivals .new-arrivals-holder .item img {
-  height: 150px;
-  width: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 .wrapper .new-arrivals .new-arrivals-holder .item label[for="pName"],
@@ -100,11 +104,12 @@ a {
 .wrapper .category-wise .product-holder .item label[for="pPrice"] {
   text-align: center;
   width: 100px;
-  background: #000;
-  color: white;
+  background: rgb(22, 22, 22);
+  color: rgb(255, 255, 255);
   line-height: 30px;
-  border-radius: 4px;
-  font-weight: 700;
+  border-radius: 2px;
+  font-weight: 600;
+  font-family: 'karla',sans-serif;
 }
 .wrapper .category-wise {
   margin: 6% auto;
@@ -153,31 +158,10 @@ a {
   .wrapper .featured .featured-text button {
     width: 100px;
   }
-  .wrapper .new-arrivals .new-arrivals-holder .item {
-    width: 150px;
-  }
-  .wrapper .new-arrivals .new-arrivals-holder .item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
 }
 @media (max-width: 492px) {
   .wrapper .category-wise ul li {
     font-size: 14px;
     padding: 2px;
-  }
-  .wrapper .category-wise ul {
-    margin: 40px auto 20px auto;
-  }
-  .wrapper .category-wise .product-holder {
-    grid-template-columns: repeat(auto-fit, 140px);
-  }
-  .wrapper .category-wise .product-holder .item {
-    width: 140px;
-  }
-  .wrapper .category-wise .product-holder .item img {
-    width: 140px;
-    height: 140px;
   }
 }
