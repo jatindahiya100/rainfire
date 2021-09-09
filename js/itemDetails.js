@@ -19,7 +19,7 @@ function products_Images() {
                 var banner = "";
                 $.each(data, function (key, value) {
                     banner += "<div class='product-photos fade'>" +
-                        "<img src=" + value.url +">" +
+                        "<img src=" + value.url + ">" +
                         "</div>";
                 });
 
@@ -56,10 +56,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-$(document).on("click", ".prev" ,function () {
+$(document).on("click", ".prev", function () {
     plusSlides(-1);
 });
-$(document).on("click", ".next" ,function () {
+$(document).on("click", ".next", function () {
     plusSlides(1);
 });
 
@@ -109,12 +109,12 @@ function productSpecs() {
 
         },
         success: function (data) {
-            if (data[0].status != 'false') {
+            if (data.status != 'false') {
                 var specs = "<tr><th colspan='2'>Specifications</th></tr>"
                 $.each(data, function (key, value) {
                     specs += "<tr>" +
-                        "<td>"+ value.p_Spec +"</td>" +
-                        "<td>"+ value.spec_Value +"</td>" +
+                        "<td>" + value.p_Spec + "</td>" +
+                        "<td>" + value.spec_Value + "</td>" +
                         "</tr>"
                 });
                 $('table').html(specs);
@@ -123,3 +123,29 @@ function productSpecs() {
     });
 }
 productSpecs();
+
+let cart_items = [];
+
+$(document).on("click", "#buy", function () {
+    //  Get Value from Url
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const p_ID = urlParams.get('ProductID');
+
+    if (localStorage.getItem('cart_items')) {
+        cart_items = JSON.parse(localStorage.getItem('cart_items'));
+    }
+    if (cart_items.includes(p_ID)) {
+        alert("Already in cart");
+    } else {
+        cart_items.push({
+            'productId': p_ID,
+            'productImage': $('.product-photos img').attr('src'),
+            'productName': $('#product-name').html(),
+            'productPrice': $('label[for=dprice]').html()
+
+        });
+        localStorage.setItem('cart_items', JSON.stringify(cart_items));
+        alert("Product Added To Cart");
+    }
+});
