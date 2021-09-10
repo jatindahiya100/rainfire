@@ -2,14 +2,17 @@
 $('#header').load("header.html");
 
 // Check If cart is empty
-var check = localStorage.getItem('cart_items');
-if (check != null) {
-    var x = document.getElementsByClassName("flex-box");
-    x[0].style.display = "flex";
-} else {
-    var x = document.getElementsByClassName("empty-cart");
-    x[0].style.display = "flex";
+function check_empty_cart() {
+    var check = JSON.parse(localStorage.getItem('cart_items'));
+    if (check.length >= 1) {
+        $('.flex-box').css('display', "flex");
+        $('.empty-cart').css('display', "none");
+    } else {
+        $('.flex-box').css('display', "none");
+        $('.empty-cart').css('display', "flex");
+    }
 }
+check_empty_cart();
 
 $(document).on("click", '.edit-qt', function () {
     var $clicked_id = $(this).attr("id");
@@ -42,6 +45,7 @@ function show_Cart_Items() {
         },
         success: function (data) {
             $('#left-flex').html(data);
+            Generate_Order_Summary();
         }
     });
 
@@ -49,8 +53,22 @@ function show_Cart_Items() {
 show_Cart_Items();
 
 $(document).on("click", ".remove", function () {
-    $item_id = $(this).attr("id");
-    alert($item_id);
+    if (confirm("Remove item from cart")) {
+        $item_id = $(this).attr("id");
+        var cart_items = JSON.parse(localStorage.getItem('cart_items'));
+        if (cart_items.includes($item_id)) {
+            var index = cart_items.indexOf($item_id);
+            if (index > -1) {
+                cart_items.splice(index, 1);
+                localStorage.setItem('cart_items', JSON.stringify(cart_items));
+                $(this).closest('.item-details').slideUp();
+                show_Cart_Items();
+                check_empty_cart();
+            }
+        } else {
+            console.log("Does't exist");
+        }
+    }
 });
 
 
@@ -64,7 +82,7 @@ function Generate_Order_Summary() {
         var qty = $(this).find('.quantity_value').val();
         total += (price * qty);
     });
-    $('#amt2bepaid').text('Rs. '+ total.toLocaleString('en-IN'));
+    $('#amt2bepaid').text('Rs. ' + total.toLocaleString('en-IN'));
 
     // Calculating Total Products
     var cart_items = JSON.parse(localStorage.getItem('cart_items'));
@@ -74,6 +92,3 @@ function Generate_Order_Summary() {
 }
 
 
-setTimeout(() => {
-    Generate_Order_Summary();
-}, 1000);
