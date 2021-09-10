@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Karla Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="../index.html">Home</a>
+        <div class="container-login">
+            <div class="admin-image">
+                <img id="lock" src="images/Safe.gif" alt="">
+            </div>
+
+            <div class="login-form">
+                <input type="text" name="user_id" id="user_id" placeholder="Admin ID" autocomplete="off">
+                <input type="password" name="password" id="password" placeholder="Password" >
+                <input type="button" id="login" value="Log In">
+                <span class="alert" id="alert"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
