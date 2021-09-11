@@ -50,8 +50,10 @@ $('#menu').on("click", function () {
 $('li').on("click", function () {
     $('li.active').removeClass('active');
     $(this).addClass('active');
-    if($(this).attr("id")=='logout'){
-        sessionStorage.clear();
-        location.reload();
+    if ($(this).attr("id") == 'logout') {
+        if (confirm("Do you want to log out")) {
+            sessionStorage.clear();
+            location.reload();
+        }
     }
 })
