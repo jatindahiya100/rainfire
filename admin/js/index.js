@@ -17,7 +17,18 @@ function login() {
                 $('#alert').addClass('success').html("Checking...").show("slow");
             },
             success: function (data) {
-                alert(data);
+                if(data=='0'){
+                    setTimeout(() => {
+                        $('#alert').removeClass('success').html("Access Denied").show("slow").delay(2000).fadeOut();
+                    }, 1000);
+                } else if(data=='1') {
+                    setTimeout(() => {
+                        $('#alert').addClass('success').html("Access Granted").show("slow").delay(2000).fadeOut();
+                    }, 1000);
+                   setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                   }, 2000);
+                }
             }
         });
 
