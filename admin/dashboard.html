@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- Importing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +40,8 @@
             <div class="nav-items">
                 <img src="images/Building-bro.svg" alt="">
                 <ul>
-                    <a href="../index.html" target="iframe"><li>Site Preview <span class="material-icons">home</span></li></a>
+                    <li class="active">Home <span class="material-icons">home</span></li>
+                    <a href="../index.html" target="iframe"><li>Site Preview<span class="material-icons">remove_red_eye</span></li></a>
                     <li>Orders <span class="material-icons">category</span></li>
                     <li>Add Products <span class="material-icons">shopping_cart</span> </li>
                     <li>Google Analytics <span class="material-icons">bar_chart</span></li>
@@ -58,33 +58,7 @@
 
     <!-- Importing jquery for AJAX -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-
-        var x = 1;
-        $('#menu').on("click", function () {
-            if (x == '1') {
-                x = 0;
-                $('nav').css("width", "0");
-                $('.main').css('margin-left', '0');
-                $('.nav-items').css('display', 'none');
-                $('.main').css('width','100%');
-            } else if (x == '0') {
-                x = 1;
-                $('nav').css("width", "300px");
-                $('.main').css('margin-left', '300px');
-                setTimeout(() => {
-                    $('.nav-items').css('display', 'flex');
-                }, 200);
-                $('.main').css('width','calc(100% - 300px)');
-            }
-
-        });
-
-        $('li').on("click",function(){
-            $('li').removeClass('active');
-            $(this).addClass('active');
-        })
-    </script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

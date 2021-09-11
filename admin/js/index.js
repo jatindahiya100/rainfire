@@ -1,6 +1,11 @@
+$('#login').on("click", function () {
+    login();
+});
+
 function login() {
     var id = $('#user_id').val();
     var password = $('#password').val();
+    var array = [];
 
     if (id.length > 0 && password.length > 0) {
 
@@ -22,6 +27,9 @@ function login() {
                         $('#alert').removeClass('success').html("Access Denied").show("slow").delay(2000).fadeOut();
                     }, 1000);
                 } else if(data=='1') {
+                    array.push(id,password);
+                    var $credentials = window.btoa(array);
+                    sessionStorage.setItem('key', JSON.stringify($credentials));
                     setTimeout(() => {
                         $('#alert').addClass('success').html("Access Granted").show("slow").delay(2000).fadeOut();
                     }, 1000);
@@ -36,8 +44,3 @@ function login() {
         $('#alert').removeClass('success').html("Empty Fields").show("slow").delay(2000).fadeOut();
     }
 }
-
-
-$('#login').on("click", function () {
-    login();
-});
