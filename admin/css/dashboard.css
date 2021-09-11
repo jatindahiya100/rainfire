@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+header .left .menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+header .left h3 {
+  margin-left: 16px;
+  color: rgb(46, 46, 46);
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+header .right {
+  margin-right: 16px;
+}
+header .right h4 {
+  color: rgb(46, 46, 46);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.wrapper nav {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: fixed;
+  width: 300px;
+  transition: 0.5s;
+  height: calc(100% - 50px);
+}
+.wrapper nav .nav-items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 2s;
+}
+.wrapper nav .nav-items img {
+  height: auto;
+  width: 100%;
+}
+.wrapper nav .nav-items ul {
+  list-style: none;
+}
+.wrapper nav .nav-items ul a{
+  text-decoration: none;
+  color: #000;
+}
+.wrapper nav .nav-items ul li {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 16px 0 16px 0;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 34px;
+  border-radius: 6px;
+}
+.active{
+  opacity: 0.9;
+  transition: 1s;
+  background: #000;
+  color: white;
+}
+.main {
+  position: fixed;
+  width: calc(100% - 300px);
+  height: calc(100% - 50px);
+  margin-left: 300px;
+  transition: 0.5s;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}

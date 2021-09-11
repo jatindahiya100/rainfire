@@ -23,13 +23,27 @@ function fetchNewArrival() {
 
                 var arrivals = "";
                 $.each(data, function (key, value) {
-                    arrivals += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
-                        "<div class='item'>" +
-                        "<img src=" + value.thumbnail + "alt=''>" +
-                        "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
-                        "</div>" +
-                        "</a>";
+                    arrivals += "<div class='flex-box'>"+
+
+                    "<div class='flex50'>"+
+                        "<div class='p_image'>"+
+                            "<img src='"+ value.thumbnail +"' alt=''>"+
+                        "</div>"+
+                    "</div>"+
+                
+                    "<div class='flex50'>"+
+                        "<div class='product-info'>"+
+                            "<label for='p_Name'>"+ value.p_Name +"</label>"+
+                            "<div class='section'>"+
+                                "<label for='p_Price'>Rs. "+ value.p_Price +"</label>"+
+                                "<label for='discount'>"+ value.discount +"% OFF</label>"+
+                            "</div>"+
+                            "<label for='new-arrivals-tag'>"+ value.stock +"</label>"+
+                            "<label for='description'><strong>Description: </strong>"+value.description+"</label>"+
+                            "<button class='buy' id='"+ value.p_ID +"'>Buy now</button>"+
+                        "</div>"+
+                    "</div>"+
+                "</div>";
 
                 });
 
@@ -41,6 +55,11 @@ function fetchNewArrival() {
     });
 }
 fetchNewArrival();
+
+$(document).on("click",".buy",function(){
+    $id = $(this).attr("id");
+    window.location.href = "Details.html?ProductID="+$id;
+});
 
 // Fetch Products By Category
 var category = "All";
@@ -65,11 +84,11 @@ function GetDataByCategory(category) {
 
                 var products = "";
                 $.each(data, function (key, value) {
-                    products += "<a href=productDetails.html?ProductID=" + value.p_ID + ">" +
+                    products += "<a href=Details.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
-                        "<img src=" + value.thumbnail + "alt=''>" +
+                        "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "₹ " + value.p_Price + "</label>" +
+                        "<label for='pPrice'>" + "Rs. " + value.p_Price + "</label>" +
                         "</div>" +
                         "</a>";
 
@@ -97,8 +116,8 @@ function heroimage() {
                 var banner = "";
                 $.each(data, function (key, value) {
                     banner += "<div class='slide-parts fade'>" +
-                        "<img src=" + value.banner_url +">" +
-                        "<div class='slide-product-name'>" + value.heading + "</div><button>Purchase</button>" +
+                        "<img src='" + value.banner_url + "' alt=''>" +
+                        "<div class='slide-product-name'>" + value.heading + "</div>" +
                         "</div>";
                 });
 

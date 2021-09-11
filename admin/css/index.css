@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/wave.svg");
+  background-repeat: no-repeat;
+}
+a {
+  position: absolute;
+  right: 0;
+  top: 2%;
+  background: #000;
+  color: white;
+  line-height: 36px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "karla", sans-serif;
+}
+.wrapper .container-login {
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 600px;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.wrapper .container-login .admin-image {
+  width: 400px;
+  height: auto;
+}
+.wrapper .container-login .admin-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form input[type="text"],
+input[type="password"] {
+  font-family: "karla", sans-serif;
+  padding-left: 12px;
+  outline: none;
+  border: none;
+  line-height: 34px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: rgba(112, 112, 112, 0.137);
+}
+.login-form input[type="button"] {
+  font-family: "karla", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 12px;
+  outline: none;
+  border: none;
+  line-height: 34px;
+  margin-bottom: 20px;
+  color: white;
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+}
+.alert {
+  display: none;
+  text-align: center;
+  font-family: "karla", sans-serif;
+  color: red;
+}
+.success {
+  color: rgb(0, 135, 189);
+}
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    background-image: none;
+  }
+  .wrapper .container-login {
+    box-shadow: none;
+    width: 100%;
+  }
+  .wrapper .container-login .admin-image {
+    width: 100%;
+  }
+}

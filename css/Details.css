@@ -33,7 +33,7 @@ html,body{
 .product-gallery .product-photos img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .prev,
 .next {
@@ -71,16 +71,14 @@ html,body{
   justify-content: space-evenly;
 }
 .checkout button {
-  width: 120px;
+  border: none;
   outline: none;
-  border: 2px solid black;
+  width: 150px;
   background: #000;
   color: white;
   font-size: 14px;
-  line-height: 28px;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 6px;
+  line-height: 36px;
+  border-radius: 4px;
 }
 
 @-webkit-keyframes fade {
@@ -102,6 +100,13 @@ html,body{
 
 .section02 {
   width: 50%;
+  height: 79vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.section02::-webkit-scrollbar {
+  display: none;
 }
 .section02 h2 {
   font-size: 26px;
@@ -130,14 +135,20 @@ html,body{
   border-radius: 6px;
   background: #000000;
 }
+.section02 .price-info {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
 .section02 .price-info label[for="dprice"]{
-  line-height: 26px;
-  color: white;
-  font-size: 24px;
+  background: rgba(0, 84, 211, 0.288);
+  text-align: center;
+  width: 120px;
+  color: rgb(0, 84, 211);
+  border-radius: 26px;
+  line-height: 36px;
+  margin: 16px 0 16px 0;
   font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 6px;
-  background: #029602;
 }
 .section02 .price-info label[for="discount"]{
   font-weight: bold;
@@ -147,9 +158,8 @@ html,body{
 .section02 .price-info label[for="deleted-price"]{
   font-weight: 600;
 }
-.section02 .price-info label[for="usaved"]{
+.section02  label[for="usaved"]{
   margin-top: 8px;
-  display: block;
   font-weight: 600;
   font-size: 14px;
 }
@@ -185,9 +195,19 @@ html,body{
   line-height: 26px;
   color: rgb(43, 43, 43);
   margin-top: 20px;
+  word-break: break-all;
 }
-@media only screen and (max-width: 800px) {
- 
+
+@media only screen and (max-width: 1000px) {
+  .section02 .specifications table{
+    width: 80%;
+  }
+  .section01 {
+    width: 50%;
+  }
+  .product-gallery {
+    width: 95%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .wrapper {
@@ -202,8 +222,30 @@ html,body{
   }
   .section02{
     width: 100%;
+    padding: 16px;
+    height: fit-content;
   }
   .product-photos {
     height: 400; 
+  }
+  .section02 .specifications table{
+    margin: auto;
+  }
+  .checkout {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .checkout button {
+    width: 50%;
+    height: 50px;
+    border-radius: 0;
+  }
+  p{
+    margin-bottom: 60px;
+  }
+  .section02 h2 {
+    font-size: 22px;
+    line-height: 40px;
   }
 }
