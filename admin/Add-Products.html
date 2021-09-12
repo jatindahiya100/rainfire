@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Add-Products.css">
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Karla Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Add Products</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="thumbnail">
+                <img id="thumb-image" src="https://m.media-amazon.com/images/I/61zrP+qT7EL._SL1500_.jpg" alt="">
+                <input id="thumbnail" type="file">
+            </div>
+
+
+            <div class="details-form">
+
+                <label for="heading">ADD Product</label>
+
+                <input name="pname" id="pname" type="text" placeholder="Beats EP">
+
+                <div class="pricing">
+                    <input name="price" type="text" placeholder="Rs. 1200">
+                    <input type="text" name="discount" id="discount" placeholder="25% OFF">
+                    <input type="text" name="Orginal_price" id="Orginal_price" placeholder="Rs. 1600"><br>
+                    <input type="text" name="saved" id="saved" placeholder="Money Saved 400">
+                </div>
+
+                <textarea name="description" id="description" cols="30" rows="6"
+                    placeholder="Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore reiciendis, deleniti atque nam tempora fuga nesciunt ea maxime ut ullam, aliquid eligendi labore, sunt incidunt! Iste, quisquam? Ipsum possimus, nam perspiciatis in nobis nihil dolorum asperiores voluptatibus expedita quidem quia, impedit porro facere? Corporis, necessitatibus optio. Delectus tempore vel reiciendis."></textarea>
+
+
+                <div class="color">
+                    <label for="color-heading">Select Color</label>
+                    <div class="color-select">
+                        <input name="color-select" type="color" value="#000">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#thumb-image').on("click", function () {
+            $('#thumbnail').click();
+        });
+    </script>
+</body>
+
+</html>
