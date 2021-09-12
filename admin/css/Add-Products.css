@@ -23,8 +23,9 @@ body {
   height: 500px;
 }
 .wrapper .container .thumbnail img {
-  width: 100%;
-  height: 100%;
+  margin: 0 5%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
 }
 .wrapper .container .thumbnail #thumbnail {
@@ -62,16 +63,24 @@ body {
   font-weight: 600;
 }
 /* For Firefox */
-.wrapper .container .details-form .pricing input[name="price"]::placeholder{
+.wrapper .container .details-form .pricing input[name="price"]::placeholder {
   opacity: 1;
 }
 /* For Edge, Chrome */
-.wrapper .container .details-form .pricing input[name="price"]::-webkit-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="price"]::-webkit-input-placeholder {
   color: rgb(0, 84, 211);
   opacity: 1;
 }
 /* For Internet Explorer */
-.wrapper .container .details-form .pricing input[name="price"]:-ms-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="price"]:-ms-input-placeholder {
   color: rgb(0, 84, 211);
   opacity: 1;
 }
@@ -89,12 +98,20 @@ body {
   opacity: 1;
 }
 /* For Edge, Chrome */
-.wrapper .container .details-form .pricing input[name="discount"]::-webkit-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="discount"]::-webkit-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
 /* For Internet Explorer */
-.wrapper .container .details-form .pricing input[name="discount"]:-ms-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="discount"]:-ms-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
@@ -107,16 +124,28 @@ body {
   font-size: 16px;
 }
 /* For Firefox */
-.wrapper .container .details-form .pricing input[name="Orginal_price"]::placeholder {
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="Orginal_price"]::placeholder {
   opacity: 1;
 }
 /* For Edge, Chrome */
-.wrapper .container .details-form .pricing input[name="Orginal_price"]::-webkit-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="Orginal_price"]::-webkit-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
 /* For Internet Explorer */
-.wrapper .container .details-form .pricing input[name="Orginal_price"]:-ms-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="Orginal_price"]:-ms-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
@@ -134,12 +163,20 @@ body {
   opacity: 1;
 }
 /* For Edge, Chrome */
-.wrapper .container .details-form .pricing input[name="saved"]::-webkit-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="saved"]::-webkit-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
 /* For Internet Explorer */
-.wrapper .container .details-form .pricing input[name="saved"]:-ms-input-placeholder{
+.wrapper
+  .container
+  .details-form
+  .pricing
+  input[name="saved"]:-ms-input-placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
@@ -154,12 +191,15 @@ body {
   flex-direction: row;
   align-items: center;
 }
+.wrapper .container .details-form .color label[for="color-heading"]{
+  font-family: "Karla",sans-serif;
+}
 .wrapper .container .details-form .color .color-select {
   width: 40px;
   height: 40px;
   border-radius: 40px;
   overflow: hidden;
-  margin: 16px;
+  margin: 10px;
 }
 .wrapper
   .container
@@ -174,3 +214,54 @@ body {
   cursor: pointer;
   transform: translate(-25%, -25%);
 }
+.wrapper .container .details-form .category {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  font-family: "Karla",sans-serif;
+}
+.wrapper .container .details-form .category label{
+  font-family: "Karla",sans-serif;
+}
+.wrapper .container .details-form .specification {
+  margin-top: 26px;
+}
+.wrapper .container .details-form .specification h2 {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 10px 26px;
+  width: max-content;
+  display: inline;
+  color: rgb(0, 84, 211);
+  background: rgba(0, 84, 211, 0.288);
+}
+.wrapper .container .details-form .specification button {
+  display: inline;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(0, 84, 211);
+  background: rgba(0, 84, 211, 0.288);
+}
+.wrapper .container .details-form .specification > div {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 16px;
+}
+.wrapper .container .details-form .specification input {
+  font-family: "karla",sans-serif;
+  text-transform: capitalize;
+  outline: black;
+  padding: 6px 0 6px 4px;
+  border: 2px solid black;
+  border-radius: 10px;
+  line-height: 20px;
+}
+
+

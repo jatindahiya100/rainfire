@@ -23,7 +23,9 @@
         <div class="container">
 
             <div class="thumbnail">
-                <img id="thumb-image" src="https://m.media-amazon.com/images/I/61zrP+qT7EL._SL1500_.jpg" alt="">
+                <img id="thumb-image"
+                    src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                    alt="">
                 <input id="thumbnail" type="file">
             </div>
 
@@ -46,9 +48,46 @@
 
 
                 <div class="color">
-                    <label for="color-heading">Select Color</label>
+                    <label for="color-heading">Select Color:</label>
                     <div class="color-select">
-                        <input name="color-select" type="color" value="#000">
+                        <input name="color-select" type="color" value="#333333">
+                    </div>
+                </div>
+
+
+
+                <div class="category">
+                        
+                    <div class="item">
+                        <input type="radio" name="category" id="">
+                        <label for="">Headphones</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" id="">
+                        <label for="">Data Cables</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" id="">
+                        <label for="">Speakers</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" id="">
+                        <label for="">Batteries</label>
+                    </div>
+                    
+                </div>
+
+
+                <div class="specification">
+                    <h2>Specifications</h2>
+                    <button id="add_more">+</button>
+
+                    <div>
+                        <input type="text" class="key" placeholder="Key">
+                        <input type="text" class="value" placeholder="Value">
                     </div>
                 </div>
 
@@ -62,6 +101,15 @@
     <script>
         $('#thumb-image').on("click", function () {
             $('#thumbnail').click();
+        });
+
+        $('#add_more').on("click",function(){
+            var addition = "<div>"+
+                        "<input type='text' class='key' placeholder='Key'> "+
+                        "<input type='text' class='value' placeholder='Value'>"+
+                    "</div>";
+                $('.specification').append(addition);
+
         });
     </script>
 </body>
