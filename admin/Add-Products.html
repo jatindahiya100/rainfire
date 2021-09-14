@@ -22,11 +22,27 @@
 
         <div class="container">
 
-            <div class="thumbnail">
-                <img id="thumb-image"
-                    src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-                    alt="">
-                <input id="thumbnail" type="file">
+            <div class="left-section">
+
+                <!-- Thumbnail will be shown here -->
+                <div class="thumnail-image">
+                    <img id="thumb-image"
+                        src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                        alt="">
+                    <input id="selected_photos" type="file" hidden multiple>
+                </div>
+
+                <!-- Selected products will be shown here -->
+                <div class="product-image-preview">
+
+                    <!-- <div class="item_image">
+                        <img src="images/Building-bro.svg" alt="">
+                    </div> -->
+
+                </div>
+
+                <button id="add-product">Save</button>
+
             </div>
 
 
@@ -39,8 +55,6 @@
                 <div class="pricing">
                     <input name="price" type="text" placeholder="Rs. 1200">
                     <input type="text" name="discount" id="discount" placeholder="25% OFF">
-                    <input type="text" name="Orginal_price" id="Orginal_price" placeholder="Rs. 1600"><br>
-                    <input type="text" name="saved" id="saved" placeholder="Money Saved 400">
                 </div>
 
                 <textarea name="description" id="description" cols="30" rows="6"
@@ -57,27 +71,27 @@
 
 
                 <div class="category">
-                        
+
                     <div class="item">
-                        <input type="radio" name="category" id="">
+                        <input type="radio" name="category" value="Headphones">
                         <label for="">Headphones</label>
                     </div>
 
                     <div class="item">
-                        <input type="radio" name="category" id="">
+                        <input type="radio" name="category" value="Data Cables">
                         <label for="">Data Cables</label>
                     </div>
 
                     <div class="item">
-                        <input type="radio" name="category" id="">
+                        <input type="radio" name="category" value="Speakers">
                         <label for="">Speakers</label>
                     </div>
 
                     <div class="item">
-                        <input type="radio" name="category" id="">
+                        <input type="radio" name="category" value="Batteries">
                         <label for="">Batteries</label>
                     </div>
-                    
+
                 </div>
 
 
@@ -85,7 +99,7 @@
                     <h2>Specifications</h2>
                     <button id="add_more">+</button>
 
-                    <div>
+                    <div class="spec-div">
                         <input type="text" class="key" placeholder="Key">
                         <input type="text" class="value" placeholder="Value">
                     </div>
@@ -98,20 +112,7 @@
 
     <!-- Importing jquery for AJAX -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $('#thumb-image').on("click", function () {
-            $('#thumbnail').click();
-        });
-
-        $('#add_more').on("click",function(){
-            var addition = "<div>"+
-                        "<input type='text' class='key' placeholder='Key'> "+
-                        "<input type='text' class='value' placeholder='Value'>"+
-                    "</div>";
-                $('.specification').append(addition);
-
-        });
-    </script>
+    <script src="js/Add-Products.js"></script>
 </body>
 
 </html>
