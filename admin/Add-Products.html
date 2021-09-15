@@ -53,8 +53,16 @@
                 <input name="pname" id="pname" type="text" placeholder="Beats EP">
 
                 <div class="pricing">
-                    <input name="price" type="text" placeholder="Rs. 1200">
-                    <input type="text" name="discount" id="discount" placeholder="25% OFF">
+
+                    <div class="pricing-01">
+                        <label for="Rs.">Rs.</label>
+                        <input name="price" type="text" placeholder="12,000" autocomplete="off" maxlength="5">
+                    </div>
+
+                    <div class="pricing-02">
+                        <input type="text" name="discount" id="discount" placeholder="100" maxlength="3">
+                        <label for="% OFF">% OFF</label>
+                    </div>
                 </div>
 
                 <textarea name="description" id="description" cols="30" rows="6"

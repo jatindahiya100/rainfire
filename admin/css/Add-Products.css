@@ -42,12 +42,15 @@ body {
   overflow-x: auto;
   align-items: center;
 }
-.wrapper .container .left-section .product-image-preview::-webkit-scrollbar{
+.wrapper .container .left-section .product-image-preview::-webkit-scrollbar {
   background-color: transparent;
   height: 6px;
 }
-.wrapper .container .left-section .product-image-preview::-webkit-scrollbar-thumb{
-  background:rgba(122, 122, 122, 0.596);
+.wrapper
+  .container
+  .left-section
+  .product-image-preview::-webkit-scrollbar-thumb {
+  background: rgba(122, 122, 122, 0.596);
   border-radius: 6px;
 }
 .wrapper .container .left-section .product-image-preview img {
@@ -85,18 +88,33 @@ body {
   line-height: 56px;
   font-family: "Karla", sans-serif;
 }
+.wrapper .container .details-form .pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper .container .details-form .pricing .pricing-01 {
+  width: 152px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: rgb(0, 84, 211);
+  background: rgba(0, 84, 211, 0.288);
+  padding: 10px 26px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
 .wrapper .container .details-form .pricing input[name="price"] {
+  width: 80px;
   outline: none;
   border: none;
-  background: rgba(0, 84, 211, 0.288);
-  text-align: center;
-  width: 120px;
   color: rgb(0, 84, 211);
-  border-radius: 26px;
-  font-size: 18px;
-  line-height: 36px;
-  margin: 16px 0 16px 0;
+  background-color: transparent;
   font-weight: 600;
+  font-size: 18px;
+  padding-left: 6px;
 }
 /* For Firefox */
 .wrapper .container .details-form .pricing input[name="price"]::placeholder {
@@ -120,13 +138,20 @@ body {
   color: rgb(0, 84, 211);
   opacity: 1;
 }
+.wrapper .container .details-form .pricing .pricing-02 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
 .wrapper .container .details-form .pricing input[name="discount"] {
   outline: none;
   border: none;
-  width: 80px;
+  width: 36px;
   font-weight: bold;
-  margin-left: 10px;
-  margin-right: 10px;
   font-size: 18px;
 }
 /* For Firefox */
@@ -152,70 +177,6 @@ body {
   opacity: 1;
 }
 
-.wrapper .container .details-form .pricing input[name="Orginal_price"] {
-  outline: none;
-  border: none;
-  text-decoration: line-through;
-  font-weight: 600;
-  font-size: 16px;
-}
-/* For Firefox */
-.wrapper
-  .container
-  .details-form
-  .pricing
-  input[name="Orginal_price"]::placeholder {
-  opacity: 1;
-}
-/* For Edge, Chrome */
-.wrapper
-  .container
-  .details-form
-  .pricing
-  input[name="Orginal_price"]::-webkit-input-placeholder {
-  color: rgb(0, 0, 0);
-  opacity: 1;
-}
-/* For Internet Explorer */
-.wrapper
-  .container
-  .details-form
-  .pricing
-  input[name="Orginal_price"]:-ms-input-placeholder {
-  color: rgb(0, 0, 0);
-  opacity: 1;
-}
-
-.wrapper .container .details-form .pricing input[name="saved"] {
-  outline: none;
-  border: none;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  font-weight: 600;
-  font-size: 14px;
-}
-/* For Firefox */
-.wrapper .container .details-form .pricing input[name="saved"]::placeholder {
-  opacity: 1;
-}
-/* For Edge, Chrome */
-.wrapper
-  .container
-  .details-form
-  .pricing
-  input[name="saved"]::-webkit-input-placeholder {
-  color: rgb(0, 0, 0);
-  opacity: 1;
-}
-/* For Internet Explorer */
-.wrapper
-  .container
-  .details-form
-  .pricing
-  input[name="saved"]:-ms-input-placeholder {
-  color: rgb(0, 0, 0);
-  opacity: 1;
-}
 .wrapper .container .details-form textarea[name="description"] {
   outline: none;
   border: none;
@@ -227,8 +188,8 @@ body {
   flex-direction: row;
   align-items: center;
 }
-.wrapper .container .details-form .color label[for="color-heading"]{
-  font-family: "Karla",sans-serif;
+.wrapper .container .details-form .color label[for="color-heading"] {
+  font-family: "Karla", sans-serif;
 }
 .wrapper .container .details-form .color .color-select {
   width: 40px;
@@ -254,10 +215,10 @@ body {
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
-  font-family: "Karla",sans-serif;
+  font-family: "Karla", sans-serif;
 }
-.wrapper .container .details-form .category label{
-  font-family: "Karla",sans-serif;
+.wrapper .container .details-form .category label {
+  font-family: "Karla", sans-serif;
 }
 .wrapper .container .details-form .specification {
   margin-top: 26px;
@@ -291,7 +252,7 @@ body {
   padding-top: 16px;
 }
 .wrapper .container .details-form .specification input {
-  font-family: "karla",sans-serif;
+  font-family: "karla", sans-serif;
   text-transform: capitalize;
   outline: black;
   padding: 6px 0 6px 4px;
@@ -299,5 +260,3 @@ body {
   border-radius: 10px;
   line-height: 20px;
 }
-
-
