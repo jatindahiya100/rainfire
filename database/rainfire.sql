@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2021 at 01:16 PM
+-- Generation Time: Sep 15, 2021 at 09:57 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -153,7 +153,8 @@ ALTER TABLE `heroimage`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`p_ID`);
+  ADD PRIMARY KEY (`p_ID`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `p_images`
@@ -180,6 +181,12 @@ ALTER TABLE `heroimage`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `p_images`
 --
 ALTER TABLE `p_images`
@@ -189,7 +196,7 @@ ALTER TABLE `p_images`
 -- AUTO_INCREMENT for table `specificaions`
 --
 ALTER TABLE `specificaions`
-  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- Constraints for dumped tables
