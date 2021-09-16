@@ -42,18 +42,24 @@ $('#add-product').on("click", function () {
                 productDetails: details,
                 specifications: JSON.stringify(specs)
             },
+            beforeSend: function () {
+
+            },
             success: function (response) {
-                console.log(response);
-               $('.product-image-preview').html(response);
+                if (response == "Inserted") {
+                    $('.progress').addClass('completed');
+                    $('.message').addClass('success').html("Product Added").fadeIn();
+                }
             }
         });
 
     } else if (details == "100") {
-        alert("Some Product Details Have Empty Fields");
+        $('.message').removeClass('success').html("Empty Fields").fadeIn().delay(3000).fadeOut();
     } else if (details == "102") {
-        alert("Price or Discount is not numeric");
+        $('.message').removeClass('success').html("Price & Discount must be numeric").slideDown().delay(3000).fadeOut();
     } else if (specs == "101") {
-        alert("No Specifications Are Given")
+        $('.message').removeClass('success').html("Product Specifications are must").slideDown().delay(3000).fadeOut();
+
     }
 });
 
@@ -89,7 +95,7 @@ function get_Specs_from_user() {
         var spec_val = $(this).find('.value').val().trim();
 
         if (spec_key.length > 0 && spec_val.length > 0) {
-            var arr = [spec_key,spec_val];
+            var arr = [spec_key, spec_val];
             spec_array.push(arr);
         }
     });

@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <hr class="progress">
     <div class="wrapper">
 
         <div class="container">
@@ -29,19 +30,12 @@
                     <img id="thumb-image"
                         src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
                         alt="">
-                    <input id="selected_photos" type="file" hidden>
-                </div>
-
-                <!-- Selected products will be shown here -->
-                <div class="product-image-preview">
-
-                    <!-- <div class="item_image">
-                        <img src="images/Building-bro.svg" alt="">
-                    </div> -->
-
+                   <form> <input id="selected_photos" name="image" type="file" hidden multiple></form>
                 </div>
 
                 <button id="add-product">Save</button>
+
+                <span class="message"></span>
 
             </div>
 
