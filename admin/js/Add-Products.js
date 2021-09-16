@@ -36,7 +36,7 @@ $('#add-product').on("click", function () {
 
         // AJAX Call to transfer data
         $.ajax({
-            url: 'api/add-product.php',
+            url: 'api/PDO-config.php',
             type: 'POST',
             data: {
                 productDetails: details,
