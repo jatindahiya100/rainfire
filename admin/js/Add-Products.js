@@ -52,8 +52,8 @@ $('#add-product').on("click", function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                console.log(response);
                 if (response == "Inserted") {
+                    console.log(response);
                     $('.progress').addClass('completed');
                     $('.message').addClass('success').html("Product Added").fadeIn();
                 }
