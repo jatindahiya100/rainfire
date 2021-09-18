@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2021 at 01:40 PM
+-- Generation Time: Sep 18, 2021 at 08:22 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -70,14 +70,13 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `p_ID`, `p_Name`, `thumbnail`, `p_Price`, `original_price`, `discount`, `money_saved`, `added_on`, `category`, `rating`, `stock`, `description`) VALUES
-(58, '180921050216', 'beats', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg', 12000, 15840, 32, 3840, '2021-09-18', 'Headphones', 4, 'In Stock', 'rainfire/products_gallery/Admin-Dashboard.pngrainfire/products_gallery/Admin-Dashboard.png'),
-(2, 'SEPT01', 'Beats EP On-Ear Headphones', 'https://i.pcmag.com/imagery/reviews/046UyKcU86Megq3Eenq0sbo-1.1597063431.fit_lpad.size_625x365.jpg', 2200, 3400, 35, 1200, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(3, 'SEPT02', 'HP Headphones', 'https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/b/h/bh10-2.jpg', 3800, 4800, 30, 1000, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(4, 'SEPT03', 'Combo pack', 'https://cf.shopee.ph/file/784dee9669f28275a21d24655f87a31d', 5800, 6800, 45, 1800, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(5, 'SEPT04', 'Rainfire Comet-X', 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14444014/2021/6/16/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.jpg', 5200, 5600, 10, 400, '2021-09-03', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(6, 'SEPT05', 'Rainfire Stylo Girl', 'https://cdn.mos.cms.futurecdn.net/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg', 2400, 3800, 40, 1400, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(7, 'SEPT06', 'Rainfire Meteor Hellfire', 'https://m.media-amazon.com/images/I/61zrP+qT7EL._SL1500_.jpg', 8200, 12000, 42, 4200, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
-(8, 'SEPT07', 'Rainfire wired babypod', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg', 1200, 1600, 20, 400, '2021-09-03', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!');
+(1, '180921105239', 'Rainfire Helio Comet', 'products_gallery/HP-BH10_TT_2_From_TPS_technologies_1024x1024.webp', 12999, 18849, 45, 5850, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(2, '180921105638', 'Comet-X Hemisphere', 'products_gallery/sennheiser-hd-350bt-on-ear-wireless-headphones-black-1_1.jpg', 19000, 23750, 25, 4750, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(3, '180921105955', 'Rainfire Beast', 'products_gallery/61zrP+qT7EL._SL1500_.jpg', 9999, 11199, 12, 1200, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(4, '180921110335', 'Stylo mafia thunder', 'products_gallery/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg', 12900, 14448, 12, 1548, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(5, '180921110623', 'Rainfire-HeX Handsfree', 'products_gallery/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg', 2200, 3190, 45, 990, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(6, '180921111032', 'Axe Stormbreaker - Rainfire', 'products_gallery/784dee9669f28275a21d24655f87a31d.jpeg', 5500, 6710, 22, 1210, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
+(7, '180921111320', 'Rainfire Bettle Box', 'products_gallery/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.webp', 12000, 15600, 30, 3600, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.');
 
 -- --------------------------------------------------------
 
@@ -96,18 +95,17 @@ CREATE TABLE `p_images` (
 --
 
 INSERT INTO `p_images` (`id`, `p_ID`, `url`) VALUES
-(1, 'SEPT01', 'https://i.pcmag.com/imagery/reviews/046UyKcU86Megq3Eenq0sbo-1.1597063431.fit_lpad.size_625x365.jpg'),
-(2, 'SEPT01', 'https://azcd.harveynorman.com.au/media/catalog/product/s/e/sennheiser-hd-350bt-on-ear-wireless-headphones-black-1_1.jpg'),
-(3, 'SEPT01', 'https://cdn.shopify.com/s/files/1/3013/1908/products/LCD-1_PS3_2000x.jpg?v=1584599044'),
-(4, 'SEPT02', 'https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/b/h/bh10-2.jpg'),
-(5, 'SEPT02', 'https://m.media-amazon.com/images/I/51uogu0uxXL._SL1500_.jpg'),
-(6, 'SEPT02', 'https://cdn.shopify.com/s/files/1/1780/7915/products/HP-BH10_TT_2_From_TPS_technologies_1024x1024.jpg?v=1604516506'),
-(7, 'SEPT03', 'https://cf.shopee.ph/file/784dee9669f28275a21d24655f87a31d'),
-(8, 'SEPT04', 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14444014/2021/6/16/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.jpg'),
-(9, 'SEPT05', 'https://cdn.mos.cms.futurecdn.net/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg\r\n'),
-(10, 'SEPT06', 'https://m.media-amazon.com/images/I/61zrP+qT7EL._SL1500_.jpg'),
-(11, 'SEPT07', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg'),
-(29, '180921050216', '/opt/lampp/htdocs/rainfire/products_gallery/Admin-Dashboard.png');
+(1, '180921105239', 'products_gallery/HP-BH10_TT_2_From_TPS_technologies_1024x1024.webp'),
+(2, '180921105239', 'products_gallery/bh10-2.webp'),
+(3, '180921105239', 'products_gallery/51uogu0uxXL._SL1500_.jpg'),
+(4, '180921105638', 'products_gallery/sennheiser-hd-350bt-on-ear-wireless-headphones-black-1_1.jpg'),
+(5, '180921105638', 'products_gallery/LCD-1_PS3_2000x.webp'),
+(6, '180921105638', 'products_gallery/046UyKcU86Megq3Eenq0sbo-1.webp'),
+(7, '180921105955', 'products_gallery/61zrP+qT7EL._SL1500_.jpg'),
+(8, '180921110335', 'products_gallery/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg'),
+(9, '180921110623', 'products_gallery/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg'),
+(10, '180921111032', 'products_gallery/784dee9669f28275a21d24655f87a31d.jpeg'),
+(11, '180921111320', 'products_gallery/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.webp');
 
 -- --------------------------------------------------------
 
@@ -127,20 +125,37 @@ CREATE TABLE `specificaions` (
 --
 
 INSERT INTO `specificaions` (`serial_no`, `product_ID`, `p_Spec`, `spec_Value`) VALUES
-(1, 'SEPT01', 'Color', 'Black'),
-(2, 'SEPT01', 'Connectivity', 'Wireless'),
-(3, 'SEPT01', 'Battery', '2200 mAh'),
-(4, 'SEPT01', 'Battery Life', '22 hours'),
-(5, 'SEPT01', 'Dolby Atmos', 'Yes'),
-(6, 'SEPT01', 'Charger', 'Yes'),
-(7, 'SEPT01', 'Audio Controls', 'Yes'),
-(8, 'SEPT01', 'Water Resistant', 'No'),
-(9, 'SEPT02', 'Color', 'black'),
-(10, 'SEPT02', 'Connectivity', 'Bluetooth-Wireless'),
-(11, 'SEPT02', 'Battery Capacity', '1100 mAh'),
-(12, 'SEPT02', 'Battery Life', '28 hrs'),
-(13, 'SEPT02', 'Dolby Atmos', 'Yes'),
-(136, '180921050216', 's', 'sd');
+(1, '180921105239', 'Audio Jack', '3mm'),
+(2, '180921105239', 'Charger', 'Yes'),
+(3, '180921105239', 'Volume Control', 'Manual'),
+(4, '180921105239', 'Battery Life', '8 hrs'),
+(5, '180921105239', 'Battery Capacity', '2200 mah'),
+(6, '180921105638', 'Connectivity', 'Bluetooth / Wifi'),
+(7, '180921105638', 'Charging', 'Wireless'),
+(8, '180921105638', 'Battery', '2200 mah'),
+(9, '180921105638', 'Standby Capacity', '24 hrs'),
+(10, '180921105955', 'Connectivity', 'wireless'),
+(11, '180921105955', 'controls', 'volume up, down, play, pause etc'),
+(12, '180921105955', 'material', 'leather coated foam'),
+(13, '180921105955', 'led light', 'turn on/OFF indicator'),
+(14, '180921110335', 'Sound', 'dolby atmos'),
+(15, '180921110335', 'charging', 'wireless'),
+(16, '180921110335', 'voice', 'hD 3.0 ultra mike'),
+(17, '180921110335', 'battery life', '28 hrs'),
+(18, '180921110335', 'battery capacity', '4000 mah'),
+(19, '180921110623', 'audio jack', '3.0 mm'),
+(20, '180921110623', 'sound', 'surround sound'),
+(21, '180921110623', 'packing', 'Hard case covering'),
+(22, '180921111032', 'sound', 'dolby atmos'),
+(23, '180921111032', 'charging', 'wireless'),
+(24, '180921111032', 'connectivity', 'wireless'),
+(25, '180921111032', 'battery', '6000 mah'),
+(26, '180921111032', 'bass boost', 'yes'),
+(27, '180921111032', 'controls', 'volume up & down, oN/OFF'),
+(28, '180921111320', 'connectivity', 'wireless'),
+(29, '180921111320', 'charging', 'fast charging'),
+(30, '180921111320', 'charger', '2 ampere'),
+(31, '180921111320', 'standy', '30 hrs');
 
 --
 -- Indexes for dumped tables
@@ -187,19 +202,19 @@ ALTER TABLE `heroimage`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `p_images`
 --
 ALTER TABLE `p_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `specificaions`
 --
 ALTER TABLE `specificaions`
-  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Constraints for dumped tables
