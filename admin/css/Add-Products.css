@@ -264,3 +264,28 @@ body {
   border-radius: 10px;
   line-height: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .wrapper .container .left-section {
+    position: relative;
+    width: 100%;
+  }
+  .wrapper .container .details-form {
+    margin-left: 0;
+  }
+  .wrapper .container .details-form .specification > div {
+    flex-wrap: wrap;
+  }
+  .wrapper .container .details-form .specification input {
+    width: 100%;
+    margin: 8px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper .container .details-form .category {
+    flex-direction: column;
+  }
+  .wrapper .container .details-form .category .item {
+    margin: 8px;
+  }
+}
