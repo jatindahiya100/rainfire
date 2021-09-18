@@ -2,7 +2,7 @@ $('#thumb-image').on("click", function () {
     $('input[type="file"]').click();
 });
 
-$("#selected_photos").on("change", function () {
+$("#files").on("change", function () {
     displayImage(this);
 });
 
@@ -29,8 +29,17 @@ $('#add_more').on("click", function () {
 
 
 $('#add-product').on("click", function () {
+    var form_data = new FormData();
     var details = get_pDetails_From_User();
     var specs = get_Specs_from_user();
+
+    // Read selected files
+    var totalfiles = document.getElementById('files').files.length;
+    for (var index = 0; index < totalfiles; index++) {
+        form_data.append("files[]", document.getElementById('files').files[index]);
+    }
+    form_data.append("productDetails", JSON.stringify(details));
+    form_data.append("specifications", JSON.stringify(specs));
 
     if (details != "100" && details != "102" && specs != "101") {
 
@@ -38,18 +47,16 @@ $('#add-product').on("click", function () {
         $.ajax({
             url: 'api/PDO-config.php',
             type: 'POST',
-            data: {
-                productDetails: details,
-                specifications: JSON.stringify(specs)
-            },
-            beforeSend: function () {
-
-            },
+            data: form_data,
+            dataType: 'json',
+            contentType: false,
+            processData: false,
             success: function (response) {
-                if (response == "Inserted") {
-                    $('.progress').addClass('completed');
-                    $('.message').addClass('success').html("Product Added").fadeIn();
-                }
+                console.log(response);
+                // if (response == "Inserted") {
+                //     $('.progress').addClass('completed');
+                //     $('.message').addClass('success').html("Product Added").fadeIn();
+                // }
             }
         });
 
@@ -74,9 +81,9 @@ function get_pDetails_From_User() {
     if (pname.length > 0 && price.length > 0 && discount_percentage.length > 0 && description.length > 0 && product_color.length > 0 && category.length > 0) {
 
         if (!isNaN(price) && !isNaN(discount_percentage)) {
-            const obj = { pname: pname, price: price, discount_percentage: discount_percentage, description: description, product_color: product_color, category: category };
+            var array = [pname, price, discount_percentage, description, product_color, category];
 
-            return obj;
+            return array;
         } else {
             var error = 102;
             return error;
