@@ -41,7 +41,7 @@ $('#add-product').on("click", function () {
     form_data.append("productDetails", JSON.stringify(details));
     form_data.append("specifications", JSON.stringify(specs));
 
-    if (details != "100" && details != "102" && specs != "101") {
+    if (details != "100" && details != "102" && specs != "101" && totalfiles > 0 ) {
 
         // AJAX Call to transfer data
         $.ajax({
@@ -56,6 +56,8 @@ $('#add-product').on("click", function () {
                     console.log(response);
                     $('.progress').addClass('completed');
                     $('.message').addClass('success').html("Product Added").fadeIn();
+                } else {
+                    $('.message').removeClass('success').html(response).fadeIn();
                 }
             }
         });
@@ -66,7 +68,8 @@ $('#add-product').on("click", function () {
         $('.message').removeClass('success').html("Price & Discount must be numeric").slideDown().delay(3000).fadeOut();
     } else if (specs == "101") {
         $('.message').removeClass('success').html("Product Specifications are must").slideDown().delay(3000).fadeOut();
-
+    } else if(totalfiles < 1){
+        $('.message').removeClass('success').html("Select Photos").slideDown().delay(3000).fadeOut();
     }
 });
 

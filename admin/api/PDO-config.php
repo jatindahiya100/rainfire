@@ -49,7 +49,7 @@ try {
 
                     // Upload file
                     if (move_uploaded_file($_FILES['files']['tmp_name'][$index], $path)) {
-                        $files_arr[] = realpath($path);
+                        $files_arr[] = "products_gallery/" . $filename;
                     }
                 }
             }
