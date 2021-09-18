@@ -41,7 +41,7 @@ $('#add-product').on("click", function () {
     form_data.append("productDetails", JSON.stringify(details));
     form_data.append("specifications", JSON.stringify(specs));
 
-    if (details != "100" && details != "102" && specs != "101" && totalfiles > 0 ) {
+    if (details != "100" && details != "102" && specs != "101" && totalfiles > 0) {
 
         // AJAX Call to transfer data
         $.ajax({
@@ -53,9 +53,20 @@ $('#add-product').on("click", function () {
             processData: false,
             success: function (response) {
                 if (response == "Inserted") {
-                    console.log(response);
                     $('.progress').addClass('completed');
                     $('.message').addClass('success').html("Product Added").fadeIn();
+                    $('#pname').val("");
+                    $('input[name="price"]').val("");
+                    $('input[name="discount"]').val("");
+                    $('textarea[name="description"]').val("");
+                    $('#files').val("");
+                    $('#thumb-image').attr("src", "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg");
+
+                    $('.spec-div').each(function () {
+                        $(this).find('.key').val("");
+                        $(this).find('.value').val("");
+                    });
+                    
                 } else {
                     $('.message').removeClass('success').html(response).fadeIn();
                 }
@@ -68,7 +79,7 @@ $('#add-product').on("click", function () {
         $('.message').removeClass('success').html("Price & Discount must be numeric").slideDown().delay(3000).fadeOut();
     } else if (specs == "101") {
         $('.message').removeClass('success').html("Product Specifications are must").slideDown().delay(3000).fadeOut();
-    } else if(totalfiles < 1){
+    } else if (totalfiles < 1) {
         $('.message').removeClass('success').html("Select Photos").slideDown().delay(3000).fadeOut();
     }
 });

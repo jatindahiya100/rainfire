@@ -79,7 +79,7 @@ try {
             $original_price = ($price * $discount_percentage) / 100 + $price;
             $money_saved = ($original_price - $price);
             $rating = 4;
-            $thumbnail = 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg';
+            $thumbnail = $files_arr[0];
 
 
             $sql1 = $conn->prepare("INSERT INTO products (p_ID, p_Name, thumbnail, p_Price, original_price, discount, money_saved, category, rating, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
