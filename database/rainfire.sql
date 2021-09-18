@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 16, 2021 at 01:59 PM
+-- Generation Time: Sep 18, 2021 at 01:33 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -70,6 +70,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `p_ID`, `p_Name`, `thumbnail`, `p_Price`, `original_price`, `discount`, `money_saved`, `added_on`, `category`, `rating`, `stock`, `description`) VALUES
+(58, '180921050216', 'beats', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg', 12000, 15840, 32, 3840, '2021-09-18', 'Headphones', 4, 'In Stock', 'rainfire/products_gallery/Admin-Dashboard.pngrainfire/products_gallery/Admin-Dashboard.png'),
 (2, 'SEPT01', 'Beats EP On-Ear Headphones', 'https://i.pcmag.com/imagery/reviews/046UyKcU86Megq3Eenq0sbo-1.1597063431.fit_lpad.size_625x365.jpg', 2200, 3400, 35, 1200, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
 (3, 'SEPT02', 'HP Headphones', 'https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/b/h/bh10-2.jpg', 3800, 4800, 30, 1000, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
 (4, 'SEPT03', 'Combo pack', 'https://cf.shopee.ph/file/784dee9669f28275a21d24655f87a31d', 5800, 6800, 45, 1800, '2021-09-03', 'Headphones', 5, 'In Stock', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque accusamus harum, quasi ipsam, quam aspernatur sint nisi, fugit omnis consequuntur voluptates. Tempora tenetur corporis eos eius voluptates, velit exercitationem labore!'),
@@ -105,7 +106,8 @@ INSERT INTO `p_images` (`id`, `p_ID`, `url`) VALUES
 (8, 'SEPT04', 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14444014/2021/6/16/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.jpg'),
 (9, 'SEPT05', 'https://cdn.mos.cms.futurecdn.net/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg\r\n'),
 (10, 'SEPT06', 'https://m.media-amazon.com/images/I/61zrP+qT7EL._SL1500_.jpg'),
-(11, 'SEPT07', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg');
+(11, 'SEPT07', 'https://idestiny.in/wp-content/uploads/2020/12/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg'),
+(29, '180921050216', '/opt/lampp/htdocs/rainfire/products_gallery/Admin-Dashboard.png');
 
 -- --------------------------------------------------------
 
@@ -137,7 +139,8 @@ INSERT INTO `specificaions` (`serial_no`, `product_ID`, `p_Spec`, `spec_Value`) 
 (10, 'SEPT02', 'Connectivity', 'Bluetooth-Wireless'),
 (11, 'SEPT02', 'Battery Capacity', '1100 mAh'),
 (12, 'SEPT02', 'Battery Life', '28 hrs'),
-(13, 'SEPT02', 'Dolby Atmos', 'Yes');
+(13, 'SEPT02', 'Dolby Atmos', 'Yes'),
+(136, '180921050216', 's', 'sd');
 
 --
 -- Indexes for dumped tables
@@ -184,19 +187,19 @@ ALTER TABLE `heroimage`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `p_images`
 --
 ALTER TABLE `p_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `specificaions`
 --
 ALTER TABLE `specificaions`
-  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- Constraints for dumped tables
