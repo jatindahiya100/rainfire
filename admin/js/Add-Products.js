@@ -53,10 +53,10 @@ $('#add-product').on("click", function () {
             processData: false,
             success: function (response) {
                 console.log(response);
-                // if (response == "Inserted") {
-                //     $('.progress').addClass('completed');
-                //     $('.message').addClass('success').html("Product Added").fadeIn();
-                // }
+                if (response == "Inserted") {
+                    $('.progress').addClass('completed');
+                    $('.message').addClass('success').html("Product Added").fadeIn();
+                }
             }
         });
 
