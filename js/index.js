@@ -35,7 +35,7 @@ function fetchNewArrival() {
                         "<div class='product-info'>"+
                             "<label for='p_Name'>"+ value.p_Name +"</label>"+
                             "<div class='section'>"+
-                                "<label for='p_Price'>Rs. "+ value.p_Price +"</label>"+
+                                "<label for='p_Price'>Rs. "+ parseInt(value.p_Price).toLocaleString('en-IN') +"</label>"+
                                 "<label for='discount'>"+ value.discount +"% OFF</label>"+
                             "</div>"+
                             "<label for='new-arrivals-tag'>"+ value.stock +"</label>"+
@@ -88,7 +88,7 @@ function GetDataByCategory(category) {
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='pPrice'>" + "Rs. " + value.p_Price + "</label>" +
+                        "<label for='pPrice'>" + "Rs. " + parseInt(value.p_Price).toLocaleString('en-IN') + "</label>" +
                         "</div>" +
                         "</a>";
 

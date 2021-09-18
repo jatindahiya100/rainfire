@@ -84,10 +84,10 @@ function product_basic_Info() {
                 $('#product-name').html(data[0].p_Name);
                 $('label[for=ratings]').html(data[0].rating);
                 $('label[for=stock]').html(data[0].stock);
-                $('label[for=dprice]').html("Rs. " + data[0].p_Price);
+                $('label[for=dprice]').html("Rs. " + parseInt(data[0].p_Price).toLocaleString('en-IN'));
                 $('label[for=discount]').html(data[0].discount + "% Off");
-                $('label[for=deleted-price]').html("<del> Rs. " + data[0].original_price + "</del>");
-                $('label[for=usaved]').html("Money Saved Rs. " + "<strong>" + data[0].money_saved + "</strong>");
+                $('label[for=deleted-price]').html("<del> Rs. " + parseInt(data[0].original_price).toLocaleString('en-IN') + "</del>");
+                $('label[for=usaved]').html("Money Saved Rs. " + "<strong>" + parseInt(data[0].money_saved).toLocaleString('en-IN') + "</strong>");
                 $('#description').append(data[0].description);
                 $('.basic_info').show();
             }

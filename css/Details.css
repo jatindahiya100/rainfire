@@ -181,13 +181,17 @@ html,body{
   height: 40px;
 }
 .section02 .specifications table tr td:first-child{
+  text-transform: capitalize;
   color: rgb(22, 22, 22);
   font-weight: 700;
   font-size: 14px;
   text-align: start;
 }
 .section02 .specifications table tr td {
+  width: 50%;
+  text-transform: capitalize;
   padding: 2px;
+  font-size: 14px;
 }
 
 #description {

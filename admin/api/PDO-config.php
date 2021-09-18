@@ -39,7 +39,7 @@ try {
                 $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
                 // Valid image extension
-                $valid_ext = array("png", "jpeg", "jpg");
+                $valid_ext = array("png", "jpeg", "jpg", "webp");
 
                 // Check extension
                 if (in_array($ext, $valid_ext)) {
