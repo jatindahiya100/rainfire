@@ -16,7 +16,7 @@ function check_empty_cart() {
         }
         return empty;
     } else {
-        empty ='true';
+        empty = 'true';
         $('.flex-box').css('display', "none");
         $('.empty-cart').css('display', "flex");
         return empty;
@@ -26,7 +26,7 @@ function check_empty_cart() {
 check_empty_cart();
 
 
-if(check_empty_cart()=='false'){
+if (check_empty_cart() == 'false') {
     $(document).on("click", '.edit-qt', function () {
         var $clicked_id = $(this).attr("id");
         if ($clicked_id == "plus") {
@@ -45,10 +45,10 @@ if(check_empty_cart()=='false'){
             }
         }
     });
-    
-    
+
+
     function show_Cart_Items() {
-    
+
         $.ajax({
             url: 'api/get-cart-items.php',
             type: 'GET',
@@ -61,10 +61,10 @@ if(check_empty_cart()=='false'){
                 Generate_Order_Summary();
             }
         });
-    
+
     }
     show_Cart_Items();
-    
+
     $(document).on("click", ".remove", function () {
         if (confirm("Remove item from cart")) {
             $item_id = $(this).attr("id");
@@ -75,19 +75,23 @@ if(check_empty_cart()=='false'){
                     cart_items.splice(index, 1);
                     localStorage.setItem('cart_items', JSON.stringify(cart_items));
                     $(this).closest('.item-details').slideUp();
+                    // count_cart_items function is defined in header
+                    count_cart_items();
                     show_Cart_Items();
                     check_empty_cart();
                 }
             } else {
+                // count_cart_items function is defined in header
+                count_cart_items();
                 console.log("Does't exist");
             }
         }
     });
-    
-    
+
+
     // Order Summary
     function Generate_Order_Summary() {
-    
+
         // Calculating Total Amount
         var total = 0;
         $('.item-details').each(function () {
@@ -96,13 +100,13 @@ if(check_empty_cart()=='false'){
             total += (price * qty);
         });
         $('#amt2bepaid').text('Rs. ' + total.toLocaleString('en-IN'));
-    
+
         // Calculating Total Products
         var cart_items = JSON.parse(localStorage.getItem('cart_items'));
-    
+
         var total_items = cart_items.length;
         $('#total_items').text(total_items);
     }
-    
+
 }
 

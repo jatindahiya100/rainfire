@@ -136,11 +136,15 @@ $(document).on("click", "#buy", function () {
         cart_items = JSON.parse(localStorage.getItem('cart_items'));
     }
     if (cart_items.includes(p_ID)) {
+        // count_cart_items function is defined in header
+        count_cart_items();
         alert("Already in cart");
         window.location.href = 'Cart.html';
     } else {
         cart_items.push(p_ID);
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
+        // count_cart_items function is defined in header
+        count_cart_items();
         alert("Product Added To Cart");
         window.location.href = 'Cart.html';
     }
