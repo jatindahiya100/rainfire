@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Google Icons -->
-     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Google Icons -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Importing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,254 +20,145 @@
 </head>
 
 <body>
-    <div class="btn">
-        <button class="active">Listed Products</button>
-        <button>Archieve</button>
+    <div class="wrapper">
+        <div class="btn">
+            <button class="active">Listed Products</button>
+            <button>Archieve</button>
+        </div>
+
+        <div class="product_listing">
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Discount %</th>
+                    <th>Added On</th>
+                    <th>Category</th>
+                    <th>Rating</th>
+                    <th>Stock</th>
+                    <th colspan="2">Manage</th>
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div class="modal-box">
+            <div class="pop-up">
+                <div id="close-modal" class="close-btn">X</div>
+                <form action="">
+                    <h3>Update Details</h3>
+                    <input type="text" id="pname" placeholder="Product Name">
+                    <input type="text" id="price" placeholder="Rs. 12000">
+                    <input type="text" id="discount" placeholder="45 %">
+
+                    <select name="Category" id="Category">
+                        <option value="" selected disabled>Choose Category</option>
+                        <option value="Headphones">Headphones</option>
+                        <option value="Data Cables">Data Cables</option>
+                        <option value="Speakers">Speakers</option>
+                        <option value="Batteries">Batteries</option>
+                    </select>
+
+                    <select name="Rating" id="Rating">
+                        <option value="Rating" selected disabled>Rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <select name="Stock" id="Stock">
+                        <option value="In Stock">In Stock</option>
+                        <option value="Out Of Stock">Out Of Stock</option>
+                    </select>
+
+                    <input type="button" value="Update">
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div class="product_listing">
-        <table>
-            <tr>
-                <th>Product ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Discount %</th>
-                <th>Added On</th>
-                <th>Category</th>
-                <th>Rating</th>
-                <th>Stock</th>
-                <th colspan="2">Manage</th>
-            </tr>
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
+        var get = "Listed";
+        function list_products(get) {
+            $.ajax({
+                url: "api/edit-Products.php",
+                type: "POST",
+                data: {
+                    sendData: get
+                },
+                success: function (response) {
+                    var products = "";
+                    $.each(response, function (key, value) {
+                        products += "<tr>" +
+                            "<td><a href='../Details.html?ProductID=" + value.p_ID + "'>" + value.p_ID + "</a></td>" +
+                            "<td>" + value.p_Name + "</td>" +
+                            "<td>" + value.p_Price + "</td>" +
+                            "<td>" + value.discount + "</td>" +
+                            "<td>" + value.added_on + "</td>" +
+                            "<td>" + value.category + "</td>" +
+                            "<td>" + value.rating + "</td>" +
+                            "<td>" + value.stock + "</td>" +
+                            "<td><button class='archieve'>Archieve <i class='fa fa-trash'></i></button></td>" +
+                            "<td><button class='edit' data-pid='" + value.p_ID + "'>Edit <i class='fa fa-edit'></i></button></td>" +
+                            "</tr>"
+                    });
+                    $('table').append(products);
+                }
+            });
+        }
+        list_products(get);
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
+        // Show Modal Box
+        $(document).on("click", ".edit", function () {
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
+            var product_Id = $(this).data("pid");
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
+            $.ajax({
+                url: "api/edit-Products.php",
+                type: "POST",
+                data: {
+                    p_ID: product_Id,
+                    sendData: "EditButtonClicked"
+                },
+                success: function (response) {
+                    $('#pname').val(response[0]['p_Name']);
+                    $('#price').val(response[0]['p_Price']);
+                    $('#discount').val(response[0]['discount']);
 
+                    $("#Category option").each(function () {
+                        if ($(this).text() == response[0]['category']) {
+                            $(this).prop("selected","selected");
+                        }
+                    });
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-            
+                    $("#Rating option").each(function () {
+                        if ($(this).text() == response[0]['rating']) {
+                            $(this).prop("selected","selected");
+                        }
+                    });
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
+                    $("#Stock option").each(function () {
+                        if ($(this).text() == response[0]['stock']) {
+                            $(this).prop("selected","selected");
+                        }
+                    });
 
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-            <tr>
-                <td>Product ID</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Discount</td>
-                <td>Added On</td>
-                <td>Headphones</td>
-                <td>Rating</td>
-                <td>In Stock</td>
-                <td><button class="archieve">Archieve <i class="fa fa-trash" ></i>
-                </button></td>
-                <td><button class="edit">Edit <i class="fa fa-edit"></i></button></td>
-            </tr>
-            
-
-        </table>
-    </div>
+                    $('.modal-box').fadeIn();
+                }
+            });
+        });
+        // Hide Modal Box
+        $(document).on("click", "#close-modal", function () {
+            $('.modal-box').fadeOut();
+        });
+    </script>
 </body>
 
 </html>
