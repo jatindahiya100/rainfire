@@ -80,14 +80,19 @@ function product_basic_Info() {
         },
         success: function (data) {
             if (data[0].status != 'false') {
+                var p_Price = parseInt(data[0].p_Price);
+                var discount = parseInt(data[0].discount);
+                var original_price = (discount / 100) * p_Price + p_Price;
+                var money_saved = (original_price - p_Price);
+
                 $('title').html(data[0].p_Name);
                 $('#product-name').html(data[0].p_Name);
                 $('label[for=ratings]').html(data[0].rating);
                 $('label[for=stock]').html(data[0].stock);
-                $('label[for=dprice]').html("Rs. " + parseInt(data[0].p_Price).toLocaleString('en-IN'));
-                $('label[for=discount]').html(data[0].discount + "% Off");
-                $('label[for=deleted-price]').html("<del> Rs. " + parseInt(data[0].original_price).toLocaleString('en-IN') + "</del>");
-                $('label[for=usaved]').html("Money Saved Rs. " + "<strong>" + parseInt(data[0].money_saved).toLocaleString('en-IN') + "</strong>");
+                $('label[for=dprice]').html("Rs. " + p_Price.toLocaleString('en-IN'));
+                $('label[for=discount]').html(discount + "% Off");
+                $('label[for=deleted-price]').html("<del> Rs. " + original_price.toLocaleString('en-IN') + "</del>");
+                $('label[for=usaved]').html("Money Saved Rs. " + "<strong>" + money_saved.toLocaleString('en-IN') + "</strong>");
                 $('#description').append(data[0].description);
                 $('.basic_info').show();
             }

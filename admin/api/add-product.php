@@ -14,13 +14,11 @@ $prod_ID = date("dmyhis");
 $pname = $p_details['pname'];
 $price = $p_details['price'];
 $discount_percentage = $p_details['discount_percentage'];
-$original_price = ($price*$discount_percentage)/100 + $price;
-$money_saved = ($original_price - $price);
 $description = $p_details['description'];
 $product_color = $p_details['product_color'];
 $category = $p_details['category'];
 
-$sql .= "INSERT INTO products (p_ID, p_Name, thumbnail, p_Price, original_price, discount, money_saved, category, rating, description) VALUES ('{$prod_ID}','{$pname}','https://www.cnet.com/a/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg',{$price},{$original_price},{$discount_percentage},{$money_saved},'{$category}','4','{$description}');";
+$sql .= "INSERT INTO products (p_ID, p_Name, thumbnail, p_Price, discount, category, rating, description) VALUES ('{$prod_ID}','{$pname}','https://www.cnet.com/a/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg',{$price},{$discount_percentage},'{$category}','4','{$description}');";
 
 // Extracting all values of specifications from array
 for ($i = 0; $i < count($p_specs); $i++) {

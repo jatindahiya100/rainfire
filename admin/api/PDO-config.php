@@ -76,15 +76,13 @@ try {
             $description = $p_details[3];
             $product_color = $p_details[4];
             $category = $p_details[5];
-            $original_price = ($price * $discount_percentage) / 100 + $price;
-            $money_saved = ($original_price - $price);
             $rating = 4;
             $thumbnail = $files_arr[0];
 
 
-            $sql1 = $conn->prepare("INSERT INTO products (p_ID, p_Name, thumbnail, p_Price, original_price, discount, money_saved, category, rating, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $sql1 = $conn->prepare("INSERT INTO products (p_ID, p_Name, thumbnail, p_Price, discount, category, rating, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
-            $sql1->execute(array($prod_ID, $pname, $thumbnail, $price, $original_price, $discount_percentage, $money_saved, $category, $rating, $description));
+            $sql1->execute(array($prod_ID, $pname, $thumbnail, $price, $discount_percentage, $category, $rating, $description));
 
 
             // Extracting all values of specifications from array

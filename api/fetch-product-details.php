@@ -30,7 +30,7 @@ function findby($p_ID,$findby)
     require 'config.php';
     switch ($findby) {
         case 'Case1':
-            $sql = "SELECT p_Name,p_Price,original_price,discount,money_saved,rating,stock,description FROM products WHERE p_ID = '{$p_ID}'";
+            $sql = "SELECT p_Name,p_Price,discount,rating,stock,description FROM products WHERE p_ID = '{$p_ID}'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);

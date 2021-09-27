@@ -11,8 +11,6 @@ if (count($dataArray) > 0) {
     $category = $dataArray[4];
     $rating = $dataArray[5];
     $stock = $dataArray[6];
-    $original_price = ($discount / 100) * $price + $price;
-    $money_saved = ($original_price - $price);
 
 
 
@@ -25,9 +23,9 @@ if (count($dataArray) > 0) {
 
         $conn = new PDO($db_name, $username, $password);
 
-        $sql = $conn->prepare("UPDATE products SET p_Name=?, p_Price=?, discount=?, category=?, rating=?, stock=?, original_price=?, money_saved=? WHERE p_ID=?");
+        $sql = $conn->prepare("UPDATE products SET p_Name=?, p_Price=?, discount=?, category=?, rating=?, stock=? WHERE p_ID=?");
 
-        $sql->execute(array($pname, $price, $discount, $category, $rating, $stock, $original_price, $money_saved, $p_ID));
+        $sql->execute(array($pname, $price, $discount, $category, $rating, $stock, $p_ID));
         if ($sql) {
             echo json_encode("Inserted");
         }
