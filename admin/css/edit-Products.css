@@ -82,7 +82,7 @@ body {
   width: 400px;
   height: max-content;
   position: relative;
-  top: 60px;
+  top: 50px;
   left: calc(50% - 200px);
   padding: 15px;
   border-radius: 4px;
@@ -118,8 +118,12 @@ body {
   margin: 12px;
   width: 300px;
   outline: none;
-  border: none;
-  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  text-align-last: center;
+  line-height: 34px;
+  background-color: rgb(255, 255, 255);
   font-family: "Karla",sans-serif;
 }
 .modal-box .pop-up select {
