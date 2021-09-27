@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn button {
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 16px;
+
+  line-height: 36px;
+  padding: 0 16px 0 16px;
+}
+.btn .active {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.product_listing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product_listing table {
+  width: 100%;
+}
+.product_listing table tr th {
+    font-size: 16px;
+    font-family: "Karla",sans-serif;
+  }
+.product_listing table tr td {
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  color: black;
+}
+.product_listing table tr td button {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    line-height: 34px;
+    padding: 0 16px 0 16px;
+    font-weight: 600;
+}
+.product_listing table tr td .archieve {
+    background: rgb(194, 0, 0);
+    color: white;
+}
+.product_listing table tr td .edit {
+    background: rgba(0, 0, 0, 0.911);
+    color: white;
+}
