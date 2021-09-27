@@ -43,10 +43,12 @@ body {
     font-family: "Karla",sans-serif;
   }
 .product_listing table tr td {
-  /* text-align: center; */
   padding: 8px;
   font-size: 13px;
   color: black;
+}
+.product_listing table tr td a {
+  color: #000;
 }
 .product_listing table tr td button {
     outline: none;
@@ -137,7 +139,7 @@ body {
 .modal-box .pop-up select::-ms-expand {
   display: none;
 }
-.modal-box .pop-up form input[type="button"]{
+.modal-box .pop-up form input[type="submit"]{
   background: #000;
   color: white;
   line-height: 36px;
