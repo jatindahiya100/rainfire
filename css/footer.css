@@ -46,4 +46,7 @@ footer .social-handles img{
     footer .footer-content .sections{
         text-align: center;
     }
+    footer .sections ul li{
+        padding-top: 12px;
+    }
   }

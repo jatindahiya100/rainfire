@@ -195,23 +195,27 @@ body {
 .flex-box .checkout{
   display: flex;
   height: auto;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 .flex-box .checkout img {
   width: 30%;
   height: auto;
-  margin-left: 16px;
-  margin-bottom: 50px;
+  margin: 16px;
 }
 .flex-box .checkout button{
+  width: 120px;
+  margin: 16px;
   outline: none;
   border: none;
-  background: rgb(0, 110, 255);
-  line-height: 46px;
+  border-radius: 18px;
+  background: rgb(0, 115, 247);
+  line-height: 36px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "Karla",sans-serif;
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .empty-cart{
   width: 100%;
@@ -246,6 +250,8 @@ body {
     margin-bottom: 50px;
   }
   .flex-box .checkout button{
+    margin: 0;
+    border-radius: 0;
     position: fixed;
     bottom: 0;
     width: 100%;

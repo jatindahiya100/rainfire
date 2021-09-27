@@ -24,7 +24,11 @@
         if (typeof (Storage) !== "undefined") {
             // Code for localStorage/sessionStorage.
             var count = JSON.parse(localStorage.getItem("cart_items"));
-            $('label[for="total-items"]').html(count.length);
+            if (count == null) {
+                $('label[for="total-items"]').html("0");
+            } else {
+                $('label[for="total-items"]').html(count.length);
+            }
         } else {
             // Sorry! No Web Storage support..
         }

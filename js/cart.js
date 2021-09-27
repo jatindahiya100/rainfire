@@ -52,7 +52,6 @@ if (check_empty_cart() == 'false') {
         $.ajax({
             url: 'api/get-cart-items.php',
             type: 'GET',
-            // dataType: "JSON",
             data: {
                 itemID: localStorage.getItem('cart_items')
             },
@@ -88,6 +87,9 @@ if (check_empty_cart() == 'false') {
         }
     });
 
+    $(document).on("click",".item-image",function(){
+        window.location.href = "Details.html?ProductID="+$('.item-details').data("id");
+    });
 
     // Order Summary
     function Generate_Order_Summary() {
@@ -107,6 +109,52 @@ if (check_empty_cart() == 'false') {
         var total_items = cart_items.length;
         $('#total_items').text(total_items);
     }
+
+
+    function checkout() {
+        // Object
+        let products = {};
+        // Array
+        const prod_array = [];
+        // Getting Shipping Info
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
+        var state = document.getElementById("state").value;
+        var district = document.getElementById("district").value;
+
+        const shipping_array = [fname,lname,email,mobile,state,district];
+
+        $('.item-details').each(function () {
+            var p_id = $(this).data("id");
+            var qty = $(this).find('.quantity_value').val();
+            products = {p_id:p_id,qty:qty};
+            prod_array.push(products);
+        });
+
+        $.ajax({
+            url: "api/place_order.php",
+            type: "POST",
+            dataType: "JSON",
+            data: {
+                shipping_array: JSON.stringify(shipping_array),
+                prod_array: JSON.stringify(prod_array)
+            },
+            beforeSend: function(){
+
+            },
+            success: function(response){
+                console.log(response);
+            }
+
+        });
+
+    }
+
+    $('#checkout').on("click", function () {
+        checkout();
+    });
 
 }
 
