@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2021 at 08:22 PM
+-- Generation Time: Sep 27, 2021 at 01:17 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -61,7 +61,7 @@ CREATE TABLE `products` (
   `added_on` date NOT NULL DEFAULT current_timestamp(),
   `category` varchar(50) NOT NULL,
   `rating` int(11) NOT NULL,
-  `stock` varchar(10) NOT NULL DEFAULT 'In Stock',
+  `stock` varchar(20) NOT NULL DEFAULT 'In Stock',
   `description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -76,7 +76,7 @@ INSERT INTO `products` (`id`, `p_ID`, `p_Name`, `thumbnail`, `p_Price`, `origina
 (4, '180921110335', 'Stylo mafia thunder', 'products_gallery/rPWYcTBnCS3PRBSgf7Fkam-1200-80.jpg', 12900, 14448, 12, 1548, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
 (5, '180921110623', 'Rainfire-HeX Handsfree', 'products_gallery/Clean-Living-EarPods-with-3-SDL934922275-1-d49eb.jpeg', 2200, 3190, 45, 990, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
 (6, '180921111032', 'Axe Stormbreaker - Rainfire', 'products_gallery/784dee9669f28275a21d24655f87a31d.jpeg', 5500, 6710, 22, 1210, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.'),
-(7, '180921111320', 'Rainfire Bettle Box', 'products_gallery/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.webp', 12000, 15600, 30, 3600, '2021-09-18', 'Headphones', 4, 'In Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.');
+(7, '180921111320', 'Rainfire Bettle Box', 'products_gallery/860a3eee-482d-41b3-8b45-fbfd73199fac1623844708853-realme-Buds-Air-2-with-Active-Noise-Cancellation-ANC-Bluetoo-1.webp', 12000, 15600, 30, 3600, '2021-09-18', 'Headphones', 4, 'Out Of Stock', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem non odio voluptas ab neque tempora reprehenderit velit dolores ipsam ipsum beatae adipisci, earum necessitatibus illo. Doloribus, nobis provident ratione nihil quo ullam? Vel illum architecto natus quis ea atque quasi est, possimus velit unde qui! Incidunt accusantium dignissimos quos.');
 
 -- --------------------------------------------------------
 
@@ -202,19 +202,19 @@ ALTER TABLE `heroimage`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `p_images`
 --
 ALTER TABLE `p_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `specificaions`
 --
 ALTER TABLE `specificaions`
-  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables
