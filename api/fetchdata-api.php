@@ -14,14 +14,17 @@ function getDataFromServer($conn, $query)
 
         if (mysqli_num_rows($result) > 0) {
             $output = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            echo json_encode($output);
+            $response = array('message' => $output, 'status' => 'true');
+            echo json_encode($response);
         } else {
             // Display Error
             echo json_encode(array('message' => 'No Products Found', 'status' => 'false'));
+            die();
         }
     } else {
         // Display Error
         echo json_encode(array('message' => 'Connection Error', 'status' => 'false'));
+        die();
     }
 }
 
@@ -30,28 +33,21 @@ function findby($url_value)
     require 'config.php';
     switch ($url_value) {
         case 'New Arrivals':
-            $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 5";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price`, `discount`, `stock`, `description` FROM products WHERE `archieve` = '0' ORDER BY id DESC LIMIT 5";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'All':
-            $sql = "SELECT * FROM products";
-            getDataFromServer($link, $sql);
-            // Close Connection to database
-            mysqli_close($link);
-            break;
-
-        case 'Best Selling':
-            $sql = "SELECT * FROM products WHERE tag = 'Best Selling'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'Headphones':
-            $sql = "SELECT * FROM products WHERE category = 'Headphones'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Headphones' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
@@ -59,7 +55,7 @@ function findby($url_value)
 
 
         case 'Data Cables':
-            $sql = "SELECT * FROM products WHERE category = 'Data Cables'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Data Cables' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
@@ -67,14 +63,14 @@ function findby($url_value)
 
 
         case 'Speakers':
-            $sql = "SELECT * FROM products WHERE category = 'Speakers'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Speakers' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'Batteries':
-            $sql = "SELECT * FROM products WHERE category = 'Batteries'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Batteries' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
@@ -85,10 +81,6 @@ function findby($url_value)
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
-            break;
-
-        default:
-
             break;
     }
 }
@@ -101,4 +93,5 @@ if (!empty($_GET['get'])) {
 } else {
     // If search value is not set in url
     echo json_encode(array('message' => 'Bad Request', 'status' => 'false'));
+    die();
 }

@@ -15,7 +15,7 @@ function products_Images() {
 
         },
         success: function (data) {
-            if (data[0].status != "false") {
+            if (data.status != "false") {
                 var banner = "";
                 $.each(data, function (key, value) {
                     banner += "<div class='product-photos fade'>" +
@@ -27,9 +27,12 @@ function products_Images() {
                     "<a class='next'>&#10095;</a>";
                 $('.product-gallery').html(banner);
                 showSlides(slideIndex);
+            } else if (data.status == "false") {
+                window.location.href = "index.html";
             } else {
                 console.log(data);
             }
+            
         }
     });
 }
@@ -79,12 +82,11 @@ function product_basic_Info() {
 
         },
         success: function (data) {
-            if (data[0].status != 'false') {
+            if (data.status != 'false') {
                 var p_Price = parseInt(data[0].p_Price);
                 var discount = parseInt(data[0].discount);
                 var original_price = (discount / 100) * p_Price + p_Price;
                 var money_saved = (original_price - p_Price);
-
                 $('title').html(data[0].p_Name);
                 $('#product-name').html(data[0].p_Name);
                 $('label[for=ratings]').html(data[0].rating);
