@@ -123,8 +123,9 @@ if (check_empty_cart() == 'false') {
         var mobile = document.getElementById("mobile").value;
         var state = document.getElementById("state").value;
         var district = document.getElementById("district").value;
-
-        const shipping_array = [fname,lname,email,mobile,state,district];
+        var pincode = document.getElementById("pincode").value;
+        var address = document.getElementById("address").value;
+        const shipping_array = [fname,lname,email,mobile,state,district,pincode,address];
 
         $('.item-details').each(function () {
             var p_id = $(this).data("id");
@@ -145,7 +146,13 @@ if (check_empty_cart() == 'false') {
 
             },
             success: function(response){
-                console.log(response);
+                if(response['status'] == 'true'){
+                    $('input').val('');
+                    localStorage.clear();
+                    check_empty_cart();
+                    location.reload();
+                    console.log("done");
+                }
             }
 
         });
