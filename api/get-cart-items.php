@@ -45,8 +45,6 @@ function fetch($link, $sql)
                             </div>
                     </div> 
                 </div>";
-        } else {
-            echo "No Products Found";
         }
     } else {
         // Display Error
