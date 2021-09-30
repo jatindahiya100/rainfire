@@ -149,8 +149,8 @@ if (check_empty_cart() == 'false') {
                 if(response['status'] == 'true'){
                     $('input').val('');
                     localStorage.clear();
+                    count_cart_items();
                     check_empty_cart();
-                    location.reload();
                     console.log("done");
                 }
             }
