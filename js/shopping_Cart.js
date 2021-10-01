@@ -87,8 +87,8 @@ if (check_empty_cart() == 'false') {
         }
     });
 
-    $(document).on("click",".item-image",function(){
-        window.location.href = "Details.html?ProductID="+$('.item-details').data("id");
+    $(document).on("click", ".item-image", function () {
+        window.location.href = "Details.html?ProductID=" + $('.item-details').data("id");
     });
 
     // Order Summary
@@ -125,37 +125,44 @@ if (check_empty_cart() == 'false') {
         var district = document.getElementById("district").value;
         var pincode = document.getElementById("pincode").value;
         var address = document.getElementById("address").value;
-        const shipping_array = [fname,lname,email,mobile,state,district,pincode,address];
 
-        $('.item-details').each(function () {
-            var p_id = $(this).data("id");
-            var qty = $(this).find('.quantity_value').val();
-            products = {p_id:p_id,qty:qty};
-            prod_array.push(products);
-        });
+        if (fname.length > 0 && lname.length > 0 && email.length > 0, mobile.length > 0 && state.length > 0 && district.length > 0, pincode.length > 0, address.length > 0) {
+            const shipping_array = [fname, lname, email, mobile, state, district, pincode, address];
 
-        $.ajax({
-            url: "api/place_order.php",
-            type: "POST",
-            dataType: "JSON",
-            data: {
-                shipping_array: JSON.stringify(shipping_array),
-                prod_array: JSON.stringify(prod_array)
-            },
-            beforeSend: function(){
+            $('.item-details').each(function () {
+                var p_id = $(this).data("id");
+                var qty = $(this).find('.quantity_value').val();
+                products = { p_id: p_id, qty: qty };
+                prod_array.push(products);
+            });
 
-            },
-            success: function(response){
-                if(response['status'] == 'true'){
-                    $('input').val('');
-                    localStorage.clear();
-                    count_cart_items();
-                    check_empty_cart();
-                    console.log("done");
+            $.ajax({
+                url: "api/place_order.php",
+                type: "POST",
+                dataType: "JSON",
+                data: {
+                    shipping_array: JSON.stringify(shipping_array),
+                    prod_array: JSON.stringify(prod_array)
+                },
+                beforeSend: function () {
+
+                },
+                success: function (response) {
+                    if (response['status'] == 'true') {
+                        $('input').val('');
+                        localStorage.clear();
+                        count_cart_items();
+                        check_empty_cart();
+                        console.log("done");
+                    }
                 }
-            }
 
-        });
+            });
+        } else {
+            alert("Empty Fields!!");
+        }
+
+
 
     }
 
