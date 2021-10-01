@@ -50,7 +50,7 @@ if (check_empty_cart() == 'false') {
     function show_Cart_Items() {
 
         $.ajax({
-            url: 'api/get-cart-items.php',
+            url: 'api/shopping_Cart.php',
             type: 'GET',
             data: {
                 itemID: localStorage.getItem('cart_items')

@@ -9,7 +9,7 @@ function products_Images() {
     const p_ID = urlParams.get('ProductID');
     var findby = "product_images"
     $.ajax({
-        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
@@ -76,7 +76,7 @@ function product_basic_Info() {
     const p_ID = urlParams.get('ProductID');
     var findby = "Case1"
     $.ajax({
-        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
@@ -110,7 +110,7 @@ function productSpecs() {
     const p_ID = urlParams.get('ProductID');
     var findby = "specs"
     $.ajax({
-        url: 'api/fetch-product-details.php?p_id=' + p_ID + '&&findby=' + findby,
+        url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
         type: "GET",
         beforeSend: function () {
 
@@ -146,13 +146,13 @@ $(document).on("click", "#buy", function () {
         // count_cart_items function is defined in header
         count_cart_items();
         alert("Already in cart");
-        window.location.href = 'Cart.html';
+        window.location.href = 'shopping_Cart.html';
     } else {
         cart_items.push(p_ID);
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
         // count_cart_items function is defined in header
         count_cart_items();
         alert("Product Added To Cart");
-        window.location.href = 'Cart.html';
+        window.location.href = 'shopping_Cart.html';
     }
 });

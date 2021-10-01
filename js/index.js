@@ -17,7 +17,7 @@ heroimage();
 function heroimage() {
     var category = "heroimage";
     $.ajax({
-        url: 'api/fetchdata-api.php?get=' + category,
+        url: 'api/index_api.php?get=' + category,
         type: "GET",
         beforeSend: function () {
 
@@ -79,7 +79,7 @@ fetchNewArrival();
 function fetchNewArrival() {
     var category = "New Arrivals";
     $.ajax({
-        url: 'api/fetchdata-api.php?get=' + category,
+        url: 'api/index_api.php?get=' + category,
         type: "GET",
         beforeSend: function () {
 
@@ -124,7 +124,7 @@ GetDataByCategory(category);
 
 function GetDataByCategory(category) {
     $.ajax({
-        url: 'api/fetchdata-api.php?get=' + category,
+        url: 'api/index_api.php?get=' + category,
         type: "GET",
         beforeSend: function () {
 
