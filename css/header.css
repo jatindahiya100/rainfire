@@ -6,6 +6,10 @@ header {
   height: 60px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+header a {
+  text-decoration: none;
+  color: black;
+}
 header .logo img {
   height: 40px;
   width: auto;
@@ -48,4 +52,14 @@ header .quick-links ul li label {
   font-weight: 600;
   border-radius: 50%;
   font-size:x-small;
+}
+/* If the browser window is 600px or smaller */
+@media only screen and (max-width: 600px) {
+  header .logo img {
+    height: 30px;
+  }
+  header .quick-links ul li {
+    font-size: 14px;
+    margin-left: 6px;
+  }
 }
