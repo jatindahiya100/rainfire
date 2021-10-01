@@ -21,7 +21,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: calc(100% - 86px);
+  min-height: calc(100% - 86px);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
@@ -255,7 +255,7 @@ a {
 }
 @media only screen and (max-width: 600px) {
   .wrapper .design_layout {
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: max-content;
     background-image: none;
   }
