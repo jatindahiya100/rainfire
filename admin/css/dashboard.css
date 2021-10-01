@@ -117,3 +117,7 @@ iframe {
   width: 100%;
   height: 100%;
 }
+.wrapper nav .nav-items ul li i {
+  font-size: 22px;
+  font-weight: 700;
+}
