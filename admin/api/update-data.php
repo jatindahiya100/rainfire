@@ -19,7 +19,7 @@ if (count($dataArray) > 0) {
         //Establish Connection to Server
         $db_name = "mysql:host=localhost;dbname=rainfire";
         $username = "rainfire";
-        $password = "123456";
+        $password = "Rainfire@123";
 
         $conn = new PDO($db_name, $username, $password);
 

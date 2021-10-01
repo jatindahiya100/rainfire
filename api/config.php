@@ -4,7 +4,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'rainfire');
-define('DB_PASSWORD', '123456');
+define('DB_PASSWORD', 'Rainfire@123');
 define('DB_NAME', 'rainfire');
  
 /* Attempt to connect to MySQL database */
