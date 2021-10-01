@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 30, 2021 at 04:22 PM
+-- Generation Time: Oct 01, 2021 at 08:51 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -249,7 +249,7 @@ ALTER TABLE `heroimage`
 -- AUTO_INCREMENT for table `order_Details`
 --
 ALTER TABLE `order_Details`
-  MODIFY `unique_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `unique_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `products`
