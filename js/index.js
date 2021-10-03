@@ -64,10 +64,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-$(document).on("click", ".prev" ,function () {
+$(document).on("click", ".prev", function () {
     plusSlides(-1);
 });
-$(document).on("click", ".next" ,function () {
+$(document).on("click", ".next", function () {
     plusSlides(1);
 });
 
@@ -88,27 +88,27 @@ function fetchNewArrival() {
             if (data['status'] == 'true') {
                 var arrivals = "";
                 $.each(data['message'], function (key, value) {
-                    arrivals += "<div class='flex-box'>"+
+                    arrivals += "<div class='flex-box' data-id='"+ value.p_ID +"'>" +
 
-                    "<div class='flex50'>"+
-                        "<div class='p_image'>"+
-                            "<img src='"+ value.thumbnail +"' alt=''>"+
-                        "</div>"+
-                    "</div>"+
-                
-                    "<div class='flex50'>"+
-                        "<div class='product-info'>"+
-                            "<label for='p_Name'>"+ value.p_Name +"</label>"+
-                            "<div class='section'>"+
-                                "<label for='p_Price'>Rs. "+ parseInt(value.p_Price).toLocaleString('en-IN') +"</label>"+
-                                "<label for='discount'>"+ value.discount +"% OFF</label>"+
-                            "</div>"+
-                            "<label for='new-arrivals-tag'>"+ value.stock +"</label>"+
-                            "<label for='description'><strong>Description: </strong>"+value.description+"</label>"+
-                            "<button class='buy' id='"+ value.p_ID +"'>Buy now</button>"+
-                        "</div>"+
-                    "</div>"+
-                "</div>";
+                        "<div class='flex50'>" +
+                        "<div class='p_image'>" +
+                        "<img src='" + value.thumbnail + "' alt=''>" +
+                        "</div>" +
+                        "</div>" +
+
+                        "<div class='flex50'>" +
+                        "<div class='product-info'>" +
+                        "<label for='p_Name'>" + value.p_Name + "</label>" +
+                        "<div class='section'>" +
+                        "<label for='p_Price'>Rs. " + parseInt(value.p_Price).toLocaleString('en-IN') + "</label>" +
+                        "<label for='discount'>" + value.discount + "% OFF</label>" +
+                        "</div>" +
+                        "<label for='new-arrivals-tag'>" + value.stock + "</label>" +
+                        "<label for='description'><strong>Description: </strong>" + value.description + "</label>" +
+                        "<button class='buy'>Buy now</button>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>";
                 });
                 $('.new-arrivals-holder').html(arrivals);
             } else {
@@ -157,9 +157,9 @@ $('li').on("click", function () {
     GetDataByCategory(category);
 });
 
-$(document).on("click",".buy",function(){
-    $id = $(this).attr("id");
-    window.location.href = "Details.html?ProductID="+$id;
+$(document).on("click", ".flex-box", function () {
+    $id = $(this).data("id");
+    window.location.href = "Details.html?ProductID=" + $id;
 });
 
 
