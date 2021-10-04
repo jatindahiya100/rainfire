@@ -164,3 +164,15 @@ $(document).on("click", ".flex-box", function () {
 });
 
 
+$(".slide_left").click(function(){
+    // To get actual position
+   var actualScroll = $(".product-holder").scrollLeft();
+ // To set new position
+ $(".product-holder").scrollLeft(actualScroll-250)
+})
+$(".slide_right").click(function(){
+    // To get actual position
+   var actualScroll = $(".product-holder").scrollLeft();
+ // To set new position
+ $(".product-holder").scrollLeft(actualScroll+250)
+})
