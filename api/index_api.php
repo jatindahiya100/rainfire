@@ -40,14 +40,14 @@ function findby($url_value)
             break;
 
         case 'All':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'Headphones':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Headphones' AND `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE category = 'Headphones' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
@@ -55,7 +55,7 @@ function findby($url_value)
 
 
         case 'Data Cables':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Data Cables' AND `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE category = 'Data Cables' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
@@ -63,14 +63,14 @@ function findby($url_value)
 
 
         case 'Speakers':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Speakers' AND `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE category = 'Speakers' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'Batteries':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price` FROM products WHERE category = 'Batteries' AND `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE category = 'Batteries' AND `archieve` = '0'";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);

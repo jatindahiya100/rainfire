@@ -137,6 +137,7 @@ function GetDataByCategory(category) {
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
+                        "<label for='category'>"+ value.category +"</label>"+
                         "<label for='pPrice'>" + "Rs. " + parseInt(value.p_Price).toLocaleString('en-IN') + "</label>" +
                         "</div>" +
                         "</a>";
