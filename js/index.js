@@ -88,7 +88,7 @@ function fetchNewArrival() {
             if (data['status'] == 'true') {
                 var arrivals = "";
                 $.each(data['message'], function (key, value) {
-                    arrivals += "<div class='flex-box' data-id='"+ value.p_ID +"'>" +
+                    arrivals += "<div class='flex-box' data-id='" + value.p_ID + "'>" +
 
                         "<div class='flex50'>" +
                         "<div class='p_image'>" +
@@ -131,21 +131,24 @@ function GetDataByCategory(category) {
         },
         success: function (data) {
             if (data['status'] == 'true') {
-                var products = "";
+                var products = "<a class='slide_left'>&#10094;</a>" +
+                    "<a class='slide_right'>&#10095;</a>" +
+                    "<div class='product-holder'>";
                 $.each(data['message'], function (key, value) {
                     products += "<a href=Details.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
                         "<img src='" + value.thumbnail + "' alt=''>" +
                         "<label for='pName'>" + value.p_Name + "</label>" +
-                        "<label for='category'>"+ value.category +"</label>"+
+                        "<label for='category'>" + value.category + "</label>" +
                         "<label for='pPrice'>" + "Rs. " + parseInt(value.p_Price).toLocaleString('en-IN') + "</label>" +
                         "</div>" +
                         "</a>";
 
                 });
-                $('.product-holder').html(products);
+                products += "</div>";
+                $('.Products_from_database').html(products);
             } else {
-                $('.product-holder').html("");
+                $('.Products_from_database').html("");
             }
         }
     });
@@ -164,15 +167,17 @@ $(document).on("click", ".flex-box", function () {
 });
 
 
-$(".slide_left").click(function(){
+
+$(document).on("click", ".slide_left", function () {
     // To get actual position
-   var actualScroll = $(".product-holder").scrollLeft();
- // To set new position
- $(".product-holder").scrollLeft(actualScroll-250)
-})
-$(".slide_right").click(function(){
+    var actualScroll = $(".product-holder").scrollLeft();
+    // To set new position
+    $(".product-holder").scrollLeft(actualScroll - 250);
+});
+
+$(document).on("click", ".slide_right", function () {
     // To get actual position
-   var actualScroll = $(".product-holder").scrollLeft();
- // To set new position
- $(".product-holder").scrollLeft(actualScroll+250)
-})
+    var actualScroll = $(".product-holder").scrollLeft();
+    // To set new position
+    $(".product-holder").scrollLeft(actualScroll + 250);
+});
