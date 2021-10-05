@@ -31,18 +31,18 @@
   position: absolute;
   top: 30%;
   left: 10%;
-  width: 30%;
-  height: 100%;
+  width: 0;
+  overflow: visible;
+  height: max-content;
   font-size: 30px;
   line-height: 46px;
   color: white;
   font-weight: 700;
   text-transform: capitalize;
-  word-spacing: 100vw;
 }
 .slide-parts button {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 10%;
   color: black;
   background-color: white;
