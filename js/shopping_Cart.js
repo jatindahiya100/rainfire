@@ -126,48 +126,52 @@ if (check_empty_cart() == 'false') {
         var pincode = document.getElementById("pincode").value;
         var address = document.getElementById("address").value;
 
-        if (fname.length > 0 && lname.length > 0 && email.length > 0, mobile.length > 0 && state.length > 0 && district.length > 0, pincode.length > 0, address.length > 0) {
-            const shipping_array = [fname, lname, email, mobile, state, district, pincode, address];
+        if (fname.trim().length > 0 && lname.trim().length > 0 && email.trim().length > 0, mobile.trim().length > 0 && state.trim().length > 0 && district.trim().length > 0, pincode.trim().length > 0, address.trim().length > 0) {
 
-            $('.item-details').each(function () {
-                var p_id = $(this).data("id");
-                var qty = $(this).find('.quantity_value').val();
-                products = { p_id: p_id, qty: qty };
-                prod_array.push(products);
-            });
+            if (!isNaN(mobile) || !isNaN(pincode)) {
 
-            $.ajax({
-                url: "api/place_order.php",
-                type: "POST",
-                dataType: "JSON",
-                data: {
-                    shipping_array: JSON.stringify(shipping_array),
-                    prod_array: JSON.stringify(prod_array)
-                },
-                beforeSend: function () {
+                const shipping_array = [fname, lname, email, mobile, state, district, pincode, address];
 
-                },
-                success: function (response) {
-                    if (response['status'] == 'true') {
-                        $('input').val('');
-                        localStorage.clear();
-                        count_cart_items();
-                        check_empty_cart();
-                        console.log("done");
+                $('.item-details').each(function () {
+                    var p_id = $(this).data("id");
+                    var qty = $(this).find('.quantity_value').val();
+                    products = { p_id: p_id, qty: qty };
+                    prod_array.push(products);
+                });
+
+                $.ajax({
+                    url: "api/place_order.php",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: {
+                        shipping_array: JSON.stringify(shipping_array),
+                        prod_array: JSON.stringify(prod_array)
+                    },
+                    beforeSend: function () {
+
+                    },
+                    success: function (response) {
+                        if (response['status'] == 'true') {
+                            $('input').val('');
+                            localStorage.clear();
+                            count_cart_items();
+                            check_empty_cart();
+                            console.log("done");
+                        }
                     }
-                }
 
-            });
+                });
+            } else {
+                alert("Mobile && pincode must be numeric");
+            }
         } else {
             alert("Empty Fields!!");
         }
-
-
-
     }
 
     $('#checkout').on("click", function () {
-        checkout();
+        // checkout();
+        alert('Currently Disabled by Seller!!');
     });
 
 }

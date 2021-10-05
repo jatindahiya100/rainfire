@@ -134,25 +134,26 @@ productSpecs();
 let cart_items = [];
 
 $(document).on("click", "#buy", function () {
-    //  Get Value from Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const p_ID = urlParams.get('ProductID');
+    alert('Currently Disabled By Seller!!');
+    // //  Get Value from Url
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+    // const p_ID = urlParams.get('ProductID');
 
-    if (localStorage.getItem('cart_items')) {
-        cart_items = JSON.parse(localStorage.getItem('cart_items'));
-    }
-    if (cart_items.includes(p_ID)) {
-        // count_cart_items function is defined in header
-        count_cart_items();
-        alert("Already in cart");
-        window.location.href = 'shopping_Cart.html';
-    } else {
-        cart_items.push(p_ID);
-        localStorage.setItem('cart_items', JSON.stringify(cart_items));
-        // count_cart_items function is defined in header
-        count_cart_items();
-        alert("Product Added To Cart");
-        window.location.href = 'shopping_Cart.html';
-    }
+    // if (localStorage.getItem('cart_items')) {
+    //     cart_items = JSON.parse(localStorage.getItem('cart_items'));
+    // }
+    // if (cart_items.includes(p_ID)) {
+    //     // count_cart_items function is defined in header
+    //     count_cart_items();
+    //     alert("Already in cart");
+    //     window.location.href = 'shopping_Cart.html';
+    // } else {
+    //     cart_items.push(p_ID);
+    //     localStorage.setItem('cart_items', JSON.stringify(cart_items));
+    //     // count_cart_items function is defined in header
+    //     count_cart_items();
+    //     alert("Product Added To Cart");
+    //     window.location.href = 'shopping_Cart.html';
+    // }
 });
