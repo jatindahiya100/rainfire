@@ -26,14 +26,13 @@ function heroimage() {
             if (data['status'] == "true") {
                 var banner = "";
                 $.each(data['message'], function (key, value) {
-                    banner += "<div class='slide-parts fade'>" +
+                    banner += "<a href='"+ value.linked_to +"'><div class='slide-parts'>" +
                         "<img src='" + value.banner_url + "' alt=''>" +
                         "<div class='slide-product-name'>" + value.heading + "</div>" +
-                        "</div>";
+                        "<button>Buy Now</button>"+
+                        "</div></a>";
                 });
 
-                banner += "<a class='prev'>&#10094;</a>" +
-                    "<a class='next'>&#10095;</a>";
                 $('.slideshow-container').html(banner);
                 showSlides(slideIndex);
             }
@@ -45,31 +44,21 @@ function heroimage() {
 var slideIndex = 1;
 
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
     var i;
     var slides = $(".slide-parts");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        // slides[i].style.display = "none";
+        $(slides[i]).css("left", "-100%");
     }
-    slides[slideIndex - 1].style.display = "block";
+    // slides[slideIndex - 1].style.display = "block";
+    $(slides[slideIndex - 1]).css("left", "0");
 }
-
-$(document).on("click", ".prev", function () {
-    plusSlides(-1);
-});
-$(document).on("click", ".next", function () {
-    plusSlides(1);
-});
+setInterval(() => {
+    showSlides(++slideIndex)
+}, 6000);
 
 
 // Calling Fetch New Arrivals
