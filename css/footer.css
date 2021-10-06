@@ -10,12 +10,15 @@ footer{
 footer .footer-content{
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 footer .footer-content .sections{
     color: white;
-    text-align: center;
+    height: max-content;
+    width: 33.33%;
+    padding: 26px;
 }
 footer .footer-content .sections label{
     font-weight: 600;
@@ -24,7 +27,20 @@ footer .sections ul li{
     padding: 4px;
     list-style-type: none;
     font-size: 14px;
-    line-height: 26px;
+    line-height: 32px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .sections ul li a {
+    text-decoration: none;
+    color: white;
+}
+footer .sections ul li img {
+    height: 28px;
+    width: 28px;
 }
 footer h4{
     color: white;
@@ -34,18 +50,22 @@ footer .social-handles{
 }
 footer .social-handles img{
     cursor: pointer;
-    padding: 2px;
+    padding: 6px;
 }
-
+footer .developer_info {
+    color: white;
+    font-size: 14px;
+}
 /* If the browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
     footer .footer-content{
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
     }
     footer .footer-content .sections{
-        text-align: center;
+        /* text-align: center; */
         margin-bottom: 16px;
+        width: 100%;
     }
     footer .sections ul li{
         padding-top: 12px;
