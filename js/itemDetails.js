@@ -85,7 +85,7 @@ function product_basic_Info() {
             if (data.status != 'false') {
                 var p_Price = parseInt(data[0].p_Price);
                 var discount = parseInt(data[0].discount);
-                var original_price = (discount / 100) * p_Price + p_Price;
+                var original_price = Math.round((discount / 100) * p_Price + p_Price);
                 var money_saved = (original_price - p_Price);
                 $('title').html(data[0].p_Name);
                 $('#product-name').html(data[0].p_Name);

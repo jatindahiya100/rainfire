@@ -29,7 +29,6 @@ function heroimage() {
                     banner += "<a href='"+ value.linked_to +"'><div class='slide-parts'>" +
                         "<img src='" + value.banner_url + "' alt=''>" +
                         "<div class='slide-product-name'>" + value.heading + "</div>" +
-                        "<button>Buy Now</button>"+
                         "</div></a>";
                 });
 
