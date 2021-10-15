@@ -163,20 +163,38 @@ a {
   align-items: center;
   justify-content: center;
 }
+.wrapper .category-wise ul {
+  margin: 12px 0;
+  width: 98%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper .category-wise ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper .category-wise ul {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .wrapper .category-wise ul li {
-  line-height: 26px;
-  padding: 0 10px;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 600;
-  background: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  border-radius: 6px;
-  display: inline-table;
-  margin: 8px;
+  margin-right: 12px;
+  list-style-type: none;
+  white-space: nowrap;
+  width: max-content;
+  line-height: 28px;
+  padding: 0 16px;
+  border-radius: 16px;
+  font-weight: 500;
+  
 }
 .active {
-  border: 2px solid black;
+  color: white;
+  background-color: rgb(0, 0, 0);
 }
 .wrapper .category-wise > div {
   position: relative;
@@ -210,7 +228,8 @@ a {
   background: rgba(0, 0, 0, 0.877);
   color: rgb(255, 255, 255);
 }
-.wrapper .category-wise > div .slide_left:hover,.wrapper .category-wise > div .slide_right:hover {
+.wrapper .category-wise > div .slide_left:hover,
+.wrapper .category-wise > div .slide_right:hover {
   background-color: black;
 }
 .wrapper .category-wise .product-holder {
@@ -220,16 +239,16 @@ a {
   overflow-x: auto;
   scroll-behavior: smooth;
 }
- /* Hide scrollbar for Chrome, Safari and Opera */
- .wrapper .category-wise .product-holder::-webkit-scrollbar {
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper .category-wise .product-holder::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .wrapper .category-wise .product-holder {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .wrapper .category-wise .product-holder .item {
   margin: 8px;
   width: 250px;
@@ -259,7 +278,7 @@ a {
 .wrapper .category-wise .product-holder .item label[for="category"] {
   margin: 6px 0;
   font-size: 12px;
-  font-family: "Karla",sans-serif;
+  font-family: "Karla", sans-serif;
 }
 .wrapper .category-wise .product-holder .item label[for="pPrice"] {
   margin-bottom: 6px;
