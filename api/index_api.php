@@ -76,6 +76,13 @@ function findby($url_value)
             mysqli_close($link);
             break;
 
+        case 'Others':
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE category = 'Others' AND `archieve` = '0'";
+            getDataFromServer($link, $sql);
+            // Close Connection to database
+            mysqli_close($link);
+            break;
+
         case 'heroimage':
             $sql = "SELECT * FROM heroimage";
             getDataFromServer($link, $sql);

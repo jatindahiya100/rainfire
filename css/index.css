@@ -31,7 +31,7 @@ a {
   background: rgb(255, 255, 255);
   text-align: center;
 }
-.wrapper .new-arrivals h3 {
+.wrapper .new-arrivals .sticky h3 {
   margin: 8px;
   display: inline-block;
   background: rgb(0, 0, 0);
@@ -186,15 +186,18 @@ a {
   list-style-type: none;
   white-space: nowrap;
   width: max-content;
-  line-height: 28px;
+  line-height: 34px;
   padding: 0 16px;
   border-radius: 16px;
-  font-weight: 500;
-  
-}
-.active {
+  font-size: 14px;
+  font-weight: 600;
+  background: #000;
   color: white;
-  background-color: rgb(0, 0, 0);
+  user-select: none;
+}
+.wrapper .category-wise ul li:hover {
+  background: rgba(0, 84, 211, 0.288);
+  color: rgb(0, 84, 211);
 }
 .wrapper .category-wise > div {
   position: relative;
