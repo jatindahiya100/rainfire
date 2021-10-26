@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background: #2273f8;;
+  background: #2273f8;
 }
 header a {
   text-decoration: none;
@@ -28,7 +28,7 @@ header .quick-links ul #cart-icon {
 }
 header .quick-links ul li {
   margin-left: 18px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Karla", sans-serif;
 }
 header .quick-links ul li img {
@@ -60,7 +60,7 @@ header .quick-links ul li label {
     height: 30px;
   }
   header .quick-links ul li {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 16px;
   }
 }
