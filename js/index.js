@@ -1,64 +1,11 @@
 window.addEventListener('load', function () {
-
-    $('#loader').slideUp(1000);
-    $('.wrapper').delay(1000).fadeIn(1000);
+    $('.loading-content').fadeOut(2000);
+    $('.wrapper').delay(2000).fadeIn();
     // Loading header
     $('#header').load("header.html");
     // Loading Footer
     $('#footer').load("footer.html");
-
-
 });
-
-// Calling heroimage() function
-heroimage();
-
-// Declaring  heroimage() function
-function heroimage() {
-    var category = "heroimage";
-    $.ajax({
-        url: 'api/index_api.php?get=' + category,
-        type: "GET",
-        beforeSend: function () {
-
-        },
-        success: function (data) {
-            if (data['status'] == "true") {
-                var banner = "";
-                $.each(data['message'], function (key, value) {
-                    banner += "<a href='"+ value.linked_to +"'><div class='slide-parts'>" +
-                        "<img src='" + value.banner_url + "' alt=''>" +
-                        "<div class='slide-product-name'>" + value.heading + "</div>" +
-                        "</div></a>";
-                });
-
-                $('.slideshow-container').html(banner);
-                showSlides(slideIndex);
-            }
-        }
-    });
-}
-
-// Slideshow Function
-var slideIndex = 1;
-
-
-function showSlides(n) {
-    var i;
-    var slides = $(".slide-parts");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        // slides[i].style.display = "none";
-        $(slides[i]).css("left", "-100%");
-    }
-    // slides[slideIndex - 1].style.display = "block";
-    $(slides[slideIndex - 1]).css("left", "0");
-}
-setInterval(() => {
-    showSlides(++slideIndex)
-}, 6000);
-
 
 // Calling Fetch New Arrivals
 fetchNewArrival();
@@ -91,14 +38,14 @@ function fetchNewArrival() {
                         "<label for='p_Price'>Rs. " + parseInt(value.p_Price).toLocaleString('en-IN') + "</label>" +
                         "<label for='discount'>" + value.discount + "% OFF</label>" +
                         "</div>" +
-                        "<label for='new-arrivals-tag'>" + value.stock + "</label>" +
+                        "<label for='featured-tag'>" + value.stock + "</label>" +
                         "<label for='description'><strong>Description: </strong>" + value.description + "</label>" +
                         "<button class='buy'>Buy now</button>" +
                         "</div>" +
                         "</div>" +
                         "</div>";
                 });
-                $('.new-arrivals-holder').html(arrivals);
+                $('.featured-holder').html(arrivals);
             } else {
                 console.log(data.msg)
             }
@@ -153,8 +100,6 @@ $(document).on("click", ".flex-box", function () {
     $id = $(this).data("id");
     window.location.href = "Details.html?ProductID=" + $id;
 });
-
-
 
 $(document).on("click", ".slide_left", function () {
     // To get actual position

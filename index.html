@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/slideShow.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Rainfire | Home</title>
@@ -25,18 +24,39 @@
 
 <body>
 
-    <div style="display: flex; justify-content: center;" id="loader">
-        <img style="width: 300px;height: auto; object-fit: contain;" src="images/finalLogo.png" alt="">
+    <div class="loading-content">
+        <div id="loader"></div>
     </div>
 
-
     <div class="wrapper" style="display: none;">
+
+        <!-- Header Section Starts here... -->
         <div id="header">
             <!-- Load Header -->
         </div>
+        <!-- Header Section Ends here... -->
 
-        <div class="slideshow-container">
-        </div>
+        <!-- home section starts  -->
+        <section class="home" id="home">
+
+            <div class="content">
+                <h1>Rainfire Best <br> Quality Products</h1>
+                <ul>
+                    <li>20+ Products</li>
+                    <li>Free Delivery</li>
+                    <li>24 x 7 Support</li>
+                    <li>Premium Products</li>
+                    <li>Anywhere, Anytime...</li>
+                </ul>
+                <a href="#"><button class="btn">Order Now</button></a>
+            </div>
+
+            <div class="image">
+                <img id="hero_image" src="images/hero-img.png" alt="">
+            </div>
+
+        </section>
+        <!-- home section ends -->
 
 
         <div class="category-wise">
@@ -54,11 +74,11 @@
         </div>
 
 
-        <div class="new-arrivals">
+        <div class="featured">
             <div class="sticky">
                 <h3>Featured Product</h3>
             </div>
-            <div class="new-arrivals-holder">
+            <div class="featured-holder">
             </div>
         </div>
 
