@@ -27,7 +27,8 @@ header .quick-links ul #cart-icon {
   width: 45px;
 }
 header .quick-links ul li {
-  font-size: 14px;
+  color: white;
+  font-size: 32px;
   margin-left: 18px;
   font-weight: 600;
   font-family: "Karla", sans-serif;
@@ -55,10 +56,4 @@ header .quick-links ul li label {
   border-radius: 50%;
   font-size: x-small;
 }
-/* If the browser window is 600px or smaller */
-@media only screen and (max-width: 600px) {
-  header .quick-links ul li {
-    font-size: 14px;
-    margin-left: 16px;
-  }
-}
+

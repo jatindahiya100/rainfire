@@ -7,21 +7,30 @@
 
     <div class="quick-links">
         <ul>
-            <li><a href="">Home</a></li>
-            
-                <li><a href="#footer">Contact</a></li>
-            
-            <a href="shopping_Cart.html">
-                <li id="cart-icon">
+            <li id="cart-icon">
+                
                     <img src="images/cart-white.png" alt="">
                     <label for="total-items"></label>
-                </li>
-            </a>
+                
+            </li>
+
+            <li id="hamburger">&#8801;</li>
+
         </ul>
     </div>
 </header>
 
 <script>
+
+    var cart = document.getElementById("cart-icon");
+    var hamburger = document.getElementById("hamburger");
+    cart.addEventListener("click",function(){
+        window.location.href = "shopping_Cart.html";
+    });
+    
+    hamburger.addEventListener("click",function(){
+        window.location.href = "#footer";
+    });
     function count_cart_items() {
         if (typeof (Storage) !== "undefined") {
             // Code for localStorage/sessionStorage.
