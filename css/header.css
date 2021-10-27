@@ -7,6 +7,7 @@ header {
   background: #2273f8;
 }
 header a {
+  font-size: 16px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }

@@ -21,6 +21,7 @@ footer .footer-content .sections {
   padding: 26px;
 }
 footer .footer-content .sections label {
+  font-size: 14px;
   font-weight: 600;
 }
 footer .sections ul li {
