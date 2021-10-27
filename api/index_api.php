@@ -40,7 +40,7 @@ function findby($url_value)
             break;
 
         case 'All':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE `archieve` = '0'";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE `archieve` = '0' ORDER BY id DESC";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
