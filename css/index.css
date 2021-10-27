@@ -82,7 +82,8 @@ body {
 }
 
 .home .content h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  line-height: 7rem;
   color: #fff;
 }
 
