@@ -45,6 +45,7 @@ footer .sections ul li img {
 }
 footer h4 {
   color: white;
+  font-size: initial;
 }
 footer .social-handles {
   margin: 1%;
