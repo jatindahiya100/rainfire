@@ -33,14 +33,14 @@ function findby($url_value)
     require 'config.php';
     switch ($url_value) {
         case 'New Arrivals':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price`, `discount`, `stock`, `description` FROM products WHERE `archieve` = '0' ORDER BY RAND() LIMIT 5";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`, `p_Price`, `discount`, `stock`, `description` FROM products WHERE `archieve` = '0' ORDER BY id DESC LIMIT 3";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
         case 'All':
-            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE `archieve` = '0' ORDER BY Rand()";
+            $sql = "SELECT `p_ID` ,`p_Name`, `thumbnail`,`category`, `p_Price` FROM products WHERE `archieve` = '0' ORDER BY id DESC";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);

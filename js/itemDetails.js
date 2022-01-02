@@ -152,7 +152,6 @@ $(document).on("click", "#buy", function () {
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
         // count_cart_items function is defined in header
         count_cart_items();
-        alert("Product Added To Cart");
         window.location.href = 'shopping_Cart.html';
     }
 });
