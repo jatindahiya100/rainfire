@@ -50,6 +50,9 @@ try {
                     // Upload file
                     if (move_uploaded_file($_FILES['files']['tmp_name'][$index], $path)) {
                         $files_arr[] = "products_gallery/" . $filename;
+                    } else {
+                        echo json_encode("Failed To Upload Check Server Permissions");
+                        die();
                     }
                 }
             }

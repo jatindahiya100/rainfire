@@ -102,7 +102,7 @@ body {
 }
 /* Category Wise */
 .wrapper .category-select {
-  padding: 16px;
+  padding: 8px;
 }
 .wrapper .category-select ul {
   padding: 16px;
@@ -139,14 +139,13 @@ body {
   color: rgb(0, 84, 211);
 }
 .wrapper .category-select > div {
-  padding: 16px;
   width: 100%;
 }
 
 .wrapper .category-select .product-holder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-auto-rows: minmax(200px, auto);
   grid-auto-columns: minmax(200px, auto);
 }
@@ -420,5 +419,10 @@ body {
 @media (max-width: 500px) {
   html {
     font-size: 50%;
+  }
+  .wrapper .category-select .product-holder {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-auto-columns: minmax(160px, auto);
   }
 }
