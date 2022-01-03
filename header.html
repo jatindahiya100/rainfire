@@ -1,35 +1,22 @@
 <header>
-    <a href="index.html">
-        <div class="logo">
-            <img src="images/transparent_logo.png" alt="rainfire logo">
-        </div>
-    </a>
+    <div class="logo">
+        <a href="index.html"><img src="images/Untitled design(1).png" alt="rainfire logo"></a>
+    </div>
 
     <div class="quick-links">
-        <ul>
-            <li id="cart-icon">
-                
-                    <img src="images/cart-white.png" alt="">
-                    <label for="total-items"></label>
-                
-            </li>
-
-            <li id="hamburger">&#8801;</li>
-
-        </ul>
+        <span id="cart-icon">
+            <img src="images/trolley.png" alt="">
+            <label for="total-items"></label>
+        </span>
     </div>
 </header>
 
 <script>
 
     var cart = document.getElementById("cart-icon");
-    var hamburger = document.getElementById("hamburger");
-    cart.addEventListener("click",function(){
-        window.location.href = "shopping_Cart.html";
-    });
     
-    hamburger.addEventListener("click",function(){
-        window.location.href = "#footer";
+    cart.addEventListener("click", function () {
+        window.location.href = "shopping_Cart.html";
     });
     function count_cart_items() {
         if (typeof (Storage) !== "undefined") {

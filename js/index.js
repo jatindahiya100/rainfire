@@ -66,9 +66,7 @@ function GetDataByCategory(category) {
         },
         success: function (data) {
             if (data['status'] == 'true') {
-                var products = "<a class='slide_left'>&#10094;</a>" +
-                    "<a class='slide_right'>&#10095;</a>" +
-                    "<div class='product-holder'>";
+                var products = "<div class='product-holder'>";
                 $.each(data['message'], function (key, value) {
                     products += "<a href=Details.html?ProductID=" + value.p_ID + ">" +
                         "<div class='item'>" +
@@ -90,9 +88,9 @@ function GetDataByCategory(category) {
 }
 
 $('li').on("click", function () {
-    $('li.active').removeClass("active");
+    $('li.clicked').removeClass("clicked");
     category = $(this).attr("id");
-    $(this).addClass("active");
+    $(this).addClass("clicked");
     GetDataByCategory(category);
 });
 
