@@ -87,6 +87,10 @@ if (check_empty_cart() == 'false') {
         }
     });
 
+    $(document).on('input', '.quantity_value', function () {
+        Generate_Order_Summary();
+    });
+
     $(document).on("click", ".item-image", function () {
         window.location.href = "Details.html?ProductID=" + $('.item-details').data("id");
     });
@@ -99,7 +103,13 @@ if (check_empty_cart() == 'false') {
         $('.item-details').each(function () {
             var price = $(this).find('.price_value').val();
             var qty = $(this).find('.quantity_value').val();
-            total += (price * qty);
+            if (!isNaN(qty) && qty > 0) {
+                total += (price * qty);
+            } else {
+                qty = 1;
+                $(this).find('.quantity_value').val(qty);
+                total += (price * qty);
+            }
         });
         $('#amt2bepaid').text('Rs. ' + total.toLocaleString('en-IN'));
 

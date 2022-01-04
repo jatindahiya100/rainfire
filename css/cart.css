@@ -143,16 +143,20 @@ body {
   display: flex;
   flex-direction: column;
   padding: 6px;
- 
   border-radius: 6px;
 }
 .flex-box #right-flex .user-info form .form-group-50 .form-group-item label {
   font-size: 14px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 .flex-box #right-flex .user-info form .form-group-50 .form-group-item input {
   border: none;
   outline: none;
+  height: 36px;
+  background: rgba(235, 235, 235, 0.459);
+  border-radius: 12px;
+  padding-left: 12px;
 }
 
 .flex-box #right-flex .user-info form .form-group-100 {
@@ -164,16 +168,22 @@ body {
   display: flex;
   flex-direction: column;
   padding: 6px;
-  
   border-radius: 6px;
 }
 .flex-box #right-flex .user-info form .form-group-100 .form-group-item label {
   font-size: 14px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 .flex-box #right-flex .user-info form .form-group-100 .form-group-item input {
   border: none;
   outline: none;
+  background: rgba(235, 235, 235, 0.459);
+  height: 36px;
+  border-radius: 12px;
+  padding-left: 12px;
+
+
 }
 
 .flex-box .order-summary{
@@ -263,6 +273,17 @@ body {
     height: auto;
   }
   .flex-box #left-flex .item-details .item-info {
+    width: 100%;
+  }
+  .flex-box #right-flex .user-info form .form-group-50 {
+    float: none;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .flex-box #right-flex .user-info form .form-group-50 .form-group-item {
+    width: 100%;
+  }
+  .flex-box #right-flex .user-info form .form-group-100 .form-group-item {
     width: 100%;
   }
 }
