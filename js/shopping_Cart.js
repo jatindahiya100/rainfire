@@ -127,61 +127,89 @@ if (check_empty_cart() == 'false') {
         // Array
         const prod_array = [];
         // Getting Shipping Info
-        var fname = document.getElementById("fname").value;
-        var lname = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-        var mobile = document.getElementById("mobile").value;
-        var state = document.getElementById("state").value;
-        var district = document.getElementById("district").value;
-        var pincode = document.getElementById("pincode").value;
-        var address = document.getElementById("address").value;
+        var fname = document.getElementById("fname").value.trim();
+        var lname = document.getElementById("lname").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var mobile = document.getElementById("mobile").value.trim();
+        var state = document.getElementById("state").value.trim();
+        var district = document.getElementById("district").value.trim();
+        var pincode = document.getElementById("pincode").value.trim();
+        var address = document.getElementById("address").value.trim();
 
-        if (fname.trim().length > 0 && lname.trim().length > 0 && email.trim().length > 0, mobile.trim().length > 0 && state.trim().length > 0 && district.trim().length > 0, pincode.trim().length > 0, address.trim().length > 0) {
 
-            if (!isNaN(mobile) || !isNaN(pincode)) {
-
-                const shipping_array = [fname, lname, email, mobile, state, district, pincode, address];
-
-                $('.item-details').each(function () {
-                    var p_id = $(this).data("id");
-                    var qty = $(this).find('.quantity_value').val();
-                    products = { p_id: p_id, qty: qty };
-                    prod_array.push(products);
-                });
-
-                $.ajax({
-                    url: "api/place_order.php",
-                    type: "POST",
-                    dataType: "JSON",
-                    data: {
-                        shipping_array: JSON.stringify(shipping_array),
-                        prod_array: JSON.stringify(prod_array)
-                    },
-                    beforeSend: function () {
-
-                    },
-                    success: function (response) {
-                        if (response['status'] == 'true') {
-                            $('input').val('');
-                            localStorage.clear();
-                            count_cart_items();
-                            check_empty_cart();
-                            console.log("done");
+        var emptyinputs = 8;
+        $('.form-group-item').each(function () {
+            if ($(this).find('input').val().trim().length == 0) {
+                $(this).find('input').css("border", "1px solid red");
+            } else {
+                if ($(this).find('input').attr("id") == "mobile" || $(this).find('input').attr("id") == "pincode") {
+                    if (!isNaN($(this).find('input').val())) {
+                        if ($(this).find('input').attr("id") == "mobile" && $(this).find('input').val().length == 10) {
+                            emptyinputs--;
+                            $(this).find('input').css("border", "none");
+                        } else if ($(this).find('input').attr("id") == "pincode" && $(this).find('input').val().length == 6) {
+                            emptyinputs--;
+                            $(this).find('input').css("border", "none");
+                        } else {
+                            $(this).find('input').css("border", "1px solid red");
                         }
+
+                    } else {
+                        $(this).find('input').css("border", "1px solid red");
                     }
 
-                });
-            } else {
-                alert("Mobile && pincode must be numeric");
+                } else {
+                    emptyinputs--;
+                    $(this).find('input').css("border", "none");
+                }
+
             }
-        } else {
-            alert("Empty Fields!!");
+        });
+
+        if (emptyinputs == 0) {
+            alert('Currently Disabled by Seller!!');
+            // const shipping_array = [fname, lname, email, mobile, state, district, pincode, address];
+            // $('.item-details').each(function () {
+            //     var p_id = $(this).data("id");
+            //     var qty = $(this).find('.quantity_value').val();
+            //     products = { p_id: p_id, qty: qty };
+            //     prod_array.push(products);
+            // });
+
+            // $.ajax({
+            //     url: "api/place_order.php",
+            //     type: "POST",
+            //     dataType: "JSON",
+            //     data: {
+            //         shipping_array: JSON.stringify(shipping_array),
+            //         prod_array: JSON.stringify(prod_array)
+            //     },
+            //     beforeSend: function () {
+
+            //     },
+            //     success: function (response) {
+            //         if (response['status'] == 'true') {
+            //             $('input').val('');
+            //             localStorage.clear();
+            //             count_cart_items();
+            //             check_empty_cart();
+            //             console.log("done");
+            //         }
+            //     }
+
+            // });
         }
     }
 
+    var btnclicked = 0;
     $('#checkout').on("click", function () {
-        // checkout();
-        alert('Currently Disabled by Seller!!');
+        if (btnclicked > 0) {
+            checkout();
+        } else {
+            $('#checkout').html("Checkout");
+            $('.user-info').slideDown();
+            btnclicked++;
+        }
     });
 
 }

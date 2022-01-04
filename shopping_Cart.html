@@ -15,7 +15,7 @@
     <!-- Karla Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
+    <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
     <title>Shopping Cart</title>
 </head>
 
@@ -28,6 +28,22 @@
         <div class="flex-box">
             <div id="left-flex" class="flex"></div>
             <div id="right-flex" class="flex">
+
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <table>
+                        <tr>
+                            <td>Total items</td>
+                            <td id="total_items"></td>
+                        </tr>
+                        <tr>
+                            <td>Amount to be paid</td>
+                            <td id="amt2bepaid"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
                 <div class="user-info">
                     <h3>We're almost Done</h3>
                     <form>
@@ -55,7 +71,8 @@
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="Mobile">Mobile</label>
-                                <input type="text" name="Mobile" id="mobile" placeholder="Enter Your 10 digit Mobile number">
+                                <input type="text" name="Mobile" id="mobile"
+                                    placeholder="Enter Your 10 digit Mobile number">
                             </div>
                         </div>
 
@@ -89,22 +106,10 @@
                     </form>
                 </div>
 
-                <div class="order-summary">
-                    <h3>Order Summary</h3>
-                    <table>
-                        <tr>
-                            <td>Total items</td>
-                            <td id="total_items"></td>
-                        </tr>
-                        <tr>
-                            <td>Amount to be paid</td>
-                            <td id="amt2bepaid"></td>
-                        </tr>
-                    </table>
-                </div>
+
 
                 <div class="checkout">
-                    <button id="checkout">Checkout</button>
+                    <button id="checkout">Proceed</button>
                 </div>
 
             </div>
