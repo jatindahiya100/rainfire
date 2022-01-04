@@ -261,11 +261,10 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 8px 0;
   }
   .flex-box #left-flex .item-details {
-   
     flex-direction: column;
-    
   }
   .flex-box #left-flex .item-details .item-image{
     width: 100%;
