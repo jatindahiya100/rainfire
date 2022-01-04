@@ -16,7 +16,9 @@ header .quick-links {
   flex-direction: row;
   align-items: center;
 }
-
+header .quick-links #call-action {
+  margin-right: 20px;
+}
 header .quick-links #cart-icon {
   position: relative;
   height: 36px;
