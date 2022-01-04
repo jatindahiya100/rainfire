@@ -420,6 +420,16 @@ body {
   html {
     font-size: 50%;
   }
+  .landing-page {
+    padding: 0 7%;
+  }
+  .landing-page .lg-content h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .landing-page .lg-content ul li {
+    line-height: 5rem;
+  }
   .wrapper .category-select .product-holder {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-auto-rows: minmax(200px, auto);
