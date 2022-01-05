@@ -26,11 +26,7 @@
 
 <body>
 
-    <div class="loading-content">
-        <div id="loader"></div>
-    </div>
-
-    <div class="wrapper" style="display: none;">
+    <div class="wrapper">
 
         <!-- Header Section Starts here... -->
         <div id="header">
@@ -177,8 +173,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         window.addEventListener('load', function () {
-            $('.loading-content').fadeOut(2000);
-            $('.wrapper').delay(2000).fadeIn();
             // Loading header
             $('#header').load("header.html");
             // Loading Footer

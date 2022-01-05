@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
-    $('.loading-content').fadeOut(2000);
-    $('.wrapper').delay(2000).fadeIn();
+    $('.loading-content').fadeOut();
+    $('.wrapper').fadeIn();
     // Loading header
     $('#header').load("header.html");
     // Loading Footer
