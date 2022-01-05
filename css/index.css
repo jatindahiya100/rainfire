@@ -105,6 +105,9 @@ body {
   padding: 8px;
 }
 .wrapper .category-select ul {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
   padding: 16px;
   width: 100%;
   display: flex;
