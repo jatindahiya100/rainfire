@@ -255,6 +255,9 @@ body {
   .flex-box .checkout img {
     margin-bottom: 50px;
   }
+  .flex-box .order-summary{
+    margin-bottom: 50px;
+  }
   .flex-box .checkout button{
     margin: 0;
     border-radius: 0;

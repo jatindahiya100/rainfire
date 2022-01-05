@@ -206,8 +206,11 @@ if (check_empty_cart() == 'false') {
         if (btnclicked > 0) {
             checkout();
         } else {
-            $('#checkout').html("Checkout");
+            $('#checkout').html("Place Order");
             $('.user-info').slideDown();
+            $('html,body').animate({
+                scrollTop: $(".user-info").offset().top},
+                'slow');
             btnclicked++;
         }
     });
