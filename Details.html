@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/Details.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
+</head>
+
+<body>
+
+    <div class="container-box">
+        <div id="header"></div>
+
+        <div class="wrapper">
+
+            <div class="section01">
+                <!-- Products Gallery -->
+                <div class="product-gallery">
+
+
+                </div>
+
+                <!-- Checkout Section -->
+                <div class="checkout">
+                    <button id="buy">Buy</button>
+                </div>
+
+            </div>
+
+            <div class="section02">
+                <div class="basic_info" style="display:none">
+                    <h2 id="product-name"></h2>
+
+                    <div class="basic-info">
+                        <label for="ratings"></label>
+                        <label for="stock"></label>
+                    </div>
+
+                    <div class="price-info">
+                        <label for="dprice"></label>
+                        <label for="discount"></label>
+                        <label for="deleted-price"></label>
+                    </div>
+                    <label for="usaved"></label>
+                </div>
+
+                <div class="specifications">
+                    <table>
+                        <!-- Specification from server -->
+                    </table>
+                    <p id="description"><strong>Description: </strong>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/itemDetails.js"></script>
+</body>
+
+</html>

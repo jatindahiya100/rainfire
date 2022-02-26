@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}       
+html,body{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 5%;
+}
+
+.section01 {
+  width: 45%;
+}
+.product-gallery {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+.product-photos {
+  display: none;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 5%;
+}
+.product-gallery .product-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+.checkout button {
+  font-family: "Karla",sans-serif;
+  border: none;
+  outline: none;
+  width: 150px;
+  background: #000;
+  color: white;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius: 4px;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section02 {
+  width: 50%;
+  height: 79vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.section02::-webkit-scrollbar {
+  display: none;
+}
+.section02 h2 {
+  font-size: 26px;
+  line-height: 46px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.849);
+}
+.section02 .basic-info{
+  margin: 4px 0 16px;
+}
+.section02 .basic-info label[for="ratings"]{
+  line-height: 26px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #2874F0;
+}
+.section02 .basic-info label[for="stock"]{
+  line-height: 26px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #000000;
+}
+.section02 .price-info {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+.section02 .price-info label[for="dprice"]{
+  background: rgba(0, 84, 211, 0.288);
+  text-align: center;
+  width: 120px;
+  color: rgb(0, 84, 211);
+  border-radius: 26px;
+  line-height: 36px;
+  margin: 16px 0 16px 0;
+  font-weight: 600;
+}
+.section02 .price-info label[for="discount"]{
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.section02 .price-info label[for="deleted-price"]{
+  font-weight: 600;
+}
+.section02  label[for="usaved"]{
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.section02 .specifications{
+  margin-top: 30px;
+  width: 100%;
+}
+.section02 .specifications table{
+  border-collapse: collapse;
+  width: 70%;
+}
+.section02 .specifications table th{
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+.section02 .specifications table tr{
+  height: 40px;
+}
+.section02 .specifications table tr td:first-child{
+  text-transform: capitalize;
+  color: rgb(22, 22, 22);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: start;
+}
+.section02 .specifications table tr td:last-child{
+  text-align:right;
+}
+.section02 .specifications table tr td {
+  width: 50%;
+  text-transform: capitalize;
+  padding: 2px;
+  font-size: 14px;
+}
+
+#description {
+  font-size: 14px;
+  line-height: 26px;
+  color: rgb(43, 43, 43);
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .section02 .specifications table{
+    width: 100%;
+  }
+  .section01 {
+    width: 50%;
+  }
+  .product-gallery {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column; 
+  }
+  .section01 {
+    width: 100%;
+  }
+  .product-gallery{
+    margin-top: 0;
+    width: 100%;
+  }
+  .section02{
+    width: 100%;
+    padding: 16px;
+    height: fit-content;
+  }
+  .product-photos {
+    height: 400; 
+  }
+  .section02 .specifications table{
+    margin: auto;
+  }
+  .checkout {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .checkout button {
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+  }
+  p{
+    margin-bottom: 60px;
+  }
+  .section02 h2 {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}

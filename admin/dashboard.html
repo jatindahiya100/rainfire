@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Karla Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Admin | Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <div id="menu" class="menu-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <h3>Dashboard</h3>
+        </div>
+
+        <div class="right">
+            <h4>Hi! Rainfire</h4>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+        <nav>
+            <div class="nav-items">
+                <img src="images/Building-bro.svg" alt="">
+                <ul>
+                    <a href="home.html" target="iframe"><li class="active">Home <i class="fa fa-home" style="font-size:20px"></i></li></a>
+                    <a href="../index.html" target="iframe"><li>Site Preview<i class="fa fa-eye"></i></li></a>
+                    <li>Orders <i class='fa fa-history' style='font-size:20px'></i></li>
+                    <a href="Add-Products.html" target="iframe"><li>Add Product <i class='fa fa-cart-plus'></i> </li></a>
+                    <a href="edit_Products.html" target="iframe"><li>Edit Product  <i class="fa fa-edit"></i></li></a>
+                    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=analytics&passive=1209600&continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F%23&followup=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><li>Analytics <i class='fa fa-line-chart'></i> </li></a>
+                    <a href="http://localhost/phpmyadmin/" target="iframe"><li>phpmyadmin <i class='fa fa-database'></i></li></a>
+                    <li id="logout">Log Out <i class='fa fa-power-off'></i></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <iframe src="home.html" name="iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

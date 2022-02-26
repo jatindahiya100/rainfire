@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Add-Products.css">
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Karla Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Add Products</title>
+</head>
+
+<body>
+    <hr class="progress">
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="left-section">
+
+                <!-- Thumbnail will be shown here -->
+                <div class="thumnail-image">
+                    <img id="thumb-image"
+                        src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                        alt="">
+                        <input type="file" name="files[]" id="files" hidden multiple accept="image/*">
+                </div>
+
+                <button id="add-product">Save</button>
+
+                <span class="message"></span>
+
+            </div>
+
+
+            <div class="details-form">
+
+                <label for="heading">ADD Product</label>
+
+                <input name="pname" id="pname" type="text" placeholder="Beats EP">
+
+                <div class="pricing">
+
+                    <div class="pricing-01">
+                        <label for="Rs.">Rs.</label>
+                        <input name="price" type="text" placeholder="12,000" autocomplete="off" maxlength="5">
+                    </div>
+
+                    <div class="pricing-02">
+                        <input type="text" name="discount" id="discount" placeholder="100" maxlength="3">
+                        <label for="% OFF">% OFF</label>
+                    </div>
+                </div>
+
+                <textarea name="description" id="description" cols="30" rows="6"
+                    placeholder="Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore reiciendis, deleniti atque nam tempora fuga nesciunt ea maxime ut ullam, aliquid eligendi labore, sunt incidunt! Iste, quisquam? Ipsum possimus, nam perspiciatis in nobis nihil dolorum asperiores voluptatibus expedita quidem quia, impedit porro facere? Corporis, necessitatibus optio. Delectus tempore vel reiciendis."></textarea>
+
+
+                <div class="color">
+                    <label for="color-heading">Select Color:</label>
+                    <div class="color-select">
+                        <input name="color-select" type="color" value="#333333">
+                    </div>
+                </div>
+
+
+
+                <div class="category">
+
+                    <div class="item">
+                        <input type="radio" name="category" value="Headphones" checked>
+                        <label for="Headphones">Headphones</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" value="Data Cables">
+                        <label for="Data Cables">Data Cables</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" value="Speakers">
+                        <label for="Speakers">Speakers</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" value="Batteries">
+                        <label for="Batteries">Batteries</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" name="category" value="Others">
+                        <label for="Others">Others</label>
+                    </div>
+
+                </div>
+
+
+                <div class="specification">
+                    <h2>Specifications</h2>
+                    <button id="add_more">+</button>
+
+                    <div class="spec-div">
+                        <input type="text" class="key" placeholder="Key">
+                        <input type="text" class="value" placeholder="Value">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/Add-Products.js"></script>
+</body>
+
+</html>

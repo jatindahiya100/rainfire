@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn button {
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 16px;
+
+  line-height: 36px;
+  padding: 0 16px 0 16px;
+}
+.btn .active {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.product_listing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product_listing table {
+  width: 100%;
+}
+.product_listing table tr th {
+    font-size: 16px;
+    font-family: "Karla",sans-serif;
+  }
+.product_listing table tr td {
+  padding: 8px;
+  font-size: 13px;
+  color: black;
+}
+.product_listing table tr td a {
+  color: #000;
+}
+.product_listing table tr td button {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    line-height: 34px;
+    padding: 0 16px 0 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.product_listing table tr td .archieve {
+    background: rgb(194, 0, 0);
+    color: white;
+}
+.product_listing table tr td .edit {
+    background: rgba(0, 0, 0, 0.911);
+    color: white;
+}
+/* Pop Up */
+.modal-box {
+  display: none;
+  background: rgba(0, 0, 0, 0.541);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  overflow-y: auto;
+}
+.pop-up {
+  background: #fff;
+  width: 400px;
+  height: max-content;
+  position: relative;
+  top: 50px;
+  left: calc(50% - 200px);
+  padding: 15px;
+  border-radius: 4px;
+}
+.modal-box .pop-up .close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.modal-box .pop-up form {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-box .pop-up form h3 {
+  font-family: "Karla",sans-serif;
+  margin-bottom: 20px;
+}
+.modal-box .pop-up input,select {
+  margin: 12px;
+  width: 300px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  text-align-last: center;
+  line-height: 34px;
+  background-color: rgb(255, 255, 255);
+  font-family: "Karla",sans-serif;
+}
+.modal-box .pop-up select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+.modal-box .pop-up select::-ms-expand {
+  display: none;
+}
+.modal-box .pop-up form input[type="submit"]{
+  background: #000;
+  color: white;
+  line-height: 36px;
+  padding: 0 24px 0 24px;
+  width: max-content;
+  font-family: "Karla",sans-serif;
+  border-radius: 4px;
+  font-weight: 600;
+}
