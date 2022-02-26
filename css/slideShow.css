@@ -4,96 +4,42 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
-
 .slideshow-container {
   width: 100%;
+  height: 50%;
   position: relative;
   margin: auto;
+  background: #000;
 }
 .slide-parts {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
 }
 
 .slideshow-container .slide-parts img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Next and previous buttons */
-.prev,
-.next {
-  cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slide-product-name {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 10%;
-  width: 30%;
-  height: 100%;
-  font-size: 36px;
+  width: 0;
+  overflow: visible;
+  height: max-content;
+  font-size: 30px;
   line-height: 46px;
   color: white;
   font-weight: 700;
   text-transform: capitalize;
-  word-spacing: 100vw;
-}
-.slide-parts button {
-  position: absolute;
-  bottom: 15%;
-  left: 10%;
-  color: black;
-  background-color: white;
-  font-weight: 700;
-  padding: 4px 16px;
-  line-height: 26px;
-  border-radius: 6px;
-  border: none;
 }
 .slide-product-name button:hover {
   background-color: rgb(236, 230, 230);
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
 }

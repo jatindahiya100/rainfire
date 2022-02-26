@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Icons -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Karla Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/edit-Products.css">
+    <title>Edit Products</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="btn">
+            <button class="active">Listed Products</button>
+            <button>Archieve</button>
+        </div>
+
+        <div class="product_listing">
+            <table>
+                <!-- Product List From Database -->
+            </table>
+        </div>
+
+        <div class="modal-box">
+            <div class="pop-up">
+                <div id="close-modal" class="close-btn">X</div>
+                <form id="update_product">
+                    <h3>Update Details</h3>
+                    <input id="store_p_ID" type="text" disabled hidden>
+                    <label for="pname">Product Name</label>
+                    <input type="text" id="pname" placeholder="Product Name">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" placeholder="Rs. 12000">
+                    <label for="discount">Discount %</label>
+                    <input type="text" id="discount" placeholder="45 %">
+
+                    <label for="category">Category</label>
+                    <select name="Category" id="Category">
+                        <option value="" selected disabled>Choose Category</option>
+                        <option value="Headphones">Headphones</option>
+                        <option value="Data Cables">Data Cables</option>
+                        <option value="Speakers">Speakers</option>
+                        <option value="Batteries">Batteries</option>
+                    </select>
+
+                    <label for="Rating">Rating</label>
+                    <select name="Rating" id="Rating">
+                        <option value="Rating" selected disabled>Rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <label for="Stock">Stock</label>
+                    <select name="Stock" id="Stock">
+                        <option value="In Stock">In Stock</option>
+                        <option value="Out Of Stock">Out Of Stock</option>
+                    </select>
+
+                    <input id="update" type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/edit_Products.js"></script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ function fetch($link, $sql)
             $output = mysqli_fetch_assoc($result);
 
             echo "
-                <div class='item-details'> 
+                <div class='item-details' data-id='{$output['p_ID']}'>
                     <div class='item-image'>
                             <img src='{$output['thumbnail']}' alt=''>
                     </div>
@@ -45,8 +45,6 @@ function fetch($link, $sql)
                             </div>
                     </div> 
                 </div>";
-        } else {
-            echo "No Products Found";
         }
     } else {
         // Display Error

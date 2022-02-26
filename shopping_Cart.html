@@ -15,6 +15,7 @@
     <!-- Karla Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
     <title>Shopping Cart</title>
 </head>
 
@@ -27,62 +28,63 @@
         <div class="flex-box">
             <div id="left-flex" class="flex"></div>
             <div id="right-flex" class="flex">
-                <div class="user-info">
+                <div id="user-info" class="user-info">
                     <h3>We're almost Done</h3>
                     <form>
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname" placeholder="Jatin">
+                                <input type="text" name="fname" id="fname" placeholder="Your First Name">
                             </div>
                         </div>
 
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="lname">Last Name</label>
-                                <input type="text" name="lname" id="lname" placeholder="Dahiya">
+                                <input type="text" name="lname" id="lname" placeholder="Your Last Name">
                             </div>
                         </div>
 
                         <div class="form-group-100">
                             <div class="form-group-item">
-                                <label for="email">Last Name</label>
-                                <input type="email" name="email" id="email" placeholder="jatin@gmail.com">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" placeholder="xyz@example.com">
                             </div>
                         </div>
 
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="Mobile">Mobile</label>
-                                <input type="text" name="Mobile" id="mobile" placeholder="9485901109">
+                                <input type="text" name="Mobile" id="mobile"
+                                    placeholder="Enter Your 10 digit Mobile number">
                             </div>
                         </div>
 
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="state">State</label>
-                                <input type="text" name="State" id="state" placeholder="Haryana">
+                                <input type="text" name="State" id="state" placeholder="Enter Your State">
                             </div>
                         </div>
 
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="district">District</label>
-                                <input type="text" name="district" id="district" placeholder="Sonipat">
+                                <input type="text" name="district" id="district" placeholder="Enter District">
                             </div>
                         </div>
 
                         <div class="form-group-50">
                             <div class="form-group-item">
                                 <label for="pincode">Pincode</label>
-                                <input type="tel" name="pincode" id="pincode" placeholder="131001">
+                                <input type="tel" name="pincode" id="pincode" placeholder="6 digit pincode">
                             </div>
                         </div>
 
                         <div class="form-group-100">
                             <div class="form-group-item">
                                 <label for="address">Address</label>
-                                <input type="textarea" name="address" id="address" placeholder="6/510 Mahaveer Colony">
+                                <input type="textarea" name="address" id="address" placeholder="Shipping Address">
                             </div>
                         </div>
                     </form>
@@ -103,8 +105,7 @@
                 </div>
 
                 <div class="checkout">
-                    <img src="https://cdn.razorpay.com/static/assets/merchant-badge/badge-dark.png" alt="">
-                    <button>Checkout</button>
+                    <button id="checkout">Proceed</button>
                 </div>
 
             </div>
@@ -112,7 +113,7 @@
 
         <div class="empty-cart">
             <img src="images/Add to Cart-bro.svg" alt="">
-            <button>Empty Cart</button>
+            <button>Continue Shopping</button>
         </div>
     </div>
 
@@ -120,7 +121,7 @@
 
     <!-- Importing jquery for AJAX -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/shopping_Cart.js"></script>
 </body>
 
 </html>

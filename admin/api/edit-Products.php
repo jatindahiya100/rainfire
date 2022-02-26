@@ -25,39 +25,41 @@ function getDataFromServer($conn, $query)
     }
 }
 
-function findby($p_ID,$findby)
+
+function find($value,$p_ID)
 {
     require 'config.php';
-    switch ($findby) {
-        case 'Case1':
-            $sql = "SELECT p_Name,p_Price,original_price,discount,money_saved,rating,stock,description FROM products WHERE p_ID = '{$p_ID}'";
+    switch ($value) {
+        case 'Listed':
+            $sql = "SELECT * FROM products ORDER BY id DESC";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
-        case 'specs':
-            $sql = "SELECT * FROM specificaions WHERE product_ID = '{$p_ID}'";
+        case 'Archieved':
+            $sql = "SELECT * FROM products";
             getDataFromServer($link, $sql);
             // Close Connection to database
             mysqli_close($link);
             break;
 
-            case 'product_images':
-                $sql = "SELECT * FROM p_images WHERE p_ID = '{$p_ID}'";
-                getDataFromServer($link, $sql);
-                // Close Connection to database
-                mysqli_close($link);
-                break;
+        case 'EditButtonClicked':
+            $sql = "SELECT * FROM products WHERE p_ID = '{$p_ID}' LIMIT 1";
+            getDataFromServer($link, $sql);
+            // Close Connection to database
+            mysqli_close($link);
+            break;
     }
 }
-// Check if search value is set in url
-if (!empty($_GET['p_id']) && !empty($_GET['findby'])) {
 
-    // Get search value from url
-    $p_ID = $_GET['p_id'];
-    $findby = $_GET['findby'];
-    findby($p_ID,$findby);
+// Check if search value is set
+if (!empty($_POST['sendData'])) {
+
+    // Get value
+    $value = $_POST['sendData'];
+    $p_ID = $_POST['p_ID'];
+    find($value,$p_ID);
 } else {
     // If search value is not set in url
     echo json_encode(array('message' => 'Bad Request', 'status' => 'false'));
