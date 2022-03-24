@@ -212,8 +212,9 @@ aside ul li a {
 .wrapper .category-select ul {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   overflow-x: auto;
 }
@@ -228,7 +229,7 @@ aside ul li a {
   scrollbar-width: none; /* Firefox */
 }
 .wrapper .category-select ul li {
-  margin: 2%;
+  margin: 3%;
   min-height: 100px;
   min-width: 100px;
   display: flex;

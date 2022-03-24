@@ -111,6 +111,7 @@ $("li").on("click", function () {
   $("li.clicked").removeClass("clicked");
   category = $(this).attr("id");
   $(this).addClass("clicked");
+  $(this).closest("ul").css({"flex-wrap": "nowrap", "justify-content": "start", "transition": "1s"});
   GetDataByCategory(category);
 });
 
