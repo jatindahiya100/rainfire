@@ -1,3 +1,11 @@
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
 * {
   margin: 0;
   padding: 0;
@@ -89,10 +97,12 @@ aside ul li {
 .wrapper .landing-page .bubble.x1 {
   height: 50px;
   width: 50px;
-  background: #000;
+  background: rgb(27, 250, 202);
   bottom: 10%;
   left: 20%;
   font-size: 24px;
+  box-shadow: rgb(27, 250, 202) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 3s infinite alternate;
 }
 .wrapper .landing-page .bubble.x2 {
   height: 40px;
@@ -102,6 +112,8 @@ aside ul li {
   right: 5%;
   font-size: 30px;
   box-shadow: rgb(64, 197, 255) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 3s infinite alternate;
+
 }
 .wrapper .landing-page .bubble.x3 {
   height: 32px;
@@ -111,6 +123,7 @@ aside ul li {
   right: 50%;
   font-size: 28px;
   box-shadow: rgb(255, 195, 80) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 2s infinite alternate;
 }
 .wrapper .landing-page .bubble.x4 {
   height: 60px;
@@ -120,6 +133,7 @@ aside ul li {
   right: 5%;
   font-size: 46px;
   box-shadow: rgb(255, 122, 75) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 2s infinite alternate;
 }
 .wrapper .landing-page .bubble.x5 {
   height: 50px;
@@ -129,6 +143,17 @@ aside ul li {
   right: 0;
   font-size: 30px;
   box-shadow: rgb(255, 75, 75) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 4s infinite alternate;
+}
+.wrapper .landing-page .bubble.x6 {
+  height: 30px;
+  width: 30px;
+  background: #ff4f4f;
+  left: 2%;
+  top: 50%;
+  font-size: 20px;
+  box-shadow: rgb(255, 75, 75) 0px 8px 24px;
+  animation: fadeInAnimation ease-in-out 5s infinite alternate;
 }
 .wrapper .landing-page .layout-design {
   width: 100%;
@@ -178,28 +203,49 @@ aside ul li {
   padding: 8px;
 }
 .wrapper .category-select ul {
+  width: 100%;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  overflow-x: auto;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper .category-select ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper .category-select ul {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .wrapper .category-select ul li {
-  height: 150px;
-  width: 150px;
+  margin: 2%;
+  min-height: 100px;
+  min-width:  100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+  background:#2f3447;
 }
 .wrapper .category-select ul li span {
   margin-top: 12px;
   font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+.wrapper .category-select ul li img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .clicked {
-  border: 1px solid #2f3447;
+  transition: transform .2s; /* Animation */
+  transform: scale(1.1);
 }
 .wrapper .category-select > div {
   width: 100%;
@@ -209,7 +255,8 @@ aside ul li {
   margin-top: 3%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 20px;
+  grid-row-gap: 30px;
   grid-auto-rows: minmax(200px, auto);
   grid-auto-columns: minmax(200px, auto);
 }
