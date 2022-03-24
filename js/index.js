@@ -65,8 +65,8 @@ function fetchNewArrival() {
 }
 
 // Fetch Products By Category
-var category = "All";
-// GetDataByCategory(category);
+var category = "Headphones";
+GetDataByCategory(category);
 
 function GetDataByCategory(category) {
   $.ajax({
