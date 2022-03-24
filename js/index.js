@@ -66,7 +66,7 @@ function fetchNewArrival() {
 
 // Fetch Products By Category
 var category = "All";
-GetDataByCategory(category);
+// GetDataByCategory(category);
 
 function GetDataByCategory(category) {
   $.ajax({
@@ -99,7 +99,7 @@ function GetDataByCategory(category) {
             "</a>";
         });
         products += "</div>";
-        $(".Products_from_database").html(products);
+        $(".Products_from_database").html(products).fadeOut().fadeIn();
       } else {
         $(".Products_from_database").html("");
       }

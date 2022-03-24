@@ -178,47 +178,35 @@ aside ul li {
   padding: 8px;
 }
 .wrapper .category-select ul {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  padding: 16px;
-  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
-  overflow-x: auto;
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-.wrapper .category-select ul::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.wrapper .category-select ul {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper .category-select ul li {
-  margin-right: 6px;
-  list-style-type: none;
-  white-space: nowrap;
-  width: max-content;
-  line-height: 34px;
-  padding: 0 16px;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  user-select: none;
 }
+.wrapper .category-select ul li span {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
 .clicked {
-  background: rgba(0, 84, 211, 0.288);
-  color: rgb(0, 84, 211);
+  border: 1px solid #2f3447;
 }
 .wrapper .category-select > div {
   width: 100%;
 }
 
 .wrapper .category-select .product-holder {
+  margin-top: 3%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
@@ -231,6 +219,7 @@ aside ul li {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .wrapper .category-select .product-holder .item img {
