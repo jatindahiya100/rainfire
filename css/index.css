@@ -90,8 +90,8 @@ aside ul li {
   height: 50px;
   width: 50px;
   background: #000;
-  top: 65%;
-  left: 40%;
+  bottom: 10%;
+  left: 20%;
   font-size: 24px;
 }
 .wrapper .landing-page .bubble.x2 {
@@ -108,7 +108,7 @@ aside ul li {
   width: 32px;
   background: #ffc860;
   top: 36%;
-  right: 40%;
+  right: 50%;
   font-size: 28px;
   box-shadow: rgb(255, 195, 80) 0px 8px 24px;
 }
@@ -120,6 +120,15 @@ aside ul li {
   right: 5%;
   font-size: 46px;
   box-shadow: rgb(255, 122, 75) 0px 8px 24px;
+}
+.wrapper .landing-page .bubble.x5 {
+  height: 50px;
+  width: 50px;
+  background: #ff4f4f;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  box-shadow: rgb(255, 75, 75) 0px 8px 24px;
 }
 .wrapper .landing-page .layout-design {
   width: 100%;
