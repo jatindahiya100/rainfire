@@ -1,127 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/cart.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <!-- Importing Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Karla Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" type="image/ico" href="https://www.rainfire.in/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="https://www.rainfire.in/favicon.ico"
+    />
     <title>Shopping Cart</title>
-</head>
+    <!-- Google Analytics Tracking Code-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3P8FKCK37V"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<body>
+      gtag("config", "G-3P8FKCK37V");
+    </script>
+  </head>
+
+  <body>
     <div class="container">
-        <div id="header">
-            <!-- header.html file will load here -->
-        </div>
+      <div id="header">
+        <!-- header.html file will load here -->
+      </div>
 
-        <div class="flex-box">
-            <div id="left-flex" class="flex"></div>
-            <div id="right-flex" class="flex">
-                <div id="user-info" class="user-info">
-                    <h3>We're almost Done</h3>
-                    <form>
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname" placeholder="Your First Name">
-                            </div>
-                        </div>
-
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="lname">Last Name</label>
-                                <input type="text" name="lname" id="lname" placeholder="Your Last Name">
-                            </div>
-                        </div>
-
-                        <div class="form-group-100">
-                            <div class="form-group-item">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" placeholder="xyz@example.com">
-                            </div>
-                        </div>
-
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="Mobile">Mobile</label>
-                                <input type="text" name="Mobile" id="mobile"
-                                    placeholder="Enter Your 10 digit Mobile number">
-                            </div>
-                        </div>
-
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="state">State</label>
-                                <input type="text" name="State" id="state" placeholder="Enter Your State">
-                            </div>
-                        </div>
-
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="district">District</label>
-                                <input type="text" name="district" id="district" placeholder="Enter District">
-                            </div>
-                        </div>
-
-                        <div class="form-group-50">
-                            <div class="form-group-item">
-                                <label for="pincode">Pincode</label>
-                                <input type="tel" name="pincode" id="pincode" placeholder="6 digit pincode">
-                            </div>
-                        </div>
-
-                        <div class="form-group-100">
-                            <div class="form-group-item">
-                                <label for="address">Address</label>
-                                <input type="textarea" name="address" id="address" placeholder="Shipping Address">
-                            </div>
-                        </div>
-                    </form>
+      <div class="flex-box">
+        <div id="left-flex" class="flex"></div>
+        <div id="right-flex" class="flex">
+          <div id="user-info" class="user-info">
+            <h3>We're almost Done</h3>
+            <form>
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="fname">First Name</label>
+                  <input
+                    type="text"
+                    name="fname"
+                    id="fname"
+                    placeholder="Your First Name"
+                  />
                 </div>
+              </div>
 
-                <div class="order-summary">
-                    <h3>Order Summary</h3>
-                    <table>
-                        <tr>
-                            <td>Total items</td>
-                            <td id="total_items"></td>
-                        </tr>
-                        <tr>
-                            <td>Amount to be paid</td>
-                            <td id="amt2bepaid"></td>
-                        </tr>
-                    </table>
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="lname">Last Name</label>
+                  <input
+                    type="text"
+                    name="lname"
+                    id="lname"
+                    placeholder="Your Last Name"
+                  />
                 </div>
+              </div>
 
-                <div class="checkout">
-                    <button id="checkout">Proceed</button>
+              <div class="form-group-100">
+                <div class="form-group-item">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="xyz@example.com"
+                  />
                 </div>
+              </div>
 
-            </div>
-        </div>
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="Mobile">Mobile</label>
+                  <input
+                    type="text"
+                    name="Mobile"
+                    id="mobile"
+                    placeholder="Enter Your 10 digit Mobile number"
+                  />
+                </div>
+              </div>
 
-        <div class="empty-cart">
-            <img src="images/Add to Cart-bro.svg" alt="">
-            <button>Continue Shopping</button>
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="state">State</label>
+                  <input
+                    type="text"
+                    name="State"
+                    id="state"
+                    placeholder="Enter Your State"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="district">District</label>
+                  <input
+                    type="text"
+                    name="district"
+                    id="district"
+                    placeholder="Enter District"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group-50">
+                <div class="form-group-item">
+                  <label for="pincode">Pincode</label>
+                  <input
+                    type="tel"
+                    name="pincode"
+                    id="pincode"
+                    placeholder="6 digit pincode"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group-100">
+                <div class="form-group-item">
+                  <label for="address">Address</label>
+                  <input
+                    type="textarea"
+                    name="address"
+                    id="address"
+                    placeholder="Shipping Address"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <table>
+              <tr>
+                <td>Total items</td>
+                <td id="total_items"></td>
+              </tr>
+              <tr>
+                <td>Amount to be paid</td>
+                <td id="amt2bepaid"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="checkout">
+            <button id="checkout">Proceed</button>
+          </div>
         </div>
+      </div>
+
+      <div class="empty-cart">
+        <img src="images/Add to Cart-bro.svg" alt="" />
+        <button>Continue Shopping</button>
+      </div>
     </div>
-
-
 
     <!-- Importing jquery for AJAX -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/shopping_Cart.js"></script>
-</body>
-
+  </body>
 </html>
