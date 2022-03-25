@@ -23,6 +23,7 @@ body {
 }
 .wrapper {
   height: 100%;
+  scroll-behavior: smooth;
   border-radius: 12px;
   background-color: white;
   overflow: hidden;
@@ -182,11 +183,12 @@ aside ul li a {
 }
 .wrapper .landing-page .layout-design .colmn h1 {
   font-size: 4rem;
-  line-height: 5rem;
+  line-height: 5.5rem;
   text-transform: capitalize;
   color: #2f3447;
 }
 .wrapper .landing-page .layout-design .colmn p {
+  margin-top: 16px;
   font-size: 1.5rem;
   line-height: 3rem;
   text-transform: capitalize;

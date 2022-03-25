@@ -228,14 +228,16 @@ body {
   height: 100%;
   display: none;
   flex-direction: column;
+  padding: 5% 0;
   align-items: center;
 }
 .empty-cart img {
   width: 100%;
-  height: 500px;
+  max-height: 300px;
 }
 .empty-cart button {
   width: 200px;
+  margin-top: 20px;
   line-height: 36px;
   background: #000;
   color: white;
