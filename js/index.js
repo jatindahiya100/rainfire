@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 });
 
 // Calling Fetch New Arrivals
-fetchNewArrival();
+// fetchNewArrival();
 
 // Declaring Fetch New Arrivals function
 function fetchNewArrival() {
@@ -118,20 +118,6 @@ $("li").on("click", function () {
 $(document).on("click", ".flex-box", function () {
   $id = $(this).data("id");
   window.location.href = "Details.html?ProductID=" + $id;
-});
-
-$(document).on("click", ".slide_left", function () {
-  // To get actual position
-  var actualScroll = $(".product-holder").scrollLeft();
-  // To set new position
-  $(".product-holder").scrollLeft(actualScroll - 250);
-});
-
-$(document).on("click", ".slide_right", function () {
-  // To get actual position
-  var actualScroll = $(".product-holder").scrollLeft();
-  // To set new position
-  $(".product-holder").scrollLeft(actualScroll + 250);
 });
 
 $(document).on("click", "#openSidebar", function () {
