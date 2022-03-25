@@ -21,7 +21,7 @@
                 '</tr>';
                     $.each(response, function (key, value) {
                         products += "<tr>" +
-                            "<td><a href='../Details.html?ProductID=" + value.p_ID + "'>" + value.p_ID + "</a></td>" +
+                            "<td><a href='../Product?ProductID=" + value.p_ID + "'>" + value.p_ID + "</a></td>" +
                             "<td>" + value.p_Name + "</td>" +
                             "<td>" + value.p_Price + "</td>" +
                             "<td>" + value.discount + "</td>" +

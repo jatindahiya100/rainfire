@@ -1,12 +1,11 @@
 // Loading header
-$('#header').load("header.html");
+$('#header').load("header");
 
 // hero Image
 function products_Images() {
     //  Get Value from Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const p_ID = urlParams.get('ProductID');
+    var url = document.URL;
+    const p_ID = url.substring(url.lastIndexOf('-') + 1);
     var findby = "product_images"
     $.ajax({
         url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
@@ -28,7 +27,7 @@ function products_Images() {
                 $('.product-gallery').html(banner);
                 showSlides(slideIndex);
             } else if (data.status == "false") {
-                window.location.href = "index.html";
+                window.location.href = "index";
             } else {
                 console.log(data);
             }
@@ -71,9 +70,8 @@ products_Images();
 
 function product_basic_Info() {
     //  Get Value from Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const p_ID = urlParams.get('ProductID');
+    var url = document.URL;
+    const p_ID = url.substring(url.lastIndexOf('-') + 1);
     var findby = "Case1"
     $.ajax({
         url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
@@ -105,9 +103,8 @@ product_basic_Info();
 
 function productSpecs() {
     //  Get Value from Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const p_ID = urlParams.get('ProductID');
+    var url = document.URL;
+    const p_ID = url.substring(url.lastIndexOf('-') + 1);
     var findby = "specs"
     $.ajax({
         url: 'api/item_Details.php?p_id=' + p_ID + '&&findby=' + findby,
@@ -135,9 +132,8 @@ let cart_items = [];
 
 $(document).on("click", "#buy", function () {
     //  Get Value from Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const p_ID = urlParams.get('ProductID');
+    var url = document.URL;
+    const p_ID = url.substring(url.lastIndexOf('-') + 1);
 
     if (localStorage.getItem('cart_items')) {
         cart_items = JSON.parse(localStorage.getItem('cart_items'));
@@ -146,12 +142,12 @@ $(document).on("click", "#buy", function () {
         // count_cart_items function is defined in header
         count_cart_items();
         alert("Already in cart");
-        window.location.href = 'shopping_Cart.html';
+        window.location.href = 'cart';
     } else {
         cart_items.push(p_ID);
         localStorage.setItem('cart_items', JSON.stringify(cart_items));
         // count_cart_items function is defined in header
         count_cart_items();
-        window.location.href = 'shopping_Cart.html';
+        window.location.href = 'cart';
     }
 });

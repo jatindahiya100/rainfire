@@ -1,5 +1,5 @@
 // Loading header
-$('#header').load("header.html");
+$('#header').load("header");
 
 // Check If cart is empty
 function check_empty_cart() {
@@ -92,7 +92,7 @@ if (check_empty_cart() == 'false') {
     });
 
     $(document).on("click", ".item-image", function () {
-        window.location.href = "Details.html?ProductID=" + $('.item-details').data("id");
+        window.location.href = "Product?ProductID=" + $('.item-details').data("id");
     });
 
     // Order Summary

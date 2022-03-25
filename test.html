@@ -171,7 +171,7 @@ if (check_empty_cart() == 'false') {
     });
 
     $(document).on("click", ".item-image", function () {
-        window.location.href = "Details.html?ProductID=" + $('.item-details').data("id");
+        window.location.href = "Details?ProductID=" + $('.item-details').data("id");
     });
 
     // Order Summary

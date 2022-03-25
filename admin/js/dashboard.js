@@ -2,7 +2,7 @@ function validate_user() {
     var x = JSON.parse(sessionStorage.getItem('key'));
 
     if (sessionStorage.getItem('key') === null) {
-        window.location.href = 'index.html';
+        window.location.href = 'index';
     } else {
         var id = window.atob(x[0]);
         var key = window.atob(x[1]);
@@ -16,7 +16,7 @@ function validate_user() {
             },
             success: function (data) {
                 if (data != '1') {
-                    window.location.href = 'index.html';
+                    window.location.href = 'index';
                 }
             }
         });

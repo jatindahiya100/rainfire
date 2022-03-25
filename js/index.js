@@ -1,10 +1,8 @@
 window.addEventListener("load", function () {
   $(".loading-content").fadeOut();
   $(".wrapper").fadeIn();
-  // Loading header
-  $("#header").load("header.html");
   // Loading Footer
-  $("#footer").load("footer.html");
+  $("#footer").load("footer");
 });
 
 // Calling Fetch New Arrivals
@@ -78,7 +76,9 @@ function GetDataByCategory(category) {
         var products = "<div class='product-holder'>";
         $.each(data["message"], function (key, value) {
           products +=
-            "<a href=Details.html?ProductID=" +
+            "<a href=" +
+            value.p_Name.replace(/ /g, "-") +
+            "-" +
             value.p_ID +
             ">" +
             "<div class='item'>" +
@@ -111,13 +111,19 @@ $("li").on("click", function () {
   $("li.clicked").removeClass("clicked");
   category = $(this).attr("id");
   $(this).addClass("clicked");
-  $(this).closest("ul").css({"flex-wrap": "nowrap", "justify-content": "start", "transition": "1s"});
+  $(this)
+    .closest("ul")
+    .css({
+      "flex-wrap": "nowrap",
+      "justify-content": "start",
+      transition: "1s",
+    });
   GetDataByCategory(category);
 });
 
 $(document).on("click", ".flex-box", function () {
   $id = $(this).data("id");
-  window.location.href = "Details.html?ProductID=" + $id;
+  window.location.href = "Product?ProductID=" + $id;
 });
 
 $(document).on("click", "#openSidebar", function () {

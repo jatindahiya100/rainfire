@@ -15,7 +15,7 @@ function validate_user() {
             },
             success: function (data) {
                 if (data == '1') {
-                    window.location.href = 'dashboard.html'
+                    window.location.href = 'dashboard'
                 }
             }
         });
@@ -51,7 +51,7 @@ function login() {
                         $('#alert').addClass('success').html("Access Granted").show("slow").delay(2000).fadeOut();
                     }, 1000);
                     setTimeout(() => {
-                        window.location.href = 'dashboard.html';
+                        window.location.href = 'dashboard';
                     }, 2000);
                 }
             }
