@@ -8,6 +8,8 @@ RewriteRule ^(.*)$ $1.html
 # Return Error 404 if Original Request is .html
 RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.html[? ].*$"
 RewriteRule .* - [L,R=404]
+ErrorDocument 403 https://rainfire.in/error/403_Error
+ErrorDocument 404 https://rainfire.in/error/404_Error
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
